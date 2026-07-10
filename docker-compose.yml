@@ -1,0 +1,23 @@
+services:
+  web:
+    build: .
+    image: zetac-website
+    container_name: zetac-website
+    # Reachable only via the shared nginx-proxy (zetac.de); no public host port.
+    environment:
+      # Register with the shared nginx-proxy + acme-companion for HTTPS
+      VIRTUAL_HOST: zetac.de
+      VIRTUAL_PORT: "80"
+      LETSENCRYPT_HOST: zetac.de
+      LETSENCRYPT_EMAIL: info@zetac.de
+    networks:
+      - default
+      - proxy
+    restart: unless-stopped
+
+networks:
+  # default: implicit per-stack bridge
+  default:
+  # shared reverse-proxy network, created/owned by /root/reverse-proxy
+  proxy:
+    external: true
