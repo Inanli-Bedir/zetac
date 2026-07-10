@@ -15,8 +15,8 @@
   --color-text-light: #6b7280;
   --color-border: #e2e8f0;
   --color-border-subtle: #eef2f6;
-  --color-accent-light: rgba(201, 162, 39, 0.1);
-  --color-accent-glow: rgba(201, 162, 39, 0.16);
+  --color-accent-light: rgba(201, 162, 39, 0.13);
+  --color-accent-glow: rgba(201, 162, 39, 0.22);
   --color-icon-bg: #f1f5f9;
   --font-heading: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -344,16 +344,16 @@ ul {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 10% 0%, rgba(201, 162, 39, 0.09) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 60% at 10% 0%, rgba(201, 162, 39, 0.15) 0%, transparent 55%),
     radial-gradient(ellipse 60% 50% at 90% 20%, rgba(17, 24, 39, 0.04) 0%, transparent 50%),
-    linear-gradient(180deg, #ffffff 0%, var(--color-bg) 72%);
+    linear-gradient(180deg, #fffef8 0%, var(--color-bg) 72%);
 }
 
 .hero-bg-orb {
   position: absolute;
   border-radius: 50%;
   filter: blur(72px);
-  opacity: 0.55;
+  opacity: 0.75;
 }
 
 .hero-bg-orb--1 {
@@ -361,7 +361,7 @@ ul {
   right: 6%;
   width: 380px;
   height: 380px;
-  background: radial-gradient(circle, rgba(201, 162, 39, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(201, 162, 39, 0.32) 0%, transparent 70%);
 }
 
 .hero-bg-orb--2 {
@@ -389,7 +389,7 @@ ul {
   text-transform: uppercase;
   color: var(--color-accent-hover);
   background: var(--color-accent-light);
-  border: 1px solid rgba(201, 162, 39, 0.18);
+  border: 1px solid rgba(201, 162, 39, 0.3);
   border-radius: 100px;
 }
 
@@ -439,8 +439,9 @@ ul {
   gap: 4px;
   min-width: 140px;
   padding: 18px 22px;
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid var(--color-border);
+  background: rgba(255, 252, 240, 0.85);
+  border: 1px solid rgba(201, 162, 39, 0.22);
+  border-left: 2px solid rgba(201, 162, 39, 0.38);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   backdrop-filter: blur(8px);
@@ -510,7 +511,7 @@ ul {
 
 /* ---- About ---- */
 .about {
-  background: linear-gradient(160deg, #ffffff 0%, var(--color-bg) 55%, #f0f4f8 100%);
+  background: linear-gradient(160deg, #fffef8 0%, var(--color-bg) 55%, #f0f4f8 100%);
   overflow: hidden;
 }
 
@@ -525,7 +526,7 @@ ul {
   position: absolute;
   border-radius: 50%;
   filter: blur(90px);
-  opacity: 0.45;
+  opacity: 0.6;
 }
 
 .about-bg-orb--1 {
@@ -533,7 +534,7 @@ ul {
   right: -6%;
   width: 520px;
   height: 520px;
-  background: radial-gradient(circle, rgba(201, 162, 39, 0.13) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(201, 162, 39, 0.2) 0%, transparent 70%);
 }
 
 .about-bg-orb--2 {
@@ -713,7 +714,7 @@ ul {
   overflow: hidden;
   padding: 112px 0;
   background:
-    linear-gradient(180deg, var(--color-bg) 0%, #ffffff 45%, var(--color-bg) 100%);
+    linear-gradient(180deg, var(--color-bg) 0%, #fffef8 45%, var(--color-bg) 100%);
 }
 
 .services .container {
@@ -793,7 +794,7 @@ ul {
   min-height: 300px;
   height: 100%;
   padding: 40px 38px 42px;
-  background: linear-gradient(165deg, #ffffff 0%, #fafbfc 100%);
+  background: linear-gradient(165deg, #fffef8 0%, #fafbfc 100%);
   border-radius: var(--radius-xl);
   overflow: hidden;
   transition:
@@ -1158,9 +1159,9 @@ ul {
   font-family: var(--font-heading);
   font-size: 15px;
   font-weight: 700;
-  color: var(--color-primary);
-  background: linear-gradient(145deg, rgba(201, 162, 39, 0.16) 0%, rgba(201, 162, 39, 0.06) 100%);
-  border: 1px solid rgba(201, 162, 39, 0.22);
+  color: var(--color-accent-hover);
+  background: linear-gradient(145deg, rgba(201, 162, 39, 0.24) 0%, rgba(201, 162, 39, 0.1) 100%);
+  border: 1px solid rgba(201, 162, 39, 0.35);
   border-radius: 14px;
 }
 
@@ -1185,9 +1186,9 @@ ul {
 
 /* ---- Why Us ---- */
 .why-us {
-  background: var(--color-bg-elevated);
-  border-top: 1px solid var(--color-border-subtle);
-  border-bottom: 1px solid var(--color-border-subtle);
+  background: linear-gradient(180deg, #fffef5 0%, #ffffff 55%);
+  border-top: 1px solid rgba(201, 162, 39, 0.18);
+  border-bottom: 1px solid rgba(201, 162, 39, 0.12);
 }
 
 .why-us-grid {
@@ -1292,9 +1293,9 @@ ul {
 .contact-form {
   padding: 36px;
   background: var(--color-card);
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(201, 162, 39, 0.22);
   border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(201, 162, 39, 0.06);
 }
 
 .form-group {
@@ -1369,7 +1370,7 @@ ul {
 .footer {
   padding: 56px 0 32px;
   background: var(--color-primary);
-  border-top: none;
+  border-top: 2px solid rgba(201, 162, 39, 0.32);
   color: rgba(255, 255, 255, 0.82);
 }
 
@@ -1439,8 +1440,8 @@ ul {
   height: 480px;
   border-radius: 50%;
   filter: blur(90px);
-  opacity: 0.35;
-  background: radial-gradient(circle, rgba(201, 162, 39, 0.18) 0%, transparent 70%);
+  opacity: 0.6;
+  background: radial-gradient(circle, rgba(201, 162, 39, 0.26) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -1468,7 +1469,19 @@ ul {
 
 /* ---- Home services section ---- */
 .home-services {
-  background: var(--color-bg);
+  background: linear-gradient(180deg, rgba(201, 162, 39, 0.05) 0%, var(--color-bg) 40%);
+}
+
+.home-services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 162, 39, 0.45), transparent);
+  pointer-events: none;
 }
 
 .home-services-grid {
@@ -1559,8 +1572,20 @@ ul {
 
 /* ---- Home Contact ---- */
 .home-contact {
-  background: linear-gradient(160deg, var(--color-bg) 0%, #ffffff 50%, var(--color-bg) 100%);
-  border-top: 1px solid var(--color-border-subtle);
+  background: linear-gradient(160deg, var(--color-bg) 0%, #fffef8 50%, var(--color-bg) 100%);
+  border-top: 1px solid rgba(201, 162, 39, 0.15);
+}
+
+.home-contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 162, 39, 0.45), transparent);
+  pointer-events: none;
 }
 
 .home-contact-grid {
@@ -1634,9 +1659,9 @@ ul {
 .home-contact-form-wrap {
   padding: 36px;
   background: var(--color-card);
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(201, 162, 39, 0.22);
   border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(201, 162, 39, 0.06);
 }
 
 .home-contact-form-wrap .form-group:last-of-type {
