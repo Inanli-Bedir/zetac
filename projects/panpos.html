@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+  <title>Project — Zetac</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="icon" href="../assets/logo.png" type="image/png" />
+</head>
+<body data-project="panpos">
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="../index.html" class="logo" aria-label="Zetac">
+        <img src="../assets/logo.png" alt="" class="logo-img" width="44" height="44" decoding="async" />
+        <span class="logo-text">Zetac</span>
+      </a>
+      <div class="nav-right">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html#about" data-i18n="nav.about">About</a></li>
+          <li><a href="../index.html#services" data-i18n="nav.services">Services</a></li>
+          <li><a href="../index.html#projects" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="../index.html#process" data-i18n="nav.process">How We Work</a></li>
+          <li><a href="../index.html#why-us" data-i18n="nav.why">Why Zetac</a></li>
+          <li><a href="../index.html#contact" class="nav-cta" data-i18n="nav.cta">Start a Project</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button type="button" class="lang-btn is-active" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="de">DE</button>
+          <button type="button" class="lang-btn" data-lang="tr">TR</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="project-detail-page">
+    <div class="container">
+      <a href="../index.html#projects" class="project-back" data-i18n="project.back">Back to projects</a>
+
+      <section class="project-detail-hero">
+        <div class="project-detail-hero-logo">
+          <img id="projectLogo" class="project-detail-logo" src="" alt="" width="120" height="120" />
+          <div id="projectLogoFallback" class="project-detail-logo-fallback" hidden></div>
+        </div>
+        <div class="project-detail-hero-text">
+          <h1 class="project-detail-title" data-i18n="project.panpos.name">Project</h1>
+          <p class="project-detail-tagline" data-i18n="project.panpos.tagline">Tagline</p>
+        </div>
+      </section>
+
+      <div class="project-detail-grid">
+        <section class="project-detail-block">
+          <h2 data-i18n="project.overview">Overview</h2>
+          <p data-i18n="project.panpos.overview"></p>
+        </section>
+
+        <section class="project-detail-block project-detail-block--accent">
+          <h2 data-i18n="project.value">Business Value</h2>
+          <p data-i18n="project.panpos.value"></p>
+        </section>
+
+        <section class="project-detail-block project-detail-block--full">
+          <h2 data-i18n="project.features">Key Features</h2>
+          <ul class="project-features-list" id="projectFeatures"></ul>
+        </section>
+
+        <section class="project-detail-block">
+          <h2 data-i18n="project.tech">Technologies Used</h2>
+          <div class="project-tech-list" id="projectTech"></div>
+        </section>
+
+        <section class="project-detail-block project-detail-block--full" id="projectGallerySection" hidden>
+          <h2 data-i18n="project.gallery">Screenshots</h2>
+          <div class="project-gallery" id="projectGallery"></div>
+        </section>
+      </div>
+
+      <div class="project-detail-cta">
+        <a href="../index.html#contact" class="btn btn-primary" data-i18n="project.cta">Start a similar project</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo logo--footer" aria-label="Zetac">
+          <img src="../assets/logo.png" alt="" class="logo-img" width="36" height="36" loading="lazy" />
+          <span class="logo-text">Zetac</span>
+        </a>
+        <p data-i18n="footer.tagline">Custom software and marketing solutions for growing businesses.</p>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html#about" data-i18n="nav.about">About</a>
+        <a href="../index.html#services" data-i18n="nav.services">Services</a>
+        <a href="../index.html#projects" data-i18n="nav.projects">Projects</a>
+        <a href="../index.html#contact" data-i18n="contact.tag">Contact</a>
+      </div>
+      <p class="footer-copy" data-i18n="footer.rights">&copy; 2026 Zetac. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../i18n.js"></script>
+  <script src="../project-i18n.js"></script>
+  <script src="../projects-data.js"></script>
+  <script src="../project-detail.js"></script>
+  <script src="../script.js"></script>
+</body>
+</html>
