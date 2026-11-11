@@ -1,0 +1,32 @@
+# Local development stack: Vite dev server with hot reload.
+#
+#   Start: docker compose up -d        (first run builds the image automatically)
+#   Open:  http://localhost:5173
+#   Stop:  docker compose down
+#
+# Production does NOT use this file; it uses docker-compose.prod.yml:
+#   docker compose -f docker-compose.prod.yml up -d --build
+name: zetac-website-dev
+
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      # Localhost only, so the dev server is not exposed on your network.
+      - "127.0.0.1:5173:5173"
+    volumes:
+      # Mount the source so edits are picked up without rebuilding the image.
+      - .:/app
+      # Keep the image's node_modules; don't let the host folder shadow it.
+      - /app/node_modules
+    environment:
+      # vite.config.js sets server.open: true; there is no browser in the container.
+      BROWSER: none
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:5173/"]
+      interval: 10s
+      timeout: 3s
+      start_period: 10s
+      retries: 3

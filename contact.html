@@ -1,150 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact Zetac — tell us about your project and we'll get back to you within 1–2 business days." />
-  <title>Projekt starten — Zetac</title>
+  <title>Kontakt – Zetac</title>
+  <meta name="description" content="Schreiben Sie uns: info@zetac.de" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- The arrow (→) is not in Google's default Inter subsets; load just that glyph. -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&text=%E2%86%92&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="zetac.css" />
   <link rel="icon" href="assets/logo.png" type="image/png" />
-  <link rel="apple-touch-icon" href="assets/logo.png" />
 </head>
 <body>
-  <header class="header" id="header">
-    <nav class="nav container">
-      <a href="index.html" class="logo" aria-label="Zetac">
-        <img src="assets/logo.png" alt="" class="logo-img" width="54" height="54" decoding="async" fetchpriority="high" />
-        <span class="logo-text">Zetac</span>
-      </a>
-      <div class="nav-right">
-        <ul class="nav-links" id="navLinks">
-          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-          <li><a href="about.html" data-i18n="nav.about">About</a></li>
-          <li><a href="services.html" data-i18n="nav.services">Services</a></li>
-          <li><a href="social.html" data-i18n="nav.social">Social</a></li>
-          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Zetac – zur Startseite"><img src="assets/logo.png" alt="" width="30" height="30" />Zetac</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menü</button>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <ul class="nav-list">
+          <li><a href="about.html">Über uns</a></li>
+          <li><a href="projekte.html">Projekte</a></li>
+          <li><a href="services.html">Leistungen</a></li>
+          <li class="nav-cta"><a href="contact.html" aria-current="page">Kontakt</a></li>
         </ul>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <div class="lang-switcher" role="group" aria-label="Language">
-          <button type="button" class="lang-btn is-active" data-lang="en">EN</button>
-          <button type="button" class="lang-btn" data-lang="de">DE</button>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
-  <div class="page-wrapper">
-  <main>
-    <div class="page-top">
-      <div class="container">
-        <span class="section-tag" data-i18n="contact.tag">Contact</span>
-        <h1 class="page-top-title" data-i18n="contact.title">Let's Build Something Together</h1>
-        <p class="page-top-desc" data-i18n="contact.desc">Tell us about your project idea. We'll get back to you within 1–2 business days with thoughts on how we can help.</p>
-      </div>
-    </div>
+  <main id="inhalt">
+    <section class="wrap page-head">
+      <h1>Kontakt</h1>
+      <p>Erzählen Sie uns kurz, worum es geht. Wir melden uns innerhalb von 1–2 Werktagen.</p>
+    </section>
 
-    <section class="section contact">
-      <div class="container">
-        <div class="contact-grid">
-
-          <!-- Left: contact information -->
-          <div class="contact-info reveal-on-scroll">
-            <h2 class="contact-info-heading" data-i18n="contact.infoHeading">Get in Touch</h2>
-            <p class="contact-info-lead" data-i18n="contact.infoLead">We'd love to hear about your project. Send us a message and we'll get back to you within 1–2 business days.</p>
-            <div class="home-contact-details">
-              <a href="mailto:info@zetac.de" class="home-contact-detail">
-                <span class="home-contact-detail__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                </span>
-                <div>
-                  <span class="home-contact-detail__label" data-i18n="contact.email">Email</span>
-                  <span class="home-contact-detail__value">info@zetac.de</span>
-                </div>
-              </a>
-              <div class="home-contact-detail">
-                <span class="home-contact-detail__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                </span>
-                <div>
-                  <span class="home-contact-detail__label" data-i18n="contact.location">Location</span>
-                  <span class="home-contact-detail__value" data-i18n="contact.locationValue">Paderborn, Germany</span>
-                </div>
-              </div>
-              <a href="https://www.instagram.com/zetac.digital.consultancy/" class="home-contact-detail" target="_blank" rel="noopener noreferrer">
-                <span class="home-contact-detail__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
-                </span>
-                <div>
-                  <span class="home-contact-detail__label">Instagram</span>
-                  <span class="home-contact-detail__value">@zetac.digital.consultancy</span>
-                </div>
-              </a>
-              <a href="social.html" class="home-contact-detail">
-                <span class="home-contact-detail__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-                </span>
-                <div>
-                  <span class="home-contact-detail__label" data-i18n="contact.social">Social</span>
-                  <span class="home-contact-detail__value">LinkedIn &amp; GitHub</span>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <!-- Right: contact form -->
-          <form class="contact-form reveal-on-scroll" id="contactForm" style="--reveal-index: 1" novalidate>
-            <div class="form-group">
-              <label for="name" data-i18n="form.name">Your Name</label>
-              <input type="text" id="name" name="name" data-i18n-placeholder="form.namePlaceholder" placeholder="John Smith" required />
-            </div>
-            <div class="form-group">
-              <label for="email" data-i18n="form.email">Email Address</label>
-              <input type="email" id="email" name="email" data-i18n-placeholder="form.emailPlaceholder" placeholder="john@company.com" required />
-            </div>
-            <div class="form-group">
-              <label for="idea" data-i18n="form.idea">Project Idea</label>
-              <input type="text" id="idea" name="idea" data-i18n-placeholder="form.ideaPlaceholder" placeholder="e.g. Customer portal, inventory system, company website" required />
-            </div>
-            <div class="form-group">
-              <label for="message" data-i18n="form.message">Message</label>
-              <textarea id="message" name="message" rows="5" data-i18n-placeholder="form.messagePlaceholder" placeholder="Tell us more about your project, timeline, or any questions you have." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full" data-i18n="form.submit">Send Message</button>
-            <p class="form-note" id="formNote" hidden data-i18n="form.success">Thank you! We'll be in touch soon.</p>
-          </form>
-
-        </div>
-      </div>
+    <section class="wrap">
+      <a class="contact-mail" href="mailto:info@zetac.de">info@zetac.de</a>
+      <dl class="contact-grid">
+        <div><dt>Standort</dt><dd>Paderborn, Deutschland</dd></div>
+        <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/zetac.digital.consultancy/" target="_blank" rel="noopener noreferrer">@zetac.digital.consultancy</a></dd></div>
+        <div><dt>Antwortzeit</dt><dd>1–2 Werktage</dd></div>
+      </dl>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="index.html" class="logo logo--footer" aria-label="Zetac">
-          <img src="assets/logo.png" alt="" class="logo-img" width="36" height="36" decoding="async" loading="lazy" />
-          <span class="logo-text">Zetac</span>
-        </a>
-        <p data-i18n="footer.tagline">Custom software and marketing solutions for growing businesses.</p>
-      </div>
-      <div class="footer-links">
-        <a href="about.html" data-i18n="nav.about">About</a>
-        <a href="services.html" data-i18n="nav.services">Services</a>
-        <a href="contact.html" data-i18n="nav.contact">Contact</a>
-        <a href="social.html" data-i18n="nav.social">Social</a>
-      </div>
-      <p class="footer-copy" data-i18n="footer.rights">&copy; 2026 Zetac. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>Zetac · Digitalstudio in Paderborn</span>
+      <nav aria-label="Fußzeile">
+        <a href="about.html">Über uns</a>
+        <a href="projekte.html">Projekte</a>
+        <a href="services.html">Leistungen</a>
+        <a href="contact.html">Kontakt</a>
+        <a href="https://www.instagram.com/zetac.digital.consultancy/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </nav>
+      <span>© 2026 Zetac</span>
     </div>
   </footer>
 
-  </div>
-
-  <script src="i18n.js"></script>
-  <script src="script.js"></script>
+  <script src="site.js" defer></script>
 </body>
 </html>

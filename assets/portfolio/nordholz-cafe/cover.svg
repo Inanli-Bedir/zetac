@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1420"/>
+      <stop offset="55%" stop-color="#1b2540"/>
+      <stop offset="100%" stop-color="#141d2c"/>
+    </linearGradient>
+    <radialGradient id="orb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c9a227" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#c9a227" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="300" rx="18" fill="url(#bg)"/>
+  <circle cx="336" cy="36" r="120" fill="url(#orb)"/>
+  <rect x="40" y="45" width="320" height="204.00000000000003" rx="10" fill="rgba(255,255,255,0.035)" stroke="rgba(201,162,39,0.28)"/>
+  <rect x="40" y="45" width="320" height="26" rx="10" fill="rgba(255,255,255,0.05)"/>
+  <circle cx="56" cy="58" r="4" fill="#c9a227" fill-opacity="0.7"/>
+  <circle cx="70" cy="58" r="4" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="84" cy="58" r="4" fill="rgba(255,255,255,0.18)"/>
+  <rect x="58" y="85" width="115.19999999999999" height="13" rx="4" fill="rgba(201,162,39,0.45)"/>
+  <rect x="58" y="89" width="244.24" height="7" rx="3.5" fill="rgba(255,255,255,0.09)"/>
+  <rect x="58" y="107" width="176.08" height="7" rx="3.5" fill="rgba(255,255,255,0.09)"/>
+  <rect x="58" y="125" width="210.16" height="7" rx="3.5" fill="rgba(255,255,255,0.09)"/>
+  <rect x="58" y="143" width="142" height="7" rx="3.5" fill="rgba(255,255,255,0.09)"/>
+  <circle cx="356" cy="256" r="25" fill="#0d1420" stroke="#c9a227" stroke-opacity="0.45" stroke-width="1.5"/>
+  <text x="356" y="262" text-anchor="middle" font-family="Sora, sans-serif" font-size="17" font-weight="700" fill="#c9a227">NC</text>
+</svg>

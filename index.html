@@ -1,200 +1,209 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Zetac — Custom SaaS, business software, websites, and digital solutions for your business." />
-  <title>Zetac — Custom SaaS & Software Solutions</title>
+  <title>Zetac – Digitalstudio aus Paderborn</title>
+  <meta name="description" content="Wir sind Zetac, ein kleines Digitalstudio aus Paderborn. Wir bauen Apps, Onlineshops und Social-Media-Auftritte für Unternehmen." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- The arrow (→) is not in Google's default Inter subsets; load just that glyph. -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&text=%E2%86%92&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="zetac.css" />
   <link rel="icon" href="assets/logo.png" type="image/png" />
-  <link rel="apple-touch-icon" href="assets/logo.png" />
 </head>
 <body>
-  <header class="header" id="header">
-    <nav class="nav container">
-      <a href="index.html" class="logo" aria-label="Zetac">
-        <img src="assets/logo.png" alt="" class="logo-img" width="54" height="54" decoding="async" fetchpriority="high" />
-        <span class="logo-text">Zetac</span>
-      </a>
-      <div class="nav-right">
-        <ul class="nav-links" id="navLinks">
-          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-          <li><a href="about.html" data-i18n="nav.about">About</a></li>
-          <li><a href="services.html" data-i18n="nav.services">Services</a></li>
-          <li><a href="social.html" data-i18n="nav.social">Social</a></li>
-          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <!-- Homepage variant: the header overlays the hero card (see .site-header--hero in zetac.css).
+       It stays sticky and turns cream once the page is scrolled. -->
+  <header class="site-header site-header--hero">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Zetac – zur Startseite"><span class="brand-mark"><img src="assets/logo.png" alt="" width="30" height="30" /></span>Zetac</a>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <ul class="nav-list">
+          <li><a href="about.html">Über uns</a></li>
+          <li><a href="projekte.html">Projekte</a></li>
+          <li><a href="services.html">Leistungen</a></li>
+          <li class="nav-cta"><a href="contact.html">Kontakt</a></li>
         </ul>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <div class="lang-switcher" role="group" aria-label="Language">
-          <button type="button" class="lang-btn is-active" data-lang="en">EN</button>
-          <button type="button" class="lang-btn" data-lang="de">DE</button>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
-  <div class="page-wrapper">
-  <main>
-    <section class="hero" id="hero">
-      <div class="hero-bg" aria-hidden="true">
-        <div class="hero-bg-mesh"></div>
-        <div class="hero-bg-orb hero-bg-orb--1"></div>
-        <div class="hero-bg-orb hero-bg-orb--2"></div>
-      </div>
-      <div class="container hero-content">
-        <div class="hero-badge" data-i18n="hero.badge">Custom SaaS & Software Studio</div>
-        <h1 class="hero-title" data-i18n="hero.title">We Build Custom SaaS & Software for Businesses</h1>
-        <p class="hero-subtitle" data-i18n="hero.subtitle">Tell us what you need — we design, develop, and launch tailored software that helps your company work smarter and grow faster.</p>
-        <div class="hero-actions">
-          <a href="contact.html" class="btn btn-primary" data-i18n="hero.ctaPrimary">Start a Project</a>
-          <a href="about.html" class="btn btn-secondary" data-i18n="hero.ctaSecondary">Learn More</a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-value" data-i18n="hero.stat1.value">4</span>
-            <span class="stat-label" data-i18n="hero.stat1.label">Core Services</span>
-          </div>
-          <div class="stat">
-            <span class="stat-value" data-i18n="hero.stat2.value">End-to-End</span>
-            <span class="stat-label" data-i18n="hero.stat2.label">From Idea to Launch</span>
-          </div>
-          <div class="stat">
-            <span class="stat-value" data-i18n="hero.stat3.value">Paderborn</span>
-            <span class="stat-label" data-i18n="hero.stat3.label">Based in Germany</span>
-          </div>
-        </div>
+  <main id="inhalt">
+    <!-- 1. Hero (design: zetac-hero.html). Background: assets/zetac-background.jpg -->
+    <section class="cover" aria-labelledby="hero-title">
+      <!-- Hero background video (decorative). Drop the clip files at these paths; site.js
+           only loads them when motion is allowed. Until they exist, or if playback fails,
+           the still image (assets/zetac-background.jpg) is shown instead.
+             assets/hero/zetac-hero-loop.webm  (VP9 or AV1)
+             assets/hero/zetac-hero-loop.mp4   (H.264, for Safari) -->
+      <video class="cover-video" aria-hidden="true" tabindex="-1" muted loop playsinline autoplay
+             preload="none" disablepictureinpicture disableremoteplayback
+             poster="assets/zetac-background.jpg">
+        <source data-src="assets/hero/zetac-hero-loop.webm" type="video/webm" />
+        <source data-src="assets/hero/zetac-hero-loop.mp4" type="video/mp4" />
+      </video>
+      <h1 id="hero-title">Apps, Onlineshops und Social Media.</h1>
+      <div class="cover-bottom">
+        <p>Wir entwickeln individuelle Apps, erstellen Onlineshops mit Google-SEO und betreuen Social-Media-Auftritte für Unternehmen.</p>
+        <a class="cover-action" href="#leistungen"><span>Leistungen entdecken</span><span class="cover-arrow" aria-hidden="true">→</span></a>
       </div>
     </section>
 
-    <section class="section home-services">
-      <div class="container">
-        <div class="section-header section-header--center reveal-on-scroll">
-          <span class="section-tag" data-i18n="services.tag">Services</span>
-          <h2 class="section-title" data-i18n="services.title">What We Build for You</h2>
-          <p class="section-desc" data-i18n="services.desc">Focused software solutions tailored to how your business actually works.</p>
-        </div>
-        <div class="home-services-grid">
-          <div class="home-service reveal-on-scroll" style="--reveal-index: 0">
-            <span class="home-service__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-            </span>
-            <h3 data-i18n="home.services.1.title">Custom SaaS Development</h3>
-            <p data-i18n="home.services.1.desc">We design and build subscription-based software products tailored to your users and workflows — from MVP to full product launch.</p>
-          </div>
-          <div class="home-service reveal-on-scroll" style="--reveal-index: 1">
-            <span class="home-service__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><circle cx="7.5" cy="6" r="1" fill="currentColor" stroke="none"/><circle cx="11" cy="6" r="1" fill="currentColor" stroke="none"/></svg>
-            </span>
-            <h3 data-i18n="home.services.2.title">Website Development</h3>
-            <p data-i18n="home.services.2.desc">Modern, fast, and professional websites that represent your brand well and turn visitors into customers.</p>
-          </div>
-          <div class="home-service reveal-on-scroll" style="--reveal-index: 2">
-            <span class="home-service__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/><polyline points="8 13 11 10 13 12 16 8" stroke-width="1.4"/></svg>
-            </span>
-            <h3 data-i18n="home.services.3.title">Google SEO &amp; Marketing</h3>
-            <p data-i18n="home.services.3.desc">We boost your online visibility through Google optimization, SEO strategy, and targeted digital marketing campaigns.</p>
-          </div>
-        </div>
-        <div class="home-services-footer reveal-on-scroll">
-          <a href="services.html" class="btn btn-outline" data-i18n="home.viewServices">View All Services</a>
-        </div>
+    <!-- 2. Leistungen (same copy as services.html). Each row reveals once via site.js ([data-reveal]). -->
+    <section class="home-services" id="leistungen" aria-labelledby="leistungen-title">
+      <div class="wrap projects-head">
+        <h2 id="leistungen-title">Leistungen<sup>01</sup></h2>
+        <a class="more more--out" href="services.html">Alle Leistungen</a>
       </div>
-    </section>
-    <section class="section home-contact" id="kontakt">
-      <div class="container">
-
-        <div class="section-header section-header--center reveal-on-scroll">
-          <span class="section-tag" data-i18n="contact.tag">Contact</span>
-          <h2 class="section-title" data-i18n="home.contact.title">Let's Work Together</h2>
-          <p class="section-desc" data-i18n="home.contact.lead">We're a focused team based in Paderborn, Germany. Reach out and tell us what you're working on — we'd love to hear from you.</p>
-        </div>
-
-        <div class="home-contact-grid">
-
-          <!-- Left: contact details -->
-          <div class="home-contact-details reveal-on-scroll" style="--reveal-index: 0">
-            <a href="mailto:info@zetac.de" class="home-contact-detail">
-              <span class="home-contact-detail__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              </span>
-              <div>
-                <span class="home-contact-detail__label" data-i18n="contact.email">Email</span>
-                <span class="home-contact-detail__value">info@zetac.de</span>
-              </div>
-            </a>
-            <div class="home-contact-detail">
-              <span class="home-contact-detail__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </span>
-              <div>
-                <span class="home-contact-detail__label" data-i18n="contact.location">Location</span>
-                <span class="home-contact-detail__value" data-i18n="contact.locationValue">Paderborn, Germany</span>
-              </div>
+      <div class="wrap">
+        <ul class="svc-rows">
+          <li data-reveal>
+            <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.75" width="11" height="18.5" rx="2.25"/><path d="M11.25 17.75h1.5"/></svg></span>
+            <h3>Individuelle App&#8209;Entwicklung</h3>
+            <div class="svc-text">
+              <p>Apps für Web und Smartphone, die genau zu Ihren Abläufen passen – vom ersten Entwurf bis zum Launch und darüber hinaus.</p>
+              <small>Zum Beispiel: Buchungssysteme, interne Tools, Kunden-Apps</small>
             </div>
-            <a href="https://www.instagram.com/zetac.digital.consultancy/" class="home-contact-detail" target="_blank" rel="noopener noreferrer">
-              <span class="home-contact-detail__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
-              </span>
-              <div>
-                <span class="home-contact-detail__label">Instagram</span>
-                <span class="home-contact-detail__value">@zetac.digital.consultancy</span>
-              </div>
-            </a>
-          </div>
+          </li>
+          <li data-reveal>
+            <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5.25 7.75h13.5l-.9 11.1a2 2 0 0 1-2 1.9H8.15a2 2 0 0 1-2-1.9z"/><path d="M9 7.75V7a3 3 0 0 1 6 0v.75"/><path d="M9 11.25a3 3 0 0 0 6 0"/></svg></span>
+            <h3>Onlineshops &amp; Google&#8209;SEO</h3>
+            <div class="svc-text">
+              <p>Onlineshops, die schnell laden, sich leicht pflegen lassen und bei Google gefunden werden.</p>
+              <small>Zum Beispiel: Shop-Aufbau, Produktseiten, lokale Suchmaschinenoptimierung</small>
+            </div>
+          </li>
+          <li data-reveal>
+            <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.75c4.7 0 8.25 3.2 8.25 7.4s-3.55 7.4-8.25 7.4c-1 0-1.95-.14-2.83-.41L4.5 19.9l1.25-3.6A7 7 0 0 1 3.75 11.15c0-4.2 3.55-7.4 8.25-7.4z"/></svg></span>
+            <h3>Social Media für Unternehmen</h3>
+            <div class="svc-text">
+              <p>Auftritte auf Instagram und Co., die zu Ihrem Unternehmen passen – Konzept, Inhalte und regelmäßige Betreuung.</p>
+              <small>Zum Beispiel: Content-Planung, Beiträge, Kanalbetreuung</small>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-          <!-- Right: mini contact form -->
-          <div class="home-contact-form-wrap reveal-on-scroll" style="--reveal-index: 1">
-            <form id="homeContactForm" class="home-contact-form" novalidate>
-              <div class="form-group">
-                <label for="hcName" data-i18n="form.name">Your Name</label>
-                <input type="text" id="hcName" name="name" data-i18n-placeholder="form.namePlaceholder" placeholder="John Smith" required />
-              </div>
-              <div class="form-group">
-                <label for="hcEmail" data-i18n="form.email">Email Address</label>
-                <input type="email" id="hcEmail" name="email" data-i18n-placeholder="form.emailPlaceholder" placeholder="john@company.com" required />
-              </div>
-              <div class="form-group">
-                <label for="hcMessage" data-i18n="form.message">Message</label>
-                <textarea id="hcMessage" name="message" rows="5" data-i18n-placeholder="form.messagePlaceholder" placeholder="Tell us about your project or idea." required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary btn-full" data-i18n="form.submit">Send Message</button>
-              <p class="form-note" id="homeFormNote" hidden data-i18n="form.success">Thank you! We'll be in touch soon.</p>
-            </form>
-          </div>
+    <!-- Call to action (between Leistungen and Projekte) -->
+    <section class="wrap idea-cta" aria-labelledby="idee-title">
+      <h2 id="idee-title">Machen Sie mehr aus Ihrer <br class="idea-break" /><span class="idea-word">Idee.</span></h2>
+      <p>Wir entwickeln Apps und Onlineshops und betreuen Ihren Social-Media-Auftritt.</p>
+      <a class="btn" href="contact.html">Projekt besprechen <span class="btn-arrow" aria-hidden="true">→</span></a>
+    </section>
 
+    <!-- 2. Ausgewählte Projekte: App-Showcase.
+         Platzhalterbilder (je 780 × 1100 px, einzeln austauschbar):
+         assets/showcase/app-terminplaner.png, app-aufgaben.png, app-kundenportal.png, app-mitteilungen.png
+         The collage assembles once as a group via site.js ([data-reveal]). -->
+    <section class="showcase-band" aria-labelledby="projekte-title">
+      <div class="wrap showcase">
+        <div class="showcase-copy">
+          <h2 class="eyebrow" id="projekte-title">Ausgewählte Projekte</h2>
+          <h3>Eine App, die zu Ihrem Unternehmen passt.</h3>
+          <p>Von der Onlinebuchung bis zum internen Aufgabenplaner: Wir entwickeln Apps für die Abläufe, die Ihr Team und Ihre Kunden täglich nutzen.</p>
+          <ul class="showcase-apps">
+            <li>Terminplaner</li>
+            <li>Aufgaben</li>
+            <li>Kundenportal</li>
+            <li>Mitteilungen</li>
+          </ul>
+          <a class="btn" href="projekte.html">App-Projekte ansehen <span class="btn-arrow" aria-hidden="true">→</span></a>
         </div>
+        <figure class="showcase-stack" data-reveal>
+          <div class="showcase-screens">
+            <!-- Back to front (also the reveal order). -->
+            <img class="screen screen--terminplaner" src="assets/showcase/app-terminplaner.png" alt="Beispielansicht: Terminplaner mit Terminen im November" width="780" height="1100" loading="lazy" />
+            <img class="screen screen--aufgaben" src="assets/showcase/app-aufgaben.png" alt="Beispielansicht: Aufgabenliste für heute" width="780" height="1100" loading="lazy" />
+            <img class="screen screen--kundenportal" src="assets/showcase/app-kundenportal.png" alt="Beispielansicht: Kundenportal mit Projekten, Anfragen und Dateien" width="780" height="1100" loading="lazy" />
+            <img class="screen screen--mitteilungen" src="assets/showcase/app-mitteilungen.png" alt="Beispielansicht: neue Mitteilungen" width="780" height="1100" loading="lazy" />
+          </div>
+          <figcaption>Beispielansichten</figcaption>
+        </figure>
+      </div>
+
+      <!-- Vorher/Nachher-Vergleich (Webshop-Redesign). Directly after the app showcase, same section.
+           Platzhalterbilder, beide 1600 × 900 px (gleiches Seitenverhältnis und gleicher Ausschnitt):
+           assets/vergleich/shop-vorher.png, assets/vergleich/shop-nachher.png
+           Slider: site.js ([data-compare]). Without JS it stays at 50/50. -->
+      <div class="wrap compare-block">
+        <h3 id="vergleich-title">Ein neuer Auftritt für den Onlineshop.</h3>
+        <p id="vergleich-hint">Ziehen Sie den Regler, um Vorher und Nachher zu vergleichen.</p>
+        <figure class="compare">
+          <div class="compare-frame" data-compare style="--pos: 50%">
+            <img class="compare-img" src="assets/vergleich/shop-nachher.png" alt="Nachher: neues Design des Onlineshops" width="1600" height="900" loading="lazy" draggable="false" />
+            <img class="compare-img compare-img--before" src="assets/vergleich/shop-vorher.png" alt="Vorher: altes Design des Onlineshops" width="1600" height="900" loading="lazy" draggable="false" />
+            <span class="compare-label compare-label--before" aria-hidden="true">Vorher</span>
+            <span class="compare-label compare-label--after" aria-hidden="true">Nachher</span>
+            <input class="compare-range" type="range" hidden min="0" max="100" step="1" value="50"
+                   aria-labelledby="vergleich-title" aria-describedby="vergleich-hint" aria-valuetext="50 % Vorher, 50 % Nachher" />
+            <span class="compare-divider" aria-hidden="true">
+              <span class="compare-handle">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 7.5 5 12l4.5 4.5M14.5 7.5 19 12l-4.5 4.5"/></svg>
+              </span>
+            </span>
+          </div>
+          <figcaption>Beispielansichten</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Unser Team. Directly before the contact section.
+         Platzhalterfoto (Beispielfoto, 1600 × 1067 px): assets/team/team-foto.jpg -->
+    <section class="wrap team-intro" aria-labelledby="team-title">
+      <span class="team-eyebrow">Unser Team</span>
+      <!-- Photo slides in from the left, text block from the right (once, via site.js [data-reveal]). -->
+      <div class="team-grid" data-reveal>
+        <figure class="team-photo">
+          <img src="assets/team/team-foto.jpg" alt="Beispielfoto: Team bei der Arbeit an Laptops" width="1600" height="1067" loading="lazy" />
+          <figcaption>Beispielfoto</figcaption>
+        </figure>
+        <div class="team-copy">
+          <h2 id="team-title">Die Menschen hinter Zetac.</h2>
+          <div class="team-cols">
+            <p>Wir sind ein Digitalstudio aus Paderborn und entwickeln individuelle Apps und Onlineshops.</p>
+            <p>Bei uns sprechen Sie direkt mit den Menschen, die Ihr Projekt umsetzen.</p>
+          </div>
+          <a class="team-action" href="about.html"><span>Lernen Sie uns kennen</span><span class="team-action__arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap closing closing--art">
+      <div class="closing-text">
+        <h2>Sie haben ein Projekt im Kopf?</h2>
+        <a class="mail" href="mailto:info@zetac.de">info@zetac.de</a>
+      </div>
+      <!-- Decorative envelope illustration (pure CSS + inline SVG, hidden from screen readers). -->
+      <div class="contact-art" aria-hidden="true">
+        <span class="contact-art__oval"></span>
+        <span class="contact-art__letter"></span>
+        <span class="contact-art__envelope">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+        </span>
+        <svg class="contact-art__spark" viewBox="0 0 24 24"><path d="M12 1.5c.6 5.4 2.6 8.9 10.5 10.5C14.6 13.6 12.6 17.1 12 22.5 11.4 17.1 9.4 13.6 1.5 12 9.4 10.4 11.4 6.9 12 1.5z" fill="currentColor"/></svg>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="index.html" class="logo logo--footer" aria-label="Zetac">
-          <img src="assets/logo.png" alt="" class="logo-img" width="36" height="36" decoding="async" loading="lazy" />
-          <span class="logo-text">Zetac</span>
-        </a>
-        <p data-i18n="footer.tagline">Custom software and marketing solutions for growing businesses.</p>
-      </div>
-      <div class="footer-links">
-        <a href="about.html" data-i18n="nav.about">About</a>
-        <a href="services.html" data-i18n="nav.services">Services</a>
-        <a href="contact.html" data-i18n="nav.contact">Contact</a>
-        <a href="social.html" data-i18n="nav.social">Social</a>
-      </div>
-      <p class="footer-copy" data-i18n="footer.rights">&copy; 2026 Zetac. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>Zetac · Digitalstudio in Paderborn</span>
+      <nav aria-label="Fußzeile">
+        <a href="about.html">Über uns</a>
+        <a href="projekte.html">Projekte</a>
+        <a href="services.html">Leistungen</a>
+        <a href="contact.html">Kontakt</a>
+        <a href="https://www.instagram.com/zetac.digital.consultancy/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </nav>
+      <span>© 2026 Zetac</span>
     </div>
   </footer>
 
-  </div>
-
-  <script src="i18n.js"></script>
-  <script src="script.js"></script>
+  <script src="site.js" defer></script>
 </body>
 </html>

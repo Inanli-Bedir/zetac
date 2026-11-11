@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Platzhalter: App 02">
+  <rect width="100%" height="100%" fill="#D9CFC0"/>
+  <g font-family="Helvetica, Arial, sans-serif" fill="#26221F" text-anchor="middle">
+    <text x="50%" y="48%" font-size="85" font-weight="700" letter-spacing="-2">App 02</text>
+    <text x="50%" y="56%" font-size="24" letter-spacing="3" opacity=".7">PLATZHALTER · SCREENSHOT FOLGT</text>
+    <text x="50%" y="61%" font-size="17" opacity=".55">assets/platzhalter/app-02-screenshot.svg</text>
+  </g>
+</svg>

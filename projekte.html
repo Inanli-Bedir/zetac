@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projekte – Zetac</title>
+  <meta name="description" content="Eine Auswahl der Projekte von Zetac." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- The arrow (→) is not in Google's default Inter subsets; load just that glyph. -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&text=%E2%86%92&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="zetac.css" />
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+</head>
+<body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Zetac – zur Startseite"><img src="assets/logo.png" alt="" width="30" height="30" />Zetac</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menü</button>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <ul class="nav-list">
+          <li><a href="about.html">Über uns</a></li>
+          <li><a href="projekte.html" aria-current="page">Projekte</a></li>
+          <li><a href="services.html">Leistungen</a></li>
+          <li class="nav-cta"><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inhalt">
+    <section class="wrap page-head">
+      <h1>Projekte</h1>
+      <p>Eine Auswahl unserer Arbeit. Weitere Projekte folgen.</p>
+    </section>
+
+    <section aria-label="Projektliste">
+      <!-- PLATZHALTER: App 01 – Name, Bildunterschrift, Screenshot (assets/platzhalter/app-01-screenshot.svg) -->
+      <article class="case case--wide">
+        <a href="projects/app-01.html">
+          <figure class="photo"><img src="assets/platzhalter/app-01-screenshot.svg" alt="Platzhalter-Screenshot von App 01" width="1600" height="1000" loading="lazy" /></figure>
+          <div class="wrap case-caption">
+            <div>
+              <span class="case-num">01</span>
+              <h3>App 01</h3>
+            </div>
+            <div>
+              <p class="case-caption-text"><span class="ph">Platzhalter: Bildunterschrift – was App 01 macht, in einem Satz.</span></p>
+              <span class="more">Zum Projekt</span>
+            </div>
+          </div>
+        </a>
+      </article>
+      <!-- PLATZHALTER: App 02 – Name, Bildunterschrift, Screenshot (assets/platzhalter/app-02-screenshot.svg) -->
+      <article class="case case--split is-mirrored">
+        <figure class="photo"><img src="assets/platzhalter/app-02-screenshot.svg" alt="Platzhalter-Screenshot von App 02" width="1200" height="1400" loading="lazy" /></figure>
+        <div class="case-body">
+          <span class="case-num">02</span>
+          <h3>App 02</h3>
+          <p class="case-caption-text"><span class="ph">Platzhalter: Bildunterschrift – was App 02 macht, in einem Satz.</span></p>
+          <span class="case-meta">Projektseite folgt</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="wrap closing">
+      <h2>Sie haben ein Projekt im Kopf?</h2>
+      <a class="mail" href="mailto:info@zetac.de">info@zetac.de</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>Zetac · Digitalstudio in Paderborn</span>
+      <nav aria-label="Fußzeile">
+        <a href="about.html">Über uns</a>
+        <a href="projekte.html">Projekte</a>
+        <a href="services.html">Leistungen</a>
+        <a href="contact.html">Kontakt</a>
+        <a href="https://www.instagram.com/zetac.digital.consultancy/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </nav>
+      <span>© 2026 Zetac</span>
+    </div>
+  </footer>
+
+  <script src="site.js" defer></script>
+</body>
+</html>

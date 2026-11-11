@@ -1,182 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Zetac Services — Custom SaaS development, business software, websites, and dashboards." />
-  <title>Services — Zetac</title>
+  <title>Leistungen – Zetac</title>
+  <meta name="description" content="Individuelle App-Entwicklung, Onlineshops & Google-SEO und Social Media für Unternehmen." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- The arrow (→) is not in Google's default Inter subsets; load just that glyph. -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&text=%E2%86%92&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="zetac.css" />
   <link rel="icon" href="assets/logo.png" type="image/png" />
-  <link rel="apple-touch-icon" href="assets/logo.png" />
 </head>
 <body>
-  <header class="header" id="header">
-    <nav class="nav container">
-      <a href="index.html" class="logo" aria-label="Zetac">
-        <img src="assets/logo.png" alt="" class="logo-img" width="54" height="54" decoding="async" fetchpriority="high" />
-        <span class="logo-text">Zetac</span>
-      </a>
-      <div class="nav-right">
-        <ul class="nav-links" id="navLinks">
-          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-          <li><a href="about.html" data-i18n="nav.about">About</a></li>
-          <li><a href="services.html" data-i18n="nav.services">Services</a></li>
-          <li><a href="social.html" data-i18n="nav.social">Social</a></li>
-          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Zetac – zur Startseite"><img src="assets/logo.png" alt="" width="30" height="30" />Zetac</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menü</button>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <ul class="nav-list">
+          <li><a href="about.html">Über uns</a></li>
+          <li><a href="projekte.html">Projekte</a></li>
+          <li><a href="services.html" aria-current="page">Leistungen</a></li>
+          <li class="nav-cta"><a href="contact.html">Kontakt</a></li>
         </ul>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <div class="lang-switcher" role="group" aria-label="Language">
-          <button type="button" class="lang-btn is-active" data-lang="en">EN</button>
-          <button type="button" class="lang-btn" data-lang="de">DE</button>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
-  <div class="page-wrapper">
-  <main>
-    <div class="page-top">
-      <div class="container">
-        <span class="section-tag" data-i18n="services.tag">Services</span>
-        <h1 class="page-top-title" data-i18n="services.title">What We Build for You</h1>
-        <p class="page-top-desc" data-i18n="services.desc">Focused software solutions tailored to how your business actually works.</p>
-      </div>
-    </div>
-
-    <section class="section services">
-      <div class="services-bg" aria-hidden="true">
-        <div class="services-bg-orb services-bg-orb--1"></div>
-        <div class="services-bg-orb services-bg-orb--2"></div>
-      </div>
-      <div class="container">
-        <div class="services-grid">
-          <article class="service-card reveal-on-scroll" style="--reveal-index: 0">
-            <div class="service-card-surface">
-              <span class="service-number" aria-hidden="true">01</span>
-              <div class="service-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-              </div>
-              <h3 data-i18n="services.1.title">Custom SaaS Development</h3>
-              <p data-i18n="services.1.desc">We build subscription-based software products designed around your users, your workflows, and your growth plans — from MVP to full launch.</p>
-            </div>
-          </article>
-          <article class="service-card reveal-on-scroll" style="--reveal-index: 1">
-            <div class="service-card-surface">
-              <span class="service-number" aria-hidden="true">02</span>
-              <div class="service-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-              </div>
-              <h3 data-i18n="services.2.title">Business Software Solutions</h3>
-              <p data-i18n="services.2.desc">Replace spreadsheets and disconnected tools with software built for your team — inventory, CRM, booking systems, and more.</p>
-            </div>
-          </article>
-          <article class="service-card reveal-on-scroll" style="--reveal-index: 2">
-            <div class="service-card-surface">
-              <span class="service-number" aria-hidden="true">03</span>
-              <div class="service-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-              </div>
-              <h3 data-i18n="services.3.title">Website Development</h3>
-              <p data-i18n="services.3.desc">Modern, fast, and professional websites that represent your brand well and turn visitors into customers.</p>
-            </div>
-          </article>
-          <article class="service-card reveal-on-scroll" style="--reveal-index: 3">
-            <div class="service-card-surface">
-              <span class="service-number" aria-hidden="true">04</span>
-              <div class="service-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-              </div>
-              <h3 data-i18n="services.4.title">Dashboards & Internal Tools</h3>
-              <p data-i18n="services.4.desc">Clear dashboards and admin panels that give you real-time visibility into your data, operations, and performance.</p>
-            </div>
-          </article>
-          <article class="service-card reveal-on-scroll" style="--reveal-index: 4">
-            <div class="service-card-surface">
-              <span class="service-number" aria-hidden="true">05</span>
-              <div class="service-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M8 11h6M11 8v6"/></svg>
-              </div>
-              <h3 data-i18n="services.5.title">Google SEO</h3>
-              <p data-i18n="services.5.desc">Wir helfen dabei, die Sichtbarkeit Ihrer Website bei Google zu verbessern und optimieren Inhalte und Struktur für bessere Suchergebnisse.</p>
-            </div>
-          </article>
-          <article class="service-card reveal-on-scroll" style="--reveal-index: 5">
-            <div class="service-card-surface">
-              <span class="service-number" aria-hidden="true">06</span>
-              <div class="service-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
-              </div>
-              <h3 data-i18n="services.6.title">Marketing</h3>
-              <p data-i18n="services.6.desc">Wir unterstützen Unternehmen mit einfachen und wirksamen Online-Marketing-Strategien, um mehr Kunden zu erreichen.</p>
-            </div>
-          </article>
-        </div>
-      </div>
+  <main id="inhalt">
+    <section class="wrap page-head">
+      <h1>Leistungen</h1>
+      <p>Drei Dinge, die wir gut können.</p>
     </section>
 
-    <section class="section process" id="process">
-      <div class="container">
-        <div class="section-header section-header--center reveal-on-scroll">
-          <span class="section-tag" data-i18n="process.tag">How We Work</span>
-          <h2 class="section-title" data-i18n="process.title">From Idea to Launch in Four Steps</h2>
-          <p class="section-desc" data-i18n="process.desc">A straightforward process designed to keep you informed and involved at every stage.</p>
-        </div>
-        <div class="process-steps">
-          <div class="process-step reveal-on-scroll" style="--reveal-index: 0">
-            <div class="step-number">01</div>
-            <h3 data-i18n="process.1.title">You Tell Us Your Idea or Problem</h3>
-            <p data-i18n="process.1.desc">We start with a conversation. Share what you need, what's not working today, and what success looks like for your business.</p>
+    <section class="wrap" aria-label="Leistungen">
+      <ol class="services">
+        <li>
+          <h2>Individuelle App&#8209;Entwicklung</h2>
+          <div class="svc-text">
+            <p>Apps für Web und Smartphone, die genau zu Ihren Abläufen passen – vom ersten Entwurf bis zum Launch und darüber hinaus.</p>
+            <small>Zum Beispiel: Buchungssysteme, interne Tools, Kunden-Apps</small>
           </div>
-          <div class="process-connector" aria-hidden="true"></div>
-          <div class="process-step reveal-on-scroll" style="--reveal-index: 1">
-            <div class="step-number">02</div>
-            <h3 data-i18n="process.2.title">We Plan the Solution</h3>
-            <p data-i18n="process.2.desc">We map out features, timelines, and priorities together. You get a clear plan before any development begins.</p>
+        </li>
+        <li>
+          <h2>Onlineshops &amp; Google&#8209;SEO</h2>
+          <div class="svc-text">
+            <p>Onlineshops, die schnell laden, sich leicht pflegen lassen und bei Google gefunden werden.</p>
+            <small>Zum Beispiel: Shop-Aufbau, Produktseiten, lokale Suchmaschinenoptimierung</small>
           </div>
-          <div class="process-connector" aria-hidden="true"></div>
-          <div class="process-step reveal-on-scroll" style="--reveal-index: 2">
-            <div class="step-number">03</div>
-            <h3 data-i18n="process.3.title">We Build and Test It</h3>
-            <p data-i18n="process.3.desc">We develop your solution in focused iterations, share progress along the way, and test thoroughly before launch.</p>
+        </li>
+        <li>
+          <h2>Social Media für Unternehmen</h2>
+          <div class="svc-text">
+            <p>Auftritte auf Instagram und Co., die zu Ihrem Unternehmen passen – Konzept, Inhalte und regelmäßige Betreuung.</p>
+            <small>Zum Beispiel: Content-Planung, Beiträge, Kanalbetreuung</small>
           </div>
-          <div class="process-connector" aria-hidden="true"></div>
-          <div class="process-step reveal-on-scroll" style="--reveal-index: 3">
-            <div class="step-number">04</div>
-            <h3 data-i18n="process.4.title">We Launch and Support It</h3>
-            <p data-i18n="process.4.desc">We deploy your product, train your team if needed, and stay available for updates, fixes, and future improvements.</p>
-          </div>
-        </div>
-      </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="wrap closing">
+      <h2>Sie haben ein Projekt im Kopf?</h2>
+      <a class="mail" href="mailto:info@zetac.de">info@zetac.de</a>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="index.html" class="logo logo--footer" aria-label="Zetac">
-          <img src="assets/logo.png" alt="" class="logo-img" width="36" height="36" decoding="async" loading="lazy" />
-          <span class="logo-text">Zetac</span>
-        </a>
-        <p data-i18n="footer.tagline">Custom software and marketing solutions for growing businesses.</p>
-      </div>
-      <div class="footer-links">
-        <a href="about.html" data-i18n="nav.about">About</a>
-        <a href="services.html" data-i18n="nav.services">Services</a>
-        <a href="contact.html" data-i18n="nav.contact">Contact</a>
-        <a href="social.html" data-i18n="nav.social">Social</a>
-      </div>
-      <p class="footer-copy" data-i18n="footer.rights">&copy; 2026 Zetac. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>Zetac · Digitalstudio in Paderborn</span>
+      <nav aria-label="Fußzeile">
+        <a href="about.html">Über uns</a>
+        <a href="projekte.html">Projekte</a>
+        <a href="services.html">Leistungen</a>
+        <a href="contact.html">Kontakt</a>
+        <a href="https://www.instagram.com/zetac.digital.consultancy/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </nav>
+      <span>© 2026 Zetac</span>
     </div>
   </footer>
 
-  </div>
-
-  <script src="i18n.js"></script>
-  <script src="script.js"></script>
+  <script src="site.js" defer></script>
 </body>
 </html>

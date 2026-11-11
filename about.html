@@ -1,158 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="About Zetac — young, ambitious software company based in Paderborn, Germany." />
-  <title>About — Zetac</title>
+  <title>Über uns – Zetac</title>
+  <meta name="description" content="Zetac ist ein kleines Digitalstudio aus Paderborn." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- The arrow (→) is not in Google's default Inter subsets; load just that glyph. -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&text=%E2%86%92&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="zetac.css" />
   <link rel="icon" href="assets/logo.png" type="image/png" />
-  <link rel="apple-touch-icon" href="assets/logo.png" />
 </head>
 <body>
-  <header class="header" id="header">
-    <nav class="nav container">
-      <a href="index.html" class="logo" aria-label="Zetac">
-        <img src="assets/logo.png" alt="" class="logo-img" width="54" height="54" decoding="async" fetchpriority="high" />
-        <span class="logo-text">Zetac</span>
-      </a>
-      <div class="nav-right">
-        <ul class="nav-links" id="navLinks">
-          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-          <li><a href="about.html" data-i18n="nav.about">About</a></li>
-          <li><a href="services.html" data-i18n="nav.services">Services</a></li>
-          <li><a href="social.html" data-i18n="nav.social">Social</a></li>
-          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Zetac – zur Startseite"><img src="assets/logo.png" alt="" width="30" height="30" />Zetac</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menü</button>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <ul class="nav-list">
+          <li><a href="about.html" aria-current="page">Über uns</a></li>
+          <li><a href="projekte.html">Projekte</a></li>
+          <li><a href="services.html">Leistungen</a></li>
+          <li class="nav-cta"><a href="contact.html">Kontakt</a></li>
         </ul>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <div class="lang-switcher" role="group" aria-label="Language">
-          <button type="button" class="lang-btn is-active" data-lang="en">EN</button>
-          <button type="button" class="lang-btn" data-lang="de">DE</button>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
-  <div class="page-wrapper">
-  <main>
-    <div class="page-top">
-      <div class="container">
-        <span class="section-tag" data-i18n="about.tag">About Us</span>
-        <h1 class="page-top-title" data-i18n="about.title">Young, Ambitious, and Built to Deliver</h1>
-        <p class="page-top-desc" data-i18n="about.lead">Zetac is a young software and marketing company based in Paderborn, Germany. We help businesses turn ideas into working software — from custom SaaS products to internal tools and digital marketing support.</p>
-      </div>
-    </div>
+  <main id="inhalt">
+    <section class="wrap page-head">
+      <h1>Über uns</h1>
+      <p>Zwei Gründer, ein kleines Studio, kurze Wege.</p>
+    </section>
 
-    <section class="section about">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-content reveal-on-scroll" style="--reveal-index: 0">
-            <p data-i18n="about.p2">We combine technical expertise with a clear understanding of business needs. Our goal is simple: build solutions that save time, reduce manual work, and create real value for your company.</p>
-            <p data-i18n="about.p3">Whether you need a new web application, an automation workflow, or a polished company website, we work closely with you from the first conversation to launch and beyond.</p>
-            <div class="about-facts">
-              <div class="about-fact">
-                <span class="about-fact__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-                </span>
-                <span>Paderborn, Germany</span>
-              </div>
-              <div class="about-fact">
-                <span class="about-fact__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                </span>
-                <span data-i18n="hero.stat2.value">End-to-End</span>
-              </div>
-            </div>
-          </div>
+    <!-- PLATZHALTER: Teamfoto (Stockfoto von Unsplash). Ersetzen: assets/platzhalter/team-ueber-uns.jpg -->
+    <figure class="photo about-photo">
+      <img src="assets/platzhalter/team-ueber-uns.jpg" alt="Platzhalter: Team bei der Arbeit (Stockfoto)" width="2000" height="1312" />
+      <figcaption class="temp-tag"><b>Platzhalter</b> · Stockfoto, wird durch unser Teamfoto ersetzt</figcaption>
+    </figure>
 
-          <div class="about-team reveal-on-scroll" style="--reveal-index: 1">
-            <p class="about-team-label" data-i18n="about.team">Founding Team</p>
-            <div class="founders">
-              <div class="founder-card">
-                <div class="founder-avatar">BI</div>
-                <div class="founder-info">
-                  <h3>Bedirhan Inanli</h3>
-                  <p class="founder-role" data-i18n="about.role">Co-Founder</p>
-                  <p class="founder-title" data-i18n="about.title1">Wirtschaftsinformatiker</p>
-                </div>
-              </div>
-              <div class="founder-card">
-                <div class="founder-avatar">AH</div>
-                <div class="founder-info">
-                  <h3>Ahmet Hakan Düger</h3>
-                  <p class="founder-role" data-i18n="about.role">Co-Founder</p>
-                  <p class="founder-title" data-i18n="about.title2">Informatiker</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <section class="wrap section prose">
+      <h2 class="label">Wer wir sind</h2>
+      <div class="prose-text">
+        <p>Zetac ist ein junges Digitalstudio im Umfeld der Universität Paderborn. Wir helfen Unternehmen, aus Ideen funktionierende Software zu machen.</p>
+        <p>Wir verbinden Technik mit einem klaren Blick fürs Geschäft. Bei uns sprechen Sie direkt mit den Menschen, die Ihr Projekt umsetzen – vom ersten Gespräch bis nach dem Launch.</p>
       </div>
     </section>
 
-    <section class="section why-us">
-      <div class="container">
-        <div class="why-us-grid">
-          <div class="why-us-content why-reveal" style="--reveal-index: 0">
-            <span class="section-tag" data-i18n="why.tag">Why Zetac</span>
-            <h2 class="section-title" data-i18n="why.title">A Partner That Understands Both Tech and Business</h2>
-            <p class="section-desc" data-i18n="why.desc">We don't just write code — we build solutions that make sense for your goals, your team, and your budget.</p>
-          </div>
-          <ul class="why-list">
-            <li class="why-item why-reveal" style="--reveal-index: 1">
-              <div class="why-icon" aria-hidden="true">✓</div>
-              <div>
-                <h3 data-i18n="why.1.title">Young and Motivated Team</h3>
-                <p data-i18n="why.1.desc">We're hungry to prove ourselves and invested in every project we take on. Your success is our portfolio.</p>
-              </div>
-            </li>
-            <li class="why-item why-reveal" style="--reveal-index: 2">
-              <div class="why-icon" aria-hidden="true">✓</div>
-              <div>
-                <h3 data-i18n="why.2.title">Strong Technical and Business Background</h3>
-                <p data-i18n="why.2.desc">Computer science meets business informatics — so we understand both how to build software and why it matters commercially.</p>
-              </div>
-            </li>
-            <li class="why-item why-reveal" style="--reveal-index: 3">
-              <div class="why-icon" aria-hidden="true">✓</div>
-              <div>
-                <h3 data-i18n="why.4.title">Fast Communication</h3>
-                <p data-i18n="why.4.desc">Direct access to the people building your product. Quick responses, clear updates, no layers of account managers.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
+    <section class="wrap section people" aria-labelledby="team">
+      <div class="people-label">
+        <h2 id="team" class="label">Die Gründer</h2>
       </div>
+      <!-- PLATZHALTER: Porträt ersetzen: assets/platzhalter/portrait-bedirhan.svg -->
+      <article class="person">
+        <figure class="photo"><img src="assets/platzhalter/portrait-bedirhan.svg" alt="Platzhalter: Porträt von Bedirhan Inanli" width="900" height="1125" loading="lazy" /></figure>
+        <h3>Bedirhan Inanli</h3>
+        <p class="role">Mitgründer · Wirtschaftsinformatiker</p>
+        <p class="quote"><span class="ph">Platzhalter: ein persönlicher Satz von Bedirhan</span></p>
+      </article>
+      <!-- PLATZHALTER: Porträt ersetzen: assets/platzhalter/portrait-ahmet.svg -->
+      <article class="person">
+        <figure class="photo"><img src="assets/platzhalter/portrait-ahmet.svg" alt="Platzhalter: Porträt von Ahmet Hakan Düger" width="900" height="1125" loading="lazy" /></figure>
+        <h3>Ahmet Hakan Düger</h3>
+        <p class="role">Mitgründer · Informatiker</p>
+        <p class="quote"><span class="ph">Platzhalter: ein persönlicher Satz von Ahmet</span></p>
+      </article>
+    </section>
+
+    <section class="wrap closing">
+      <h2>Sie haben ein Projekt im Kopf?</h2>
+      <a class="mail" href="mailto:info@zetac.de">info@zetac.de</a>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="index.html" class="logo logo--footer" aria-label="Zetac">
-          <img src="assets/logo.png" alt="" class="logo-img" width="36" height="36" decoding="async" loading="lazy" />
-          <span class="logo-text">Zetac</span>
-        </a>
-        <p data-i18n="footer.tagline">Custom software and marketing solutions for growing businesses.</p>
-      </div>
-      <div class="footer-links">
-        <a href="about.html" data-i18n="nav.about">About</a>
-        <a href="services.html" data-i18n="nav.services">Services</a>
-        <a href="contact.html" data-i18n="nav.contact">Contact</a>
-        <a href="social.html" data-i18n="nav.social">Social</a>
-      </div>
-      <p class="footer-copy" data-i18n="footer.rights">&copy; 2026 Zetac. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>Zetac · Digitalstudio in Paderborn</span>
+      <nav aria-label="Fußzeile">
+        <a href="about.html">Über uns</a>
+        <a href="projekte.html">Projekte</a>
+        <a href="services.html">Leistungen</a>
+        <a href="contact.html">Kontakt</a>
+        <a href="https://www.instagram.com/zetac.digital.consultancy/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </nav>
+      <span>© 2026 Zetac</span>
     </div>
   </footer>
 
-  </div>
-
-  <script src="i18n.js"></script>
-  <script src="script.js"></script>
+  <script src="site.js" defer></script>
 </body>
 </html>
