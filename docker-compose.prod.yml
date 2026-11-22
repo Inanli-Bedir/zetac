@@ -15,6 +15,20 @@ services:
       - proxy
     restart: unless-stopped
 
+  # Kontakt form mailer: receives /api/kontakt from the web container (internal network
+  # only, no public port) and sends it to info@zetac.de via SMTP. SMTP settings come from
+  # .env next to this file (see mailer/env.example); never commit that file.
+  mailer:
+    build: ./mailer
+    image: zetac-mailer
+    container_name: zetac-mailer
+    env_file:
+      - path: .env
+        required: false
+    networks:
+      - default
+    restart: unless-stopped
+
 networks:
   # default: implicit per-stack bridge
   default:

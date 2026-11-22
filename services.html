@@ -13,73 +13,130 @@
   <link rel="stylesheet" href="zetac.css" />
   <link rel="icon" href="assets/logo.png" type="image/png" />
 </head>
-<body>
+<body class="page-blank page-leistungen">
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
 
-  <header class="site-header">
+  <!-- Same navbar as the homepage, shown filled from the start (see .page-blank in zetac.css). -->
+  <header class="site-header site-header--hero">
     <div class="wrap">
-      <a class="brand" href="index.html" aria-label="Zetac – zur Startseite"><img src="assets/logo.png" alt="" width="30" height="30" />Zetac</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menü</button>
+      <a class="brand" href="index.html" aria-label="Zetac – zur Startseite"><span class="brand-mark"><img src="assets/logo.png" alt="" width="30" height="30" /></span>Zetac</a>
       <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
         <ul class="nav-list">
-          <li><a href="about.html">Über uns</a></li>
           <li><a href="projekte.html">Projekte</a></li>
           <li><a href="services.html" aria-current="page">Leistungen</a></li>
+          <li><a href="about.html">Über uns</a></li>
           <li class="nav-cta"><a href="contact.html">Kontakt</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="inhalt">
-    <section class="wrap page-head">
-      <h1>Leistungen</h1>
-      <p>Drei Dinge, die wir gut können.</p>
+  <main id="inhalt" class="page-blank-main lx">
+
+    <!-- 1. Leistungen: three cards, directly below the navbar. Each card (title included, via
+         the stretched "Mehr erfahren" link) opens its service page: leistungen-app-entwicklung.html,
+         leistungen-onlineshops.html, leistungen-social-media.html. -->
+    <section class="lx-services" id="leistungen" aria-labelledby="leistungen-title">
+      <div class="wrap">
+        <h1 id="leistungen-title">Leistungen</h1>
+        <ul class="lx-cards">
+          <li class="lx-card lx-card--white">
+            <svg class="lx-card-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.75" width="11" height="18.5" rx="2.25"/><path d="M11.25 17.75h1.5"/></svg>
+            <h3>Individuelle App&#8209;Entwicklung</h3>
+            <p>Wir entwickeln Apps für Ihre Kunden und Ihr Team. Von der Onlinebuchung bis zum internen Werkzeug.</p>
+            <a class="lx-card-link" href="leistungen-app-entwicklung.html">Mehr erfahren<span class="visually-hidden">: Individuelle App-Entwicklung</span><span class="lx-card-corner" aria-hidden="true"><span class="lx-card-arrow"><span>→</span><span>→</span></span></span></a>
+          </li>
+          <li class="lx-card lx-card--sand">
+            <svg class="lx-card-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5.25 7.75h13.5l-.9 11.1a2 2 0 0 1-2 1.9H8.15a2 2 0 0 1-2-1.9z"/><path d="M9 7.75V7a3 3 0 0 1 6 0v.75"/><path d="M9 11.25a3 3 0 0 0 6 0"/></svg>
+            <h3>Onlineshops &amp; Google&#8209;SEO</h3>
+            <p>Wir erstellen Ihren Onlineshop und helfen, Ihre Produkte bei Google besser auffindbar zu machen.</p>
+            <a class="lx-card-link" href="leistungen-onlineshops.html">Mehr erfahren<span class="visually-hidden">: Onlineshops &amp; Google-SEO</span><span class="lx-card-corner" aria-hidden="true"><span class="lx-card-arrow"><span>→</span><span>→</span></span></span></a>
+          </li>
+          <li class="lx-card lx-card--navy">
+            <svg class="lx-card-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.75 5.75a2 2 0 0 1 2-2h8.5a2 2 0 0 1 2 2v5.5a2 2 0 0 1-2 2H9.5l-3.25 2.5v-2.5h-.5a2 2 0 0 1-2-2z"/><path d="M16.25 8.25h2a2 2 0 0 1 2 2v5.5a2 2 0 0 1-2 2h-.5v2.5l-3.25-2.5H10.5a2 2 0 0 1-1.8-1.13"/></svg>
+            <h3>Social Media für Unternehmen</h3>
+            <p>Wir planen Inhalte, erstellen Beiträge und betreuen Ihre Social-Media-Kanäle.</p>
+            <a class="lx-card-link" href="leistungen-social-media.html">Mehr erfahren<span class="visually-hidden">: Social Media für Unternehmen</span><span class="lx-card-corner" aria-hidden="true"><span class="lx-card-arrow"><span>→</span><span>→</span></span></span></a>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <section class="wrap" aria-label="Leistungen">
-      <ol class="services">
-        <li>
-          <h2>Individuelle App&#8209;Entwicklung</h2>
-          <div class="svc-text">
-            <p>Apps für Web und Smartphone, die genau zu Ihren Abläufen passen – vom ersten Entwurf bis zum Launch und darüber hinaus.</p>
-            <small>Zum Beispiel: Buchungssysteme, interne Tools, Kunden-Apps</small>
-          </div>
-        </li>
-        <li>
-          <h2>Onlineshops &amp; Google&#8209;SEO</h2>
-          <div class="svc-text">
-            <p>Onlineshops, die schnell laden, sich leicht pflegen lassen und bei Google gefunden werden.</p>
-            <small>Zum Beispiel: Shop-Aufbau, Produktseiten, lokale Suchmaschinenoptimierung</small>
-          </div>
-        </li>
-        <li>
-          <h2>Social Media für Unternehmen</h2>
-          <div class="svc-text">
-            <p>Auftritte auf Instagram und Co., die zu Ihrem Unternehmen passen – Konzept, Inhalte und regelmäßige Betreuung.</p>
-            <small>Zum Beispiel: Content-Planung, Beiträge, Kanalbetreuung</small>
-          </div>
-        </li>
-      </ol>
+    <!-- 2. Onlineshop. Visual: one photo with the laptop already in it, cropped from the
+         mockup without its text (assets/leistungen/shop-visual.webp, 1050 × 1024).
+         Headline, copy and button are live HTML below. -->
+    <section class="lx-hero lx-hero--shop" id="onlineshop" aria-labelledby="onlineshop-title">
+      <div class="lx-hero-copy">
+        <h2 id="onlineshop-title">Ihr Sortiment verdient einen eigenen Onlineshop.</h2>
+        <p>Wir bauen Ihren Shop und helfen, Ihre Produkte bei Google sichtbar zu machen.</p>
+        <a class="lx-btn" href="contact.html">Shop-Projekt besprechen <span class="lx-btn-arrow" aria-hidden="true">→</span></a>
+      </div>
+      <div class="lx-visual">
+        <img class="lx-shop-img" src="assets/leistungen/shop-visual.webp" alt="Frau im hellblauen Hemd an einem Holztisch vor einer Backsteinwand; vorne ein Laptop mit einer Onlineshop-Produktseite: Sneaker Court 01 für 89,00 €, Größenauswahl und Button „In den Warenkorb“" width="1050" height="1024" />
+      </div>
     </section>
 
-    <section class="wrap closing">
-      <h2>Sie haben ein Projekt im Kopf?</h2>
-      <a class="mail" href="mailto:info@zetac.de">info@zetac.de</a>
+    <!-- 3. App-Entwicklung. Visual: one image cropped from the mockup without its text
+         (assets/leistungen/app-visual.webp, 976 × 1024). Its cream area left of the
+         photo's diagonal edge matches the page background. -->
+    <section class="lx-hero lx-hero--app" id="app-entwicklung" aria-labelledby="app-title">
+      <div class="lx-hero-copy">
+        <h2 id="app-title">Ihre Idee. Eine App, die zu Ihnen passt.</h2>
+        <p>Wir entwickeln Apps, mit denen Ihre Kunden buchen und Ihr Team den Überblick behält.</p>
+        <a class="lx-btn" href="contact.html">App-Projekt besprechen <span class="lx-btn-arrow" aria-hidden="true">→</span></a>
+      </div>
+      <div class="lx-visual">
+        <img class="lx-app-img" src="assets/leistungen/app-visual.webp" alt="Person im blau gemusterten Hemd mit Smartphone, von hinten gesehen; davor ein großes Smartphone mit einer Buchungs-App: „Platz buchen“ mit freien Zeiten für Padel und Tennis und dem Button „Termin wählen“" width="976" height="1024" loading="lazy" />
+      </div>
     </section>
+
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <span>Zetac · Digitalstudio in Paderborn</span>
-      <nav aria-label="Fußzeile">
-        <a href="about.html">Über uns</a>
-        <a href="projekte.html">Projekte</a>
-        <a href="services.html">Leistungen</a>
-        <a href="contact.html">Kontakt</a>
-        <a href="https://www.instagram.com/zetac.digital.consultancy/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      </nav>
-      <span>© 2026 Zetac</span>
+  <!-- Site footer: gold band, navy panel with rounded top corners (see .zf in zetac.css). -->
+  <footer class="zf">
+    <div class="zf-panel">
+      <div class="zf-inner">
+        <div class="zf-cols">
+          <nav aria-labelledby="zf-nav-title">
+            <h2 class="zf-title" id="zf-nav-title">Navigation</h2>
+            <ul>
+              <li><a href="projekte.html">Projekte</a></li>
+              <li><a href="services.html">Leistungen</a></li>
+              <li><a href="about.html">Über uns</a></li>
+              <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+          </nav>
+          <nav aria-labelledby="zf-svc-title">
+            <h2 class="zf-title" id="zf-svc-title">Leistungen</h2>
+            <ul>
+              <li><a href="services.html#app-entwicklung">App-Entwicklung</a></li>
+              <li><a href="services.html#onlineshop">Onlineshops &amp; Google-SEO</a></li>
+              <li><a href="services.html#leistungen">Social Media</a></li>
+            </ul>
+          </nav>
+          <div>
+            <h2 class="zf-title">Kontakt</h2>
+            <ul>
+              <li><a href="mailto:info@zetac.de">info@zetac.de</a></li>
+              <li>Paderborn, Deutschland</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Brand: logo tile beside the wordmark, tagline directly below the wordmark. -->
+        <div class="zf-sign">
+          <a class="zf-brand" href="index.html" aria-label="Zetac – zur Startseite"><span class="zf-logo"><img src="assets/logo.png" alt="" width="1024" height="1024" loading="lazy" /></span><span class="zf-brand-text"><span class="zf-word" aria-hidden="true">Zetac</span><span class="zf-tag" lang="en" aria-hidden="true">Digital Consultancy</span></span></a>
+        </div>
+        <!-- Legal row. NOTE: impressum.html and datenschutz.html do not exist yet. -->
+        <div class="zf-small">
+          <span>© 2026 Zetac</span>
+          <nav aria-label="Rechtliches">
+            <ul class="zf-legal">
+              <li><a href="impressum.html">Impressum</a></li>
+              <li><a href="datenschutz.html">Datenschutz</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </div>
   </footer>
 

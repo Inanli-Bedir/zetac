@@ -1,8 +1,17 @@
 # Local development stack: Vite dev server with hot reload.
 #
-#   Start: docker compose up -d        (first run builds the image automatically)
 #   Open:  http://localhost:5173
-#   Stop:  docker compose down
+#   Start: double-click "Start Zetac.command", or Docker Desktop → Containers →
+#          zetac-website-dev → ▶, or: docker compose up -d --wait
+#   Logs:  docker compose logs -f
+#   Stop:  docker compose stop   (keeps the container, so auto-start keeps working)
+#
+# Auto-start: `restart: unless-stopped` brings the container back whenever Docker
+# Desktop starts — but only while the container EXISTS. `docker compose down`
+# deletes it; after that, start it once again with one of the commands above.
+#
+# Keep this repo OUT of iCloud-synced folders (Desktop/Documents): iCloud offloads
+# files, and Docker cannot download them, so Vite fails with "EIO: i/o error".
 #
 # Production does NOT use this file; it uses docker-compose.prod.yml:
 #   docker compose -f docker-compose.prod.yml up -d --build
@@ -13,20 +22,49 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
+    restart: unless-stopped
     ports:
       # Localhost only, so the dev server is not exposed on your network.
       - "127.0.0.1:5173:5173"
     volumes:
-      # Mount the source so edits are picked up without rebuilding the image.
+      # Mount the source so edits are picked up (hot reload) without rebuilding.
       - .:/app
-      # Keep the image's node_modules; don't let the host folder shadow it.
-      - /app/node_modules
+      # Linux node_modules live in a named volume (seeded from the image on first
+      # use), so the host folder never shadows them and they survive recreation.
+      - node_modules:/app/node_modules
     environment:
       # vite.config.js sets server.open: true; there is no browser in the container.
       BROWSER: none
+    # Reinstall dependencies only when package-lock.json changed since the last
+    # install, then start Vite on 0.0.0.0 so it is reachable from the host.
+    command:
+      - sh
+      - -c
+      - |
+        set -e
+        want=$$(sha256sum package-lock.json | cut -d' ' -f1)
+        have=$$(cat node_modules/.lock-hash 2>/dev/null || true)
+        if [ "$$want" != "$$have" ] || [ ! -x node_modules/.bin/vite ]; then
+          echo "Installing dependencies (package-lock.json changed)..."
+          npm ci --no-audit --no-fund
+          echo "$$want" > node_modules/.lock-hash
+        fi
+        exec npx vite --host 0.0.0.0 --port 5173 --strictPort
     healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:5173/"]
+      # Check the page AND its main CSS/JS, so a page that loads with broken
+      # assets shows up as "unhealthy" (and makes `up --wait` fail).
+      test:
+        - CMD-SHELL
+        - >-
+          wget -qO /dev/null http://127.0.0.1:5173/ &&
+          wget -qO /dev/null http://127.0.0.1:5173/zetac.css &&
+          wget -qO /dev/null http://127.0.0.1:5173/site.js
       interval: 10s
       timeout: 3s
-      start_period: 10s
       retries: 3
+      # Allow time for a dependency reinstall on first start.
+      start_period: 120s
+      start_interval: 2s
+
+volumes:
+  node_modules:

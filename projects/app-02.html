@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZeitTrack – Projekte – Zetac</title>
+  <meta name="description" content="ZeitTrack: Arbeitszeiten einfach erfassen und laufende Sitzungen im Blick behalten." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- The arrows (→ ↗) are not in Google's default Inter subsets; load just that glyph. -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&text=%E2%86%92%E2%86%97&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../zetac.css" />
+  <link rel="icon" href="../assets/logo.png" type="image/png" />
+</head>
+<body class="page-blank page-web">
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <!-- Shared navbar (same as projekte.html). -->
+  <header class="site-header site-header--hero">
+    <div class="wrap">
+      <a class="brand" href="../index.html" aria-label="Zetac – zur Startseite"><span class="brand-mark"><img src="../assets/logo.png" alt="" width="30" height="30" /></span>Zetac</a>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <ul class="nav-list">
+          <li><a href="../projekte.html" aria-current="page">Projekte</a></li>
+          <li><a href="../services.html">Leistungen</a></li>
+          <li><a href="../about.html">Über uns</a></li>
+          <li class="nav-cta"><a href="../contact.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- App-Projektseite: breadcrumb, title + lead/tags (.pw-head, as projekte-web.html),
+       then both real screenshots in full inside phone frames (.pa-*, zetac.css).
+       Screenshots: assets/projekte/apps/<name>-full.webp (original pixels) + -780.webp; status bar / Safari controls cropped. -->
+  <main id="inhalt" class="page-blank-main pw">
+    <nav class="pw-crumbs" aria-label="Brotkrumen">
+      <ol>
+        <li><a href="../projekte.html">Projekte</a></li>
+        <li><a href="../projekte.html#apps">Unsere Apps</a></li>
+        <li aria-current="page">ZeitTrack</li>
+      </ol>
+    </nav>
+
+    <header class="pw-head">
+      <h1 class="pw-title">ZeitTrack</h1>
+      <div class="pw-intro">
+        <p class="pw-lead">Arbeitszeiten einfach erfassen und laufende Sitzungen im Blick behalten.</p>
+        <ul class="pw-tags" aria-label="Schwerpunkte">
+          <li>Zeiterfassung</li>
+          <li>Timer</li>
+          <li>Sitzungen</li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="pa-views" aria-labelledby="pa-views-title">
+      <h2 class="pw-h2" id="pa-views-title">Einblicke in die App.</h2>
+      <div class="pa-grid">
+        <figure class="pa-shot">
+          <div class="pa-phone" style="--app-bg: #20293a"><img src="../assets/projekte/apps/zeittrack-dashboard-780.webp" srcset="../assets/projekte/apps/zeittrack-dashboard-780.webp 780w, ../assets/projekte/apps/zeittrack-dashboard-full.webp 1178w" sizes="(max-width: 600px) 82vw, 320px" alt="ZeitTrack: Dashboard mit Arbeits-Timer, Schaltfläche „Neue Sitzung starten“ und abgeschlossenen Sitzungen von heute" width="1178" height="1930" decoding="async" /></div>
+          <figcaption><strong>Dashboard</strong> Arbeits-Timer mit der Timer-Zeit von heute und den abgeschlossenen Sitzungen.</figcaption>
+        </figure>
+        <figure class="pa-shot">
+          <div class="pa-phone" style="--app-bg: #20293a"><img src="../assets/projekte/apps/zeittrack-timer-780.webp" srcset="../assets/projekte/apps/zeittrack-timer-780.webp 780w, ../assets/projekte/apps/zeittrack-timer-full.webp 1178w" sizes="(max-width: 600px) 82vw, 320px" alt="ZeitTrack: laufender Arbeits-Timer (Sitzung 3) mit aktueller Arbeitszeit, Pause- und Stopp-Schaltfläche und Segmenten" width="1178" height="1985" loading="lazy" decoding="async" /></div>
+          <figcaption><strong>Laufender Timer</strong> Aktuelle Arbeitszeit einer laufenden Sitzung, mit Pause und Stopp.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <p class="pw-cta-row pa-cta-row">
+      <a class="pw-cta pw-cta--out" href="../contact.html">Ein ähnliches Projekt besprechen <span class="pw-cta-arrow" aria-hidden="true">↗</span></a>
+      <a class="pw-cta" href="app-03.html">Nächste App: Kommunikationsplattform <span class="pw-cta-arrow" aria-hidden="true">→</span></a>
+    </p>
+  </main>
+
+  <!-- Site footer: gold band, navy panel with rounded top corners (see .zf in zetac.css). -->
+  <footer class="zf">
+    <div class="zf-panel">
+      <div class="zf-inner">
+        <div class="zf-cols">
+          <nav aria-labelledby="zf-nav-title">
+            <h2 class="zf-title" id="zf-nav-title">Navigation</h2>
+            <ul>
+              <li><a href="../projekte.html">Projekte</a></li>
+              <li><a href="../services.html">Leistungen</a></li>
+              <li><a href="../about.html">Über uns</a></li>
+              <li><a href="../contact.html">Kontakt</a></li>
+            </ul>
+          </nav>
+          <nav aria-labelledby="zf-svc-title">
+            <h2 class="zf-title" id="zf-svc-title">Leistungen</h2>
+            <ul>
+              <li><a href="../services.html#app-entwicklung">App-Entwicklung</a></li>
+              <li><a href="../services.html#onlineshop">Onlineshops &amp; Google-SEO</a></li>
+              <li><a href="../services.html#leistungen">Social Media</a></li>
+            </ul>
+          </nav>
+          <div>
+            <h2 class="zf-title">Kontakt</h2>
+            <ul>
+              <li><a href="mailto:info@zetac.de">info@zetac.de</a></li>
+              <li>Paderborn, Deutschland</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Brand: logo tile beside the wordmark, tagline directly below the wordmark. -->
+        <div class="zf-sign">
+          <a class="zf-brand" href="../index.html" aria-label="Zetac – zur Startseite"><span class="zf-logo"><img src="../assets/logo.png" alt="" width="1024" height="1024" loading="lazy" /></span><span class="zf-brand-text"><span class="zf-word" aria-hidden="true">Zetac</span><span class="zf-tag" lang="en" aria-hidden="true">Digital Consultancy</span></span></a>
+        </div>
+        <!-- Legal row. NOTE: impressum.html and datenschutz.html do not exist yet. -->
+        <div class="zf-small">
+          <span>© 2026 Zetac</span>
+          <nav aria-label="Rechtliches">
+            <ul class="zf-legal">
+              <li><a href="../impressum.html">Impressum</a></li>
+              <li><a href="../datenschutz.html">Datenschutz</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../site.js" defer></script>
+</body>
+</html>

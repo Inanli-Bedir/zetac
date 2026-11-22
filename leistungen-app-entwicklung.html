@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Individuelle App-Entwicklung – Leistungen – Zetac</title>
+  <meta name="description" content="Individuelle App-Entwicklung von Zetac: Apps für Ihr Unternehmen, Ihr Team oder Ihre Kunden – intern genutzt oder öffentlich verfügbar." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- The arrow (→) is not in Google's default Inter subsets; load just that glyph. -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&text=%E2%86%92&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="zetac.css" />
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+</head>
+<body class="page-blank page-service page-service--app">
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <!-- Same navbar as the homepage, shown filled from the start (see .page-blank in zetac.css). -->
+  <header class="site-header site-header--hero">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Zetac – zur Startseite"><span class="brand-mark"><img src="assets/logo.png" alt="" width="30" height="30" /></span>Zetac</a>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <ul class="nav-list">
+          <li><a href="projekte.html">Projekte</a></li>
+          <li><a href="services.html" aria-current="page">Leistungen</a></li>
+          <li><a href="about.html">Über uns</a></li>
+          <li class="nav-cta"><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Individuelle App-Entwicklung: photographic hero scene (ZeitTrack / StockFlow phones), two cards, three connected steps, link to projekte-apps.html, closing navy panel.
+       Shell and breadcrumb as on the project subpages (.pw); page styles: .sv-* in zetac.css.
+       Entrances once per element via site.js [data-reveal] (.sv-anim), off with reduced motion. -->
+  <main id="inhalt" class="page-blank-main pw sv">
+    <div class="sv-wrap">
+      <nav class="pw-crumbs" aria-label="Brotkrumen">
+        <ol>
+          <li><a href="services.html">Leistungen</a></li>
+          <li aria-current="page">Individuelle App-Entwicklung</li>
+        </ol>
+      </nav>
+
+      <!-- One photographic scene behind the whole hero (as on leistungen-onlineshops.html):
+           wall, plant, ZeitTrack + StockFlow phones on stone supports. Separate positioned
+           layer (.sv-scene); the section's bottom padding reserves the phone area so the text
+           sits on the quiet wall above. The wall above the photo was extended in the asset
+           (app-scene-*) from the photo's own wall pixels. -->
+      <section class="sv-hero sv-hero--scene" aria-labelledby="sv-title">
+        <div class="sv-scene">
+          <img src="assets/leistungen/app-scene-1536.webp" srcset="assets/leistungen/app-scene-960.webp 960w, assets/leistungen/app-scene-1536.webp 1536w" sizes="min(100vw, 1600px)" alt="Zwei Smartphones auf Steinsockeln mit den Apps ZeitTrack (laufender Arbeits-Timer) und StockFlow (Lagerübersicht)" width="1536" height="1544" fetchpriority="high" />
+        </div>
+        <div class="sv-hero-text sv-anim" data-reveal>
+          <h1 class="sv-h1" id="sv-title">Eine App, die zu Ihren Abläufen passt.</h1>
+          <p class="sv-lead">Für Ihr Unternehmen, Ihr Team oder Ihre Kunden – individuell entwickelt und passend eingesetzt.</p>
+          <a class="sv-btn" href="contact.html">App-Idee besprechen <span class="sv-btn-arrow" aria-hidden="true">→</span></a>
+        </div>
+      </section>
+
+      <section class="sv-section" aria-labelledby="sv-cards-title">
+        <h2 class="sv-h2 sv-anim" data-reveal id="sv-cards-title">Intern genutzt. Oder öffentlich verfügbar.</h2>
+        <ul class="sv-cards" data-reveal-stagger="140">
+          <li class="sv-card sv-anim" data-reveal><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><path d="M12 15.5v2"/></svg><h3>Interne Anwendungen</h3><p>Zugriff nur für Sie und berechtigte Mitarbeitende. Auf Wunsch mit bestehenden Systemen verbunden.</p></li>
+          <li class="sv-card sv-anim" data-reveal><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><h3>Apps für Ihre Kunden</h3><p>Öffentlich nutzbare Anwendungen mit begleiteter Veröffentlichung im App Store und bei Google Play.</p></li>
+        </ul>
+      </section>
+
+      <section class="sv-section sv-section--tight" aria-labelledby="sv-steps-title">
+        <h2 class="visually-hidden" id="sv-steps-title">Ablauf</h2>
+        <ol class="sv-steps" data-reveal-stagger="140">
+          <li class="sv-step sv-anim" data-reveal><span class="sv-step-mark" aria-hidden="true">01</span><h3>Idee verstehen</h3><p>Wir besprechen Ihre Anforderungen, Ziele und Abläufe.</p></li>
+          <li class="sv-step sv-anim" data-reveal><span class="sv-step-mark" aria-hidden="true">02</span><h3>Individuell entwickeln</h3><p>Wir konzipieren, gestalten und entwickeln eine App, die zu Ihrem Vorhaben passt.</p></li>
+          <li class="sv-step sv-anim" data-reveal><span class="sv-step-mark" aria-hidden="true">03</span><h3>Testen &amp; veröffentlichen</h3><p>Wir testen die Anwendung gemeinsam und begleiten die Bereitstellung – intern oder bei Bedarf in den App Stores.</p></li>
+        </ol>
+        <p class="sv-more sv-anim" data-reveal><a href="projekte-apps.html">Unsere Apps ansehen <span class="sv-btn-arrow" aria-hidden="true">→</span></a></p>
+      </section>
+
+      <section class="sv-close sv-anim" data-reveal aria-labelledby="sv-close-title">
+        <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+        <span class="sv-close-rule" aria-hidden="true"></span>
+        <div>
+          <h2 id="sv-close-title">Sie haben eine App-Idee?</h2>
+          <p>Lassen Sie uns darüber sprechen und die passende Lösung entwickeln.</p>
+        </div>
+        <a class="sv-btn" href="contact.html">App-Idee besprechen <span class="sv-btn-arrow" aria-hidden="true">→</span></a>
+      </section>
+    </div>
+  </main>
+
+  <!-- Site footer: gold band, navy panel with rounded top corners (see .zf in zetac.css). -->
+  <footer class="zf">
+    <div class="zf-panel">
+      <div class="zf-inner">
+        <div class="zf-cols">
+          <nav aria-labelledby="zf-nav-title">
+            <h2 class="zf-title" id="zf-nav-title">Navigation</h2>
+            <ul>
+              <li><a href="projekte.html">Projekte</a></li>
+              <li><a href="services.html">Leistungen</a></li>
+              <li><a href="about.html">Über uns</a></li>
+              <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+          </nav>
+          <nav aria-labelledby="zf-svc-title">
+            <h2 class="zf-title" id="zf-svc-title">Leistungen</h2>
+            <ul>
+              <li><a href="services.html#app-entwicklung">App-Entwicklung</a></li>
+              <li><a href="services.html#onlineshop">Onlineshops &amp; Google-SEO</a></li>
+              <li><a href="services.html#leistungen">Social Media</a></li>
+            </ul>
+          </nav>
+          <div>
+            <h2 class="zf-title">Kontakt</h2>
+            <ul>
+              <li><a href="mailto:info@zetac.de">info@zetac.de</a></li>
+              <li>Paderborn, Deutschland</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Brand: logo tile beside the wordmark, tagline directly below the wordmark. -->
+        <div class="zf-sign">
+          <a class="zf-brand" href="index.html" aria-label="Zetac – zur Startseite"><span class="zf-logo"><img src="assets/logo.png" alt="" width="1024" height="1024" loading="lazy" /></span><span class="zf-brand-text"><span class="zf-word" aria-hidden="true">Zetac</span><span class="zf-tag" lang="en" aria-hidden="true">Digital Consultancy</span></span></a>
+        </div>
+        <!-- Legal row. NOTE: impressum.html and datenschutz.html do not exist yet. -->
+        <div class="zf-small">
+          <span>© 2026 Zetac</span>
+          <nav aria-label="Rechtliches">
+            <ul class="zf-legal">
+              <li><a href="impressum.html">Impressum</a></li>
+              <li><a href="datenschutz.html">Datenschutz</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="site.js" defer></script>
+</body>
+</html>

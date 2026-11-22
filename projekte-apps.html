@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unsere Apps – Projekte – Zetac</title>
+  <meta name="description" content="Unsere Apps: StockFlow, ZeitTrack, Kommunikationsplattform sowie Markt- &amp; Verkaufsverwaltung – individuelle Lösungen für den Arbeitsalltag." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- The arrow (→) is not in Google's default Inter subsets; load just that glyph. -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&text=%E2%86%92&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="zetac.css" />
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+</head>
+<body class="page-blank page-web page-apps">
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <!-- Same navbar as the homepage. On these placeholder pages it is shown filled
+       from the start (see .page-blank in zetac.css). -->
+  <header class="site-header site-header--hero">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Zetac – zur Startseite"><span class="brand-mark"><img src="assets/logo.png" alt="" width="30" height="30" /></span>Zetac</a>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <ul class="nav-list">
+          <li><a href="projekte.html" aria-current="page">Projekte</a></li>
+          <li><a href="services.html">Leistungen</a></li>
+          <li><a href="about.html">Über uns</a></li>
+          <li class="nav-cta"><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Unsere Apps: breadcrumb, centred heading, then four app sections (phone carousel
+       left, text right; stacked on phones), separated by thin lines; closing CTA band.
+       Screenshots: assets/projekte/apps/*-780.webp / *-full.webp (latest edited versions,
+       same as the app cards on projekte.html). Logos: assets/projects/<app>/logo.png.
+       Entrance per section via site.js [data-reveal]: phone from the left, text from the
+       right (40px, 1.2s). Carousel script at the end of this file. Styles: .ua-* in zetac.css. -->
+  <main id="inhalt" class="page-blank-main pw ua">
+    <nav class="pw-crumbs" aria-label="Brotkrumen">
+      <ol>
+        <li><a href="projekte.html">Projekte</a></li>
+        <li aria-current="page">Unsere Apps</li>
+      </ol>
+    </nav>
+
+    <header class="ua-top">
+      <h1 class="ua-title">Unsere Apps<span class="ua-dot">.</span></h1>
+      <p class="ua-sub">Individuelle Lösungen für den Arbeitsalltag.</p>
+    </header>
+
+    <div class="ua-list">
+    <article class="ua-app" id="stockflow" aria-labelledby="stockflow-title" data-reveal>
+      <div class="ua-media">
+        <div class="ua-carousel" role="group" aria-roledescription="Karussell" aria-label="Screenshots StockFlow">
+          <div class="ua-phone">
+            <ul class="ua-track" tabindex="0" aria-label="Screenshots StockFlow, mit Pfeiltasten wechseln">
+                <li class="ua-slide" data-label="Übersicht" style="--app-bg: #f3f7fd"><img src="assets/projekte/apps/stockflow-uebersicht-780.webp" srcset="assets/projekte/apps/stockflow-uebersicht-780.webp 780w, assets/projekte/apps/stockflow-uebersicht-full.webp 1179w" sizes="(max-width: 760px) 260px, 290px" alt="StockFlow: Übersicht mit Produkten gesamt, aktuellem Bestand und letzten Lagerbewegungen" width="1179" height="2404" decoding="async" draggable="false" /></li>
+                <li class="ua-slide" data-label="Produkte" style="--app-bg: #f3f7fd"><img src="assets/projekte/apps/stockflow-produkte-780.webp" srcset="assets/projekte/apps/stockflow-produkte-780.webp 780w, assets/projekte/apps/stockflow-produkte-full.webp 1179w" sizes="(max-width: 760px) 260px, 290px" alt="StockFlow: Produktverwaltung mit Produktkatalog, PDF-Export und Produkttabelle" width="1179" height="2404" loading="lazy" decoding="async" draggable="false" /></li>
+                <li class="ua-slide" data-label="Lagerbewegungen" style="--app-bg: #f0f6fe"><img src="assets/projekte/apps/stockflow-lagerbewegungen-780.webp" srcset="assets/projekte/apps/stockflow-lagerbewegungen-780.webp 780w, assets/projekte/apps/stockflow-lagerbewegungen-full.webp 852w" sizes="(max-width: 760px) 260px, 290px" alt="StockFlow: Lagerbewegungen mit neuer Buchung – Produkt, aktueller Bestand, Wareneingang oder Warenausgang, Menge und Buchungsdatum" width="852" height="1846" loading="lazy" decoding="async" draggable="false" /></li>
+            </ul>
+          </div>
+          <div class="ua-controls">
+            <button class="pj-nav ua-nav" type="button" data-dir="-1" aria-label="Vorheriger Screenshot: StockFlow"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></button>
+            <div class="pw-dots ua-dots" role="group" aria-label="Screenshot wählen: StockFlow"></div>
+            <button class="pj-nav ua-nav" type="button" data-dir="1" aria-label="Nächster Screenshot: StockFlow"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+          </div>
+        </div>
+      </div>
+      <div class="ua-text">
+        <header class="ua-head">
+          <img class="ua-logo" src="assets/projects/stockflow/logo.png" alt="" width="90" height="88" loading="lazy" decoding="async" />
+          <div>
+            <h2 class="ua-name" id="stockflow-title">StockFlow</h2>
+            <p class="ua-cat">Lagerverwaltung</p>
+          </div>
+        </header>
+        <p class="ua-intro">Ihr Lager. Klar organisiert.</p>
+        <ul class="ua-tags" aria-label="Funktionen"><li>Produkte</li><li>Bestände</li><li>Lagerbewegungen</li></ul>
+        <h3 class="ua-about">Über die Anwendung</h3>
+        <p class="ua-desc">StockFlow bündelt Produkte, Bestände und Lagerbewegungen an einem Ort. Unternehmen können ihren Produktkatalog pflegen, Bestandsänderungen erfassen und Lageraktivitäten nachvollziehen. Eine zentrale Übersicht erleichtert den täglichen Umgang mit Waren und Beständen.</p>
+      </div>
+    </article>
+    <article class="ua-app" id="zeittrack" aria-labelledby="zeittrack-title" data-reveal>
+      <div class="ua-media">
+        <div class="ua-carousel" role="group" aria-roledescription="Karussell" aria-label="Screenshots ZeitTrack">
+          <div class="ua-phone">
+            <ul class="ua-track" tabindex="0" aria-label="Screenshots ZeitTrack, mit Pfeiltasten wechseln">
+                <li class="ua-slide" data-label="Dashboard" style="--app-bg: #20293a"><img src="assets/projekte/apps/zeittrack-dashboard-780.webp" srcset="assets/projekte/apps/zeittrack-dashboard-780.webp 780w, assets/projekte/apps/zeittrack-dashboard-full.webp 1178w" sizes="(max-width: 760px) 260px, 290px" alt="ZeitTrack: Dashboard mit Arbeits-Timer und abgeschlossenen Sitzungen" width="1178" height="1930" decoding="async" draggable="false" /></li>
+                <li class="ua-slide" data-label="Laufender Timer" style="--app-bg: #20293a"><img src="assets/projekte/apps/zeittrack-timer-780.webp" srcset="assets/projekte/apps/zeittrack-timer-780.webp 780w, assets/projekte/apps/zeittrack-timer-full.webp 1178w" sizes="(max-width: 760px) 260px, 290px" alt="ZeitTrack: laufender Timer mit aktueller Arbeitszeit, Pause und Stopp" width="1178" height="1985" loading="lazy" decoding="async" draggable="false" /></li>
+                <li class="ua-slide" data-label="Anmeldung" style="--app-bg: #0f172a"><img src="assets/projekte/apps/zeittrack-anmeldung-780.webp" srcset="assets/projekte/apps/zeittrack-anmeldung-780.webp 780w, assets/projekte/apps/zeittrack-anmeldung-full.webp 1179w" sizes="(max-width: 760px) 260px, 290px" alt="ZeitTrack: Anmeldung mit E-Mail und Passwort" width="1179" height="2556" loading="lazy" decoding="async" draggable="false" /></li>
+                <li class="ua-slide" data-label="Admin Dashboard" style="--app-bg: #192032"><img src="assets/projekte/apps/zeittrack-admin-780.webp" srcset="assets/projekte/apps/zeittrack-admin-780.webp 780w, assets/projekte/apps/zeittrack-admin-full.webp 1179w" sizes="(max-width: 760px) 260px, 290px" alt="ZeitTrack: Admin Dashboard mit aktiven Mitarbeitern, Stunden heute und diese Woche sowie Stunden pro Mitarbeiter und Baustelle" width="1179" height="2290" loading="lazy" decoding="async" draggable="false" /></li>
+            </ul>
+          </div>
+          <div class="ua-controls">
+            <button class="pj-nav ua-nav" type="button" data-dir="-1" aria-label="Vorheriger Screenshot: ZeitTrack"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></button>
+            <div class="pw-dots ua-dots" role="group" aria-label="Screenshot wählen: ZeitTrack"></div>
+            <button class="pj-nav ua-nav" type="button" data-dir="1" aria-label="Nächster Screenshot: ZeitTrack"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+          </div>
+        </div>
+      </div>
+      <div class="ua-text">
+        <header class="ua-head">
+          <img class="ua-logo" src="assets/projects/timetrack/logo.png" alt="" width="512" height="507" loading="lazy" decoding="async" />
+          <div>
+            <h2 class="ua-name" id="zeittrack-title">ZeitTrack</h2>
+            <p class="ua-cat">Zeiterfassung</p>
+          </div>
+        </header>
+        <p class="ua-intro">Arbeitszeiten einfach im Blick.</p>
+        <ul class="ua-tags" aria-label="Funktionen"><li>Timer</li><li>Arbeitssitzungen</li><li>Zeitübersicht</li></ul>
+        <h3 class="ua-about">Über die Anwendung</h3>
+        <p class="ua-desc">Mit ZeitTrack lassen sich Arbeitszeiten per Timer oder manuell erfassen. Arbeitssitzungen können gestartet, pausiert und beendet werden. Abgeschlossene Sitzungen und erfasste Zeiten werden übersichtlich dargestellt.</p>
+      </div>
+    </article>
+    <article class="ua-app" id="kommunikationsplattform" aria-labelledby="kommunikationsplattform-title" data-reveal>
+      <div class="ua-media">
+        <div class="ua-carousel" role="group" aria-roledescription="Karussell" aria-label="Screenshots Kommunikationsplattform">
+          <div class="ua-phone">
+            <ul class="ua-track" tabindex="0" aria-label="Screenshots Kommunikationsplattform, mit Pfeiltasten wechseln">
+                <li class="ua-slide" data-label="Anmeldung" style="--app-bg: #f8fafb"><img src="assets/projekte/apps/kommunikation-anmeldung-780.webp" srcset="assets/projekte/apps/kommunikation-anmeldung-780.webp 780w, assets/projekte/apps/kommunikation-anmeldung-full.webp 1179w" sizes="(max-width: 760px) 260px, 290px" alt="Kommunikationsplattform: Anmeldung mit E-Mail-Adresse und Passwort" width="1179" height="2290" decoding="async" draggable="false" /></li>
+                <li class="ua-slide" data-label="Kontakte" style="--app-bg: #ffffff"><img src="assets/projekte/apps/kommunikation-kontakte-780.webp" srcset="assets/projekte/apps/kommunikation-kontakte-780.webp 780w, assets/projekte/apps/kommunikation-kontakte-full.webp 1170w" sizes="(max-width: 760px) 260px, 290px" alt="Kommunikationsplattform: Benachrichtigungen und Kontakte" width="1170" height="2240" loading="lazy" decoding="async" draggable="false" /></li>
+                <li class="ua-slide" data-label="Mein Kalender" style="--app-bg: #ffffff"><img src="assets/projekte/apps/kommunikation-kalender-780.webp" srcset="assets/projekte/apps/kommunikation-kalender-780.webp 780w, assets/projekte/apps/kommunikation-kalender-full.webp 1179w" sizes="(max-width: 760px) 260px, 290px" alt="Kommunikationsplattform: Mein Kalender mit Monatsansicht September 2026, freien und belegten Tagen sowie Zeit eintragen" width="1179" height="2404" loading="lazy" decoding="async" draggable="false" /></li>
+            </ul>
+          </div>
+          <div class="ua-controls">
+            <button class="pj-nav ua-nav" type="button" data-dir="-1" aria-label="Vorheriger Screenshot: Kommunikationsplattform"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></button>
+            <div class="pw-dots ua-dots" role="group" aria-label="Screenshot wählen: Kommunikationsplattform"></div>
+            <button class="pj-nav ua-nav" type="button" data-dir="1" aria-label="Nächster Screenshot: Kommunikationsplattform"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+          </div>
+        </div>
+      </div>
+      <div class="ua-text">
+        <header class="ua-head">
+          <img class="ua-logo" src="assets/projects/kommunikationsapp/logo.png" alt="" width="88" height="84" loading="lazy" decoding="async" />
+          <div>
+            <h2 class="ua-name" id="kommunikationsplattform-title">Kommunikationsplattform</h2>
+            <p class="ua-cat">Kommunikation</p>
+          </div>
+        </header>
+        <p class="ua-intro">Nachrichten und Kontakte an einem Ort.</p>
+        <ul class="ua-tags" aria-label="Funktionen"><li>Nachrichten</li><li>Kontakte</li><li>Benachrichtigungen</li></ul>
+        <h3 class="ua-about">Über die Anwendung</h3>
+        <p class="ua-desc">Die Kommunikationsplattform bündelt Nachrichten, Kontakte und Benachrichtigungen in einer übersichtlichen Anwendung. Nutzer können sich anmelden und auf ihre Kontakte und den persönlichen Austausch zugreifen.</p>
+      </div>
+    </article>
+    <article class="ua-app" id="markt-verkaufsverwaltung" aria-labelledby="markt-verkaufsverwaltung-title" data-reveal>
+      <div class="ua-media">
+        <div class="ua-carousel" role="group" aria-roledescription="Karussell" aria-label="Screenshots Markt- &amp; Verkaufsverwaltung">
+          <div class="ua-phone">
+            <ul class="ua-track" tabindex="0" aria-label="Screenshots Markt- &amp; Verkaufsverwaltung, mit Pfeiltasten wechseln">
+                <li class="ua-slide" data-label="Kasse" style="--app-bg: #f1f2f5"><img src="assets/projekte/apps/markt-kasse-780.webp" srcset="assets/projekte/apps/markt-kasse-780.webp 780w, assets/projekte/apps/markt-kasse-full.webp 852w" sizes="(max-width: 760px) 260px, 290px" alt="Markt- &amp; Verkaufsverwaltung: Kasse mit Marktauswahl, Zeitraumfiltern und PDF-Export je Markt" width="852" height="1810" decoding="async" draggable="false" /></li>
+                <li class="ua-slide" data-label="Produkte" style="--app-bg: #f1f2f5"><img src="assets/projekte/apps/markt-produkte-780.webp" srcset="assets/projekte/apps/markt-produkte-780.webp 780w, assets/projekte/apps/markt-produkte-full.webp 852w" sizes="(max-width: 760px) 260px, 290px" alt="Markt- &amp; Verkaufsverwaltung: Produktverwaltung mit Verkaufs- und Einkaufspreis" width="852" height="1810" loading="lazy" decoding="async" draggable="false" /></li>
+                <li class="ua-slide" data-label="Ausgaben" style="--app-bg: #f2f3f4"><img src="assets/projekte/apps/markt-ausgaben-780.webp" srcset="assets/projekte/apps/markt-ausgaben-780.webp 780w, assets/projekte/apps/markt-ausgaben-full.webp 852w" sizes="(max-width: 760px) 260px, 290px" alt="Markt- &amp; Verkaufsverwaltung: Ausgaben erfassen mit Betrag, Kategorie und Markt sowie Liste der Ausgaben je Markt" width="852" height="1810" loading="lazy" decoding="async" draggable="false" /></li>
+            </ul>
+          </div>
+          <div class="ua-controls">
+            <button class="pj-nav ua-nav" type="button" data-dir="-1" aria-label="Vorheriger Screenshot: Markt- &amp; Verkaufsverwaltung"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></button>
+            <div class="pw-dots ua-dots" role="group" aria-label="Screenshot wählen: Markt- &amp; Verkaufsverwaltung"></div>
+            <button class="pj-nav ua-nav" type="button" data-dir="1" aria-label="Nächster Screenshot: Markt- &amp; Verkaufsverwaltung"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+          </div>
+        </div>
+      </div>
+      <div class="ua-text">
+        <header class="ua-head">
+          <img class="ua-logo" src="assets/projects/markt/logo.png" alt="Markt- &amp; Verkaufsverwaltung Logo" width="512" height="512" loading="lazy" decoding="async" />
+          <div>
+            <h2 class="ua-name" id="markt-verkaufsverwaltung-title">Markt- &amp; Verkaufsverwaltung</h2>
+            <p class="ua-cat">Verkaufsverwaltung</p>
+          </div>
+        </header>
+        <p class="ua-intro">Märkte und Verkäufe zentral verwalten.</p>
+        <ul class="ua-tags" aria-label="Funktionen"><li>Märkte</li><li>Produkte</li><li>Verkäufe</li><li>Ausgaben</li></ul>
+        <h3 class="ua-about">Über die Anwendung</h3>
+        <p class="ua-desc">Die Anwendung unterstützt die Organisation von Märkten, Produkten, Verkäufen und Ausgaben. Markttermine lassen sich auswählen und zugehörige Informationen zentral verwalten. So bleiben die verschiedenen Bereiche des Verkaufsalltags übersichtlich zusammengeführt.</p>
+      </div>
+    </article>
+    </div>
+
+    <section class="ua-close" aria-labelledby="ua-close-title">
+      <h2 class="ua-close-title" id="ua-close-title">Eine App für Ihr Unternehmen?</h2>
+      <a class="ua-close-btn" href="contact.html">Projekt besprechen <span class="ua-close-arrow" aria-hidden="true">→</span></a>
+    </section>
+  </main>
+
+  <!-- Site footer: gold band, navy panel with rounded top corners (see .zf in zetac.css). -->
+  <footer class="zf">
+    <div class="zf-panel">
+      <div class="zf-inner">
+        <div class="zf-cols">
+          <nav aria-labelledby="zf-nav-title">
+            <h2 class="zf-title" id="zf-nav-title">Navigation</h2>
+            <ul>
+              <li><a href="projekte.html">Projekte</a></li>
+              <li><a href="services.html">Leistungen</a></li>
+              <li><a href="about.html">Über uns</a></li>
+              <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+          </nav>
+          <nav aria-labelledby="zf-svc-title">
+            <h2 class="zf-title" id="zf-svc-title">Leistungen</h2>
+            <ul>
+              <li><a href="services.html#app-entwicklung">App-Entwicklung</a></li>
+              <li><a href="services.html#onlineshop">Onlineshops &amp; Google-SEO</a></li>
+              <li><a href="services.html#leistungen">Social Media</a></li>
+            </ul>
+          </nav>
+          <div>
+            <h2 class="zf-title">Kontakt</h2>
+            <ul>
+              <li><a href="mailto:info@zetac.de">info@zetac.de</a></li>
+              <li>Paderborn, Deutschland</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Brand: logo tile beside the wordmark, tagline directly below the wordmark. -->
+        <div class="zf-sign">
+          <a class="zf-brand" href="index.html" aria-label="Zetac – zur Startseite"><span class="zf-logo"><img src="assets/logo.png" alt="" width="1024" height="1024" loading="lazy" /></span><span class="zf-brand-text"><span class="zf-word" aria-hidden="true">Zetac</span><span class="zf-tag" lang="en" aria-hidden="true">Digital Consultancy</span></span></a>
+        </div>
+        <!-- Legal row. NOTE: impressum.html and datenschutz.html do not exist yet. -->
+        <div class="zf-small">
+          <span>© 2026 Zetac</span>
+          <nav aria-label="Rechtliches">
+            <ul class="zf-legal">
+              <li><a href="impressum.html">Impressum</a></li>
+              <li><a href="datenschutz.html">Datenschutz</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="site.js" defer></script>
+  <script>
+    // Direct links to an app (#stockflow, #zeittrack, #kommunikationsplattform,
+    // #markt-verkaufsverwaltung), also after a refresh or a same-page hash change:
+    // land with the section just below the fixed navbar. If the section is taller than
+    // the screen (phones: phone above the text), scroll further so the app's heading
+    // and introduction are fully visible instead. CSS scroll-margin-top is the no-JS fallback.
+    (function () {
+      var header = document.querySelector('.site-header');
+      function target() {
+        var id = decodeURIComponent(location.hash.slice(1));
+        var el = id && document.getElementById(id);
+        return el && el.classList.contains('ua-app') ? el : null;
+      }
+      function land() {
+        var el = target();
+        if (!el) return;
+        var gap = 12;
+        var navBottom = header ? header.getBoundingClientRect().bottom : 0;
+        var y = window.scrollY;
+        var top = el.getBoundingClientRect().top + y - navBottom - gap;
+        var head = el.querySelector('.ua-head').getBoundingClientRect().top + y;
+        var intro = el.querySelector('.ua-intro').getBoundingClientRect().bottom + y;
+        // Heading + intro must fit between the navbar and the bottom of the screen.
+        if (intro + gap * 2 - top > window.innerHeight - navBottom) {
+          top = Math.min(head - navBottom - gap * 2, intro + gap * 2 - window.innerHeight);
+        }
+        window.scrollTo({ top: Math.max(0, top), behavior: 'instant' });
+      }
+      if (target()) {
+        // A refresh must land on the section again, not on the browser's saved position.
+        if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+        land();
+        // Re-check once fonts and images have settled (layout can shift slightly, e.g. a
+        // long title re-wrapping), until the visitor scrolls or interacts themselves.
+        window.addEventListener('load', land);
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(land);
+        if ('ResizeObserver' in window) {
+          var ro = new ResizeObserver(function () { land(); });
+          ro.observe(document.body);
+          var stop = function () {
+            ro.disconnect();
+            ['wheel', 'touchstart', 'keydown', 'pointerdown'].forEach(function (t) { window.removeEventListener(t, stop, true); });
+          };
+          ['wheel', 'touchstart', 'keydown', 'pointerdown'].forEach(function (t) { window.addEventListener(t, stop, { capture: true, passive: true }); });
+          setTimeout(stop, 4000);
+        }
+      }
+      window.addEventListener('hashchange', land);
+    })();
+  </script>
+  <script>
+    // App carousels: one per section, each with its own state and controls. The phone
+    // frame stays put; screenshots slide inside it via native horizontal scroll-snap
+    // (touch swipe — the browser keeps horizontal swipes apart from vertical scrolling
+    // inside a tall screenshot), mouse dragging, ←/→/Home/End, gold arrows (wrap
+    // around) and pagination dots. Manual only, no autoplay. Without JS the screenshots
+    // can still be swiped/scrolled natively.
+    (function () {
+      var smooth = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+
+      document.querySelectorAll('.ua-carousel').forEach(function (root) {
+        var track = root.querySelector('.ua-track');
+        var slides = root.querySelectorAll('.ua-slide');
+        var dotsBox = root.querySelector('.ua-dots');
+        var n = slides.length, index = 0, dots = [];
+        slides.forEach(function (sl, i) {
+          var label = sl.dataset.label || 'Ansicht ' + (i + 1);
+          sl.setAttribute('role', 'group');
+          sl.setAttribute('aria-roledescription', 'Folie');
+          sl.setAttribute('aria-label', (i + 1) + ' von ' + n + ': ' + label);
+          var d = document.createElement('button');
+          d.type = 'button';
+          d.className = 'pw-dot';
+          d.setAttribute('aria-label', (i + 1) + ' von ' + n + ': ' + label);
+          d.addEventListener('click', function () { go(i); });
+          dotsBox.appendChild(d);
+          dots.push(d);
+        });
+        function width() { return track.clientWidth; }
+        function mark() {
+          dots.forEach(function (d, k) { d.setAttribute('aria-current', k === index ? 'true' : 'false'); });
+          slides.forEach(function (sl, k) { sl.setAttribute('aria-hidden', String(k !== index)); sl.inert = k !== index; });
+        }
+        function go(i, behavior) {
+          index = (i + n) % n;
+          track.scrollTo({ left: index * width(), behavior: behavior || smooth });
+          mark();
+        }
+        // Native swipes: the slide nearest to the scroll position becomes current.
+        var t = null;
+        track.addEventListener('scroll', function () {
+          if (drag) return;
+          clearTimeout(t);
+          t = setTimeout(function () {
+            var i = Math.round(track.scrollLeft / width());
+            if (i !== index) { index = i; mark(); }
+          }, 60);
+        }, { passive: true });
+        root.querySelectorAll('.ua-nav').forEach(function (b) {
+          b.addEventListener('click', function () { go(index + Number(b.dataset.dir)); });
+        });
+        track.addEventListener('keydown', function (e) {
+          var map = { ArrowLeft: index - 1, ArrowRight: index + 1, Home: 0, End: n - 1 };
+          if (!(e.key in map)) return;
+          e.preventDefault();
+          go(map[e.key]);
+        });
+        // Mouse dragging (touch and pen use native scrolling).
+        var drag = null;
+        track.addEventListener('pointerdown', function (e) {
+          if (e.pointerType !== 'mouse' || e.button !== 0) return;
+          drag = { x: e.clientX, left: track.scrollLeft, start: index, moved: false };
+        });
+        track.addEventListener('pointermove', function (e) {
+          if (!drag) return;
+          var dx = e.clientX - drag.x;
+          if (!drag.moved) {
+            if (Math.abs(dx) < 6) return;
+            drag.moved = true;
+            track.classList.add('is-dragging');
+            track.setPointerCapture(e.pointerId);
+          }
+          track.scrollLeft = drag.left - dx;
+        });
+        function endDrag(e) {
+          if (!drag) return;
+          var dx = e.clientX - drag.x, d = drag;
+          drag = null;
+          if (!d.moved) return;
+          track.classList.remove('is-dragging');
+          // Dragging stops at the first/last screenshot (like touch); only the arrows wrap.
+          go(Math.max(0, Math.min(n - 1, d.start + (Math.abs(dx) > Math.min(60, width() * 0.18) ? (dx < 0 ? 1 : -1) : 0))));
+        }
+        track.addEventListener('pointerup', endDrag);
+        track.addEventListener('pointercancel', endDrag);
+        // Keep the current slide aligned when the phone changes size.
+        if ('ResizeObserver' in window) new ResizeObserver(function () { go(index, 'auto'); }).observe(track);
+        mark();
+      });
+    })();
+  </script>
+</body>
+</html>

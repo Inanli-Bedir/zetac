@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unsere Webprojekte – Projekte – Zetac</title>
+  <meta name="description" content="Einblicke in die Websites und Onlineshops, die wir umsetzen." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- The arrows (→ ↗) are not in Google's default Inter subsets; load just that glyph. -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&text=%E2%86%92%E2%86%97&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="zetac.css" />
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+</head>
+<body class="page-blank page-web">
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <!-- Same navbar as the homepage. On these placeholder pages it is shown filled
+       from the start (see .page-blank in zetac.css). -->
+  <header class="site-header site-header--hero">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Zetac – zur Startseite"><span class="brand-mark"><img src="assets/logo.png" alt="" width="30" height="30" /></span>Zetac</a>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <ul class="nav-list">
+          <li><a href="projekte.html" aria-current="page">Projekte</a></li>
+          <li><a href="services.html">Leistungen</a></li>
+          <li><a href="about.html">Über uns</a></li>
+          <li class="nav-cta"><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Webprojekte: one case (Onlineshop). Layout: breadcrumb, heading + lead/tags, wide
+       homepage screenshot (hero crop), numbered "Was wir umgesetzt haben", then phone + product page side
+       by side (stacked on phones). Styles: .pw-* in zetac.css.
+       All screenshots are real; replace them in place (keep file names or update src):
+         assets/projekte/web/onlineshop-hero-*.webp      (lossless; full 2852 × 1631 from
+                                                          "ein online shop.png", + 1600w/1000w)
+         Desktop carousel (in this order): slide-kollektion-*, detail-produkt-*,
+                           slide-warenkorb-*, detail-empfehlungen-* (.webp, lossless)
+         assets/projekte/web/mobil-*.webp                (iPhone screenshots, 1179 × 2556 + 780w) -->
+  <main id="inhalt" class="page-blank-main pw">
+    <nav class="pw-crumbs" aria-label="Brotkrumen">
+      <ol>
+        <li><a href="projekte.html">Projekte</a></li>
+        <li aria-current="page">Webprojekte</li>
+      </ol>
+    </nav>
+
+    <!-- Intro: title left; divider; short lead and project tags right (stacked on phones). -->
+    <header class="pw-head">
+      <h1 class="pw-title">Ein Onlineshop, den wir umgesetzt haben.</h1>
+      <div class="pw-intro">
+        <p class="pw-lead">Klare Struktur. Übersichtliche Produkte. Auf jedem Gerät.</p>
+        <ul class="pw-tags" aria-label="Schwerpunkte">
+          <li>Webdesign</li>
+          <li>Onlineshop</li>
+          <li>Responsive</li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Homepage screenshot, cropped in CSS to the shop's navigation + hero
+         (top 1132 of 1631 px); the full image is unchanged. -->
+    <figure class="pw-shot pw-shot--hero">
+      <div class="pw-browser">
+        <div class="pw-browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+        <img src="assets/projekte/web/onlineshop-hero-2852.webp" srcset="assets/projekte/web/onlineshop-hero-1000.webp 1000w, assets/projekte/web/onlineshop-hero-1600.webp 1600w, assets/projekte/web/onlineshop-hero-2852.webp 2852w" sizes="(max-width: 760px) calc(100vw - 56px), min(calc(100vw - 100px), 1358px)" alt="Startseite des Onlineshops: Navigation und Hero „Mehr Freude am Kochen.“ mit Bratpfanne" width="2852" height="1631" />
+      </div>
+    </figure>
+
+    <!-- Projektumfang ("Was wir umgesetzt haben"): label, heading, subtitle, then eight
+         numbered cards (2 columns × 4 rows; one column on phones, in order) and a link to
+         the contact page. Entrance once per element via site.js [data-reveal]: heading
+         first, then each card fades up 30px; cards entering together are 160 ms apart
+         (data-reveal-stagger). Styles: .pw-scope / .pw-card in zetac.css. -->
+    <section class="pw-scope" aria-labelledby="pw-done-title">
+      <header class="pw-scope-head" data-reveal>
+        <p class="pw-eyebrow">Projektumfang</p>
+        <h2 class="pw-h2" id="pw-done-title">Was wir umgesetzt haben.</h2>
+        <p class="pw-scope-sub">Von der Gestaltung bis zu automatisierten Abläufen.</p>
+      </header>
+      <ol class="pw-cards" data-reveal-stagger="160">
+        <li class="pw-card" data-reveal>
+          <span class="pw-card-num" aria-hidden="true">01</span>
+          <span class="pw-card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 9.5 5 4.5h14l1.5 5"/><path d="M3.5 9.5a2.75 2.75 0 0 0 5.5 0 3 3 0 0 0 6 0 2.75 2.75 0 0 0 5.5 0"/><path d="M5 12v7.5h14V12"/><path d="M10 19.5v-4.5h4v4.5"/></svg></span>
+          <h3 class="pw-card-title">Shop-Aufbau</h3>
+          <p class="pw-card-text">Konzeption und Umsetzung eines modernen Onlineshops für Kochgeschirr.</p>
+        </li>
+        <li class="pw-card" data-reveal>
+          <span class="pw-card-num" aria-hidden="true">02</span>
+          <span class="pw-card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="2"/><rect x="6.5" y="6.5" width="5" height="5" rx="1"/><path d="M14.5 7.5h3M14.5 10.5h3M6.5 14.5h11M6.5 17.5h7"/></svg></span>
+          <h3 class="pw-card-title">Produktseiten</h3>
+          <p class="pw-card-text">Klare Produktinformationen und eine übersichtliche Darstellung des Sortiments.</p>
+        </li>
+        <li class="pw-card" data-reveal>
+          <span class="pw-card-num" aria-hidden="true">03</span>
+          <span class="pw-card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.75" width="11" height="18.5" rx="2.25"/><path d="M11.25 17.75h1.5"/></svg></span>
+          <h3 class="pw-card-title">Mobile Ansicht</h3>
+          <p class="pw-card-text">Optimierte Darstellung und einfache Bedienung auf Smartphones.</p>
+        </li>
+        <li class="pw-card" data-reveal>
+          <span class="pw-card-num" aria-hidden="true">04</span>
+          <span class="pw-card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></span>
+          <h3 class="pw-card-title">Suchmaschinen&shy;optimierung</h3>
+          <p class="pw-card-text">Struktur, Inhalte und technische Grundlagen für eine bessere Auffindbarkeit.</p>
+        </li>
+        <li class="pw-card" data-reveal>
+          <span class="pw-card-num" aria-hidden="true">05</span>
+          <span class="pw-card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.25"/><path d="M3 19.5c.6-3.3 3-5.25 6-5.25s5.4 1.95 6 5.25"/><path d="M15.5 4.9a3.25 3.25 0 0 1 0 6.2"/><path d="M17.5 14.6c1.9.6 3.2 2.3 3.5 4.9"/></svg></span>
+          <h3 class="pw-card-title">Zielgruppenanalyse</h3>
+          <p class="pw-card-text">Kundengruppen und Bedürfnisse als Grundlage für Inhalte und Ansprache.</p>
+        </li>
+        <li class="pw-card" data-reveal>
+          <span class="pw-card-num" aria-hidden="true">06</span>
+          <span class="pw-card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 4h2.2l2.1 10.2a1.5 1.5 0 0 0 1.5 1.2h8.4a1.5 1.5 0 0 0 1.5-1.15L20.5 8H6"/><circle cx="9.5" cy="19.5" r="1.25"/><circle cx="17" cy="19.5" r="1.25"/></svg></span>
+          <h3 class="pw-card-title">Nutzerführung &amp; Kaufprozess</h3>
+          <p class="pw-card-text">Vom passenden Produkt bis zum unkomplizierten Bestellabschluss.</p>
+        </li>
+        <li class="pw-card" data-reveal>
+          <span class="pw-card-num" aria-hidden="true">07</span>
+          <span class="pw-card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg></span>
+          <h3 class="pw-card-title">E-Mail-Marketing</h3>
+          <p class="pw-card-text">Automatisierte Informationen zu Angeboten und neuen Produkten für angemeldete Kunden.</p>
+        </li>
+        <li class="pw-card" data-reveal>
+          <span class="pw-card-num" aria-hidden="true">08</span>
+          <span class="pw-card-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 12a8 8 0 0 1-14.3 4.9"/><path d="M4 12a8 8 0 0 1 14.3-4.9"/><path d="M18.5 3v4.25h-4.25"/><path d="M5.5 21v-4.25h4.25"/></svg></span>
+          <h3 class="pw-card-title">Shop-Automatisierung</h3>
+          <p class="pw-card-text">Automatisierte Abläufe für wiederkehrende Aufgaben und Kundenkommunikation.</p>
+        </li>
+      </ol>
+      <p class="pw-scope-cta"><a class="pw-cta pw-cta--out" href="contact.html">Ein ähnliches Projekt besprechen <span class="pw-cta-arrow" aria-hidden="true">↗</span></a></p>
+    </section>
+
+    <section class="pw-views" aria-labelledby="pw-views-title">
+      <h2 class="pw-h2" id="pw-views-title">Vom ersten Eindruck bis zur Produktauswahl.</h2>
+      <div class="pw-views-grid">
+        <figure class="pw-shot pw-shot--phone">
+          <!-- Mobile screenshots of the shop (iPhone, 1179 × 2556, lossless WebP + 780w).
+               Swipe (touch) or drag (mouse) horizontally; a slide taller than the screen
+               scrolls vertically. Arrow keys / Home / End when focused; dots below.
+               No autoplay. Script at the end of this file. -->
+          <div class="pw-phone">
+            <div class="pw-gallery" aria-roledescription="Karussell" aria-label="Mobile Ansichten des Onlineshops">
+              <ul class="pw-gallery-track" tabindex="0" aria-label="Mobile Screenshots, mit Pfeiltasten wechseln">
+                <li class="pw-gallery-slide" data-label="Startseite"><img src="assets/projekte/web/mobil-startseite-1179.webp" srcset="assets/projekte/web/mobil-startseite-780.webp 780w, assets/projekte/web/mobil-startseite-1179.webp 1179w" sizes="(max-width: 760px) 260px, 300px" alt="Startseite mobil: Hero „Mehr Freude am Kochen.“ mit Bratpfanne" width="1179" height="2556" draggable="false" /></li>
+                <li class="pw-gallery-slide" data-label="Produkt"><img src="assets/projekte/web/mobil-produkt-1179.webp" srcset="assets/projekte/web/mobil-produkt-780.webp 780w, assets/projekte/web/mobil-produkt-1179.webp 1179w" sizes="(max-width: 760px) 260px, 300px" alt="Produktseite mobil: Bratpfanne mit Bildergalerie und Vorschaubildern" width="1179" height="2556" draggable="false" loading="lazy" /></li>
+                <li class="pw-gallery-slide" data-label="Größe und Deckel"><img src="assets/projekte/web/mobil-optionen-1179.webp" srcset="assets/projekte/web/mobil-optionen-780.webp 780w, assets/projekte/web/mobil-optionen-1179.webp 1179w" sizes="(max-width: 760px) 260px, 300px" alt="Produktseite mobil: Preis, Größenwahl und Deckeloptionen" width="1179" height="2556" draggable="false" loading="lazy" /></li>
+                <li class="pw-gallery-slide" data-label="Warenkorb"><img src="assets/projekte/web/mobil-warenkorb-1179.webp" srcset="assets/projekte/web/mobil-warenkorb-780.webp 780w, assets/projekte/web/mobil-warenkorb-1179.webp 1179w" sizes="(max-width: 760px) 260px, 300px" alt="Warenkorb mobil: Bratpfanne 20 cm, Menge und Preis" width="1179" height="2556" draggable="false" loading="lazy" /></li>
+                <li class="pw-gallery-slide" data-label="Kasse"><img src="assets/projekte/web/mobil-kasse-1179.webp" srcset="assets/projekte/web/mobil-kasse-780.webp 780w, assets/projekte/web/mobil-kasse-1179.webp 1179w" sizes="(max-width: 760px) 260px, 300px" alt="Kasse mobil: Bestellübersicht mit Zwischensumme und Gesamtsumme" width="1179" height="2556" draggable="false" loading="lazy" /></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Phone gallery controls: ← dots → (control only the phone gallery). -->
+          <div class="pw-phone-controls">
+            <button class="pj-nav pw-phone-nav" type="button" data-phone-dir="-1" aria-label="Vorherige mobile Ansicht"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></button>
+            <div class="pw-dots" role="group" aria-label="Mobile Ansicht wählen"></div>
+            <button class="pj-nav pw-phone-nav" type="button" data-phone-dir="1" aria-label="Nächste mobile Ansicht"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+          </div>
+        </figure>
+        <figure class="pw-shot pw-shot--product">
+          <!-- Desktop carousel (independent of the phone gallery): lossless WebP screenshots,
+               Safari toolbar and scrollbar removed. Arrows, ←/→/Home/End, touch swipe,
+               mouse drag; click a screenshot for the full-resolution lightbox.
+               Produktdetails is a smaller capture (1536 × 936) — see report. -->
+          <section class="pw-desk-carousel" aria-roledescription="Karussell" aria-label="Desktop-Ansichten des Onlineshops">
+            <div class="pw-browser">
+              <div class="pw-browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+              <div class="pj-viewport" tabindex="0" aria-label="Desktop-Screenshots, mit Pfeiltasten wechseln">
+                <ul class="pj-track">
+                <li class="pj-slide" data-label="Kollektion"><button class="pj-zoom" type="button"><img src="assets/projekte/web/slide-kollektion-1600.webp" srcset="assets/projekte/web/slide-kollektion-1000.webp 1000w, assets/projekte/web/slide-kollektion-1600.webp 1600w, assets/projekte/web/slide-kollektion-2852.webp 2852w" sizes="(max-width: 760px) calc(100vw - 56px), min(calc((100vw - 140px) * 0.78), 1062px)" data-full="assets/projekte/web/slide-kollektion-2852.webp" data-density="2" alt="Kollektionsseite des Onlineshops: Kategorien Bratpfanne, Hochrandpfanne, Eckig und Wok" width="2852" height="1741" draggable="false" /></button></li>
+                <li class="pj-slide" data-label="Produktdetails"><button class="pj-zoom" type="button"><img src="assets/projekte/web/detail-produkt-1536.webp" srcset="assets/projekte/web/detail-produkt-1000.webp 1000w, assets/projekte/web/detail-produkt-1536.webp 1536w" sizes="(max-width: 760px) calc(100vw - 56px), min(calc((100vw - 140px) * 0.78), 1062px)" data-full="assets/projekte/web/detail-produkt-1536.webp" data-density="1" alt="Produktseite der Bratpfanne: technische Daten, Größen- und Deckelwahl, Warenkorb sowie Apple Pay und Google Pay" width="1536" height="936" draggable="false" loading="lazy" /></button></li>
+                <li class="pj-slide" data-label="Warenkorb"><button class="pj-zoom" type="button"><img src="assets/projekte/web/slide-warenkorb-1600.webp" srcset="assets/projekte/web/slide-warenkorb-1000.webp 1000w, assets/projekte/web/slide-warenkorb-1600.webp 1600w, assets/projekte/web/slide-warenkorb-2852.webp 2852w" sizes="(max-width: 760px) calc(100vw - 56px), min(calc((100vw - 140px) * 0.78), 1062px)" data-full="assets/projekte/web/slide-warenkorb-2852.webp" data-density="2" alt="Warenkorb des Onlineshops: Bratpfanne 20 cm, Menge, Bestellübersicht und Button „Weiter zur Kasse“" width="2852" height="1741" draggable="false" loading="lazy" /></button></li>
+                <li class="pj-slide" data-label="Empfehlungen"><button class="pj-zoom" type="button"><img src="assets/projekte/web/detail-empfehlungen-1600.webp" srcset="assets/projekte/web/detail-empfehlungen-1000.webp 1000w, assets/projekte/web/detail-empfehlungen-1600.webp 1600w, assets/projekte/web/detail-empfehlungen-2852.webp 2852w" sizes="(max-width: 760px) calc(100vw - 56px), min(calc((100vw - 140px) * 0.78), 1062px)" data-full="assets/projekte/web/detail-empfehlungen-2852.webp" data-density="2" alt="Produktempfehlungen „Das könnte Ihnen gefallen“: Light Flachpfanne, Grillpfanne eckig, Bratpfanne eckig und Hochrandpfanne" width="2852" height="1741" draggable="false" loading="lazy" /></button></li>
+                </ul>
+              </div>
+            </div>
+            <div class="pj-controls">
+              <button class="pj-nav" type="button" data-dir="-1" aria-label="Vorheriger Screenshot"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></button>
+              <p class="pj-count pw-count" aria-live="polite"><span data-current>1</span> / <span data-total>4</span></p>
+              <button class="pj-nav" type="button" data-dir="1" aria-label="Nächster Screenshot"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+            </div>
+          </section>
+        </figure>
+      </div>
+    </section>
+
+    <p class="pw-cta-row"><a class="pw-cta" href="contact.html">Projekt besprechen <span class="pw-cta-arrow" aria-hidden="true">→</span></a></p>
+  </main>
+
+  <!-- Site footer: gold band, navy panel with rounded top corners (see .zf in zetac.css). -->
+  <footer class="zf">
+    <div class="zf-panel">
+      <div class="zf-inner">
+        <div class="zf-cols">
+          <nav aria-labelledby="zf-nav-title">
+            <h2 class="zf-title" id="zf-nav-title">Navigation</h2>
+            <ul>
+              <li><a href="projekte.html">Projekte</a></li>
+              <li><a href="services.html">Leistungen</a></li>
+              <li><a href="about.html">Über uns</a></li>
+              <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+          </nav>
+          <nav aria-labelledby="zf-svc-title">
+            <h2 class="zf-title" id="zf-svc-title">Leistungen</h2>
+            <ul>
+              <li><a href="services.html#app-entwicklung">App-Entwicklung</a></li>
+              <li><a href="services.html#onlineshop">Onlineshops &amp; Google-SEO</a></li>
+              <li><a href="services.html#leistungen">Social Media</a></li>
+            </ul>
+          </nav>
+          <div>
+            <h2 class="zf-title">Kontakt</h2>
+            <ul>
+              <li><a href="mailto:info@zetac.de">info@zetac.de</a></li>
+              <li>Paderborn, Deutschland</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Brand: logo tile beside the wordmark, tagline directly below the wordmark. -->
+        <div class="zf-sign">
+          <a class="zf-brand" href="index.html" aria-label="Zetac – zur Startseite"><span class="zf-logo"><img src="assets/logo.png" alt="" width="1024" height="1024" loading="lazy" /></span><span class="zf-brand-text"><span class="zf-word" aria-hidden="true">Zetac</span><span class="zf-tag" lang="en" aria-hidden="true">Digital Consultancy</span></span></a>
+        </div>
+        <!-- Legal row. NOTE: impressum.html and datenschutz.html do not exist yet. -->
+        <div class="zf-small">
+          <span>© 2026 Zetac</span>
+          <nav aria-label="Rechtliches">
+            <ul class="zf-legal">
+              <li><a href="impressum.html">Impressum</a></li>
+              <li><a href="datenschutz.html">Datenschutz</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox gallery for the desktop carousel: opens on the clicked screenshot; gold
+       arrows (sides on desktop, bottom bar on phones), ←/→ keys and touch swipe browse
+       all slides; counter "x / N". Each image fits the screen at its own proportions.
+       Escape, close button or a click beside the image closes it; focus stays inside,
+       the page doesn't scroll behind it, and the carousel follows the last image viewed. -->
+  <dialog class="pj-lightbox pj-lightbox--gallery" aria-label="Screenshots vergrößert" aria-roledescription="Galerie">
+    <button class="pj-lightbox-close" type="button" aria-label="Schließen"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <button class="pj-nav pj-lb-nav pj-lb-prev" type="button" data-lb-dir="-1" aria-label="Vorheriger Screenshot"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></button>
+    <figure class="pj-lightbox-figure pj-lb-stage">
+      <img alt="" />
+    </figure>
+    <button class="pj-nav pj-lb-nav pj-lb-next" type="button" data-lb-dir="1" aria-label="Nächster Screenshot"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+    <div class="pj-lb-bar">
+      <p class="pj-lb-label"></p>
+      <p class="pj-lb-count" aria-live="polite"><span data-lb-current>1</span> / <span data-lb-total>4</span></p>
+    </div>
+  </dialog>
+
+  <script src="site.js" defer></script>
+  <script>
+    // Phone gallery: native horizontal scroll-snap (touch swipe; the browser separates
+    // horizontal swipes from vertical scrolling inside a tall slide), mouse dragging,
+    // arrow keys / Home / End, and pagination dots. Manual only — no autoplay.
+    (function () {
+      var track = document.querySelector('.pw-gallery-track');
+      var dotsBox = document.querySelector('.pw-dots');
+      if (!track || !dotsBox) return;
+      var slides = track.querySelectorAll('.pw-gallery-slide');
+      var n = slides.length, index = 0;
+      var smooth = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+
+      var dots = [];
+      slides.forEach(function (s, i) {
+        var label = s.dataset.label || 'Ansicht ' + (i + 1);
+        s.setAttribute('role', 'group');
+        s.setAttribute('aria-roledescription', 'Folie');
+        s.setAttribute('aria-label', (i + 1) + ' von ' + n + ': ' + label);
+        var d = document.createElement('button');
+        d.type = 'button';
+        d.className = 'pw-dot';
+        d.setAttribute('aria-label', (i + 1) + ' von ' + n + ': ' + label);
+        d.addEventListener('click', function () { go(i); });
+        dotsBox.appendChild(d);
+        dots.push(d);
+      });
+
+      function width() { return slides[0].getBoundingClientRect().width || track.clientWidth; }
+      function go(i, behavior) {
+        index = Math.max(0, Math.min(n - 1, i));
+        track.scrollTo({ left: index * width(), behavior: behavior || smooth });
+        mark();
+      }
+      function mark() {
+        dots.forEach(function (d, k) { d.setAttribute('aria-current', k === index ? 'true' : 'false'); });
+        slides.forEach(function (s, k) { s.setAttribute('aria-hidden', String(k !== index)); });
+      }
+      // Follow native swipes: the slide nearest to the scroll position is the current one.
+      var t = null;
+      track.addEventListener('scroll', function () {
+        if (drag) return;
+        clearTimeout(t);
+        t = setTimeout(function () {
+          var i = Math.round(track.scrollLeft / width());
+          if (i !== index) { index = i; mark(); }
+        }, 60);
+      }, { passive: true });
+
+      // Gold arrows below the phone (wrap around, like the desktop carousel).
+      document.querySelectorAll('.pw-phone-nav').forEach(function (b) {
+        b.addEventListener('click', function () { go((index + Number(b.dataset.phoneDir) + n) % n); });
+      });
+      track.addEventListener('keydown', function (e) {
+        var map = { ArrowLeft: index - 1, ArrowRight: index + 1, Home: 0, End: n - 1 };
+        if (!(e.key in map)) return;
+        e.preventDefault();
+        go(map[e.key]);
+      });
+
+      // Mouse dragging (touch and pen use native scrolling).
+      var drag = null;
+      track.addEventListener('pointerdown', function (e) {
+        if (e.pointerType !== 'mouse' || e.button !== 0) return;
+        drag = { x: e.clientX, left: track.scrollLeft, start: index };
+        track.classList.add('is-dragging');
+        track.setPointerCapture(e.pointerId);
+      });
+      track.addEventListener('pointermove', function (e) {
+        if (!drag) return;
+        track.scrollLeft = drag.left - (e.clientX - drag.x);
+      });
+      function endDrag(e) {
+        if (!drag) return;
+        var dx = e.clientX - drag.x, start = drag.start;
+        drag = null;
+        track.classList.remove('is-dragging');
+        var step = Math.abs(dx) > Math.min(60, width() * 0.18) ? (dx < 0 ? 1 : -1) : 0;
+        go(start + step);
+      }
+      track.addEventListener('pointerup', endDrag);
+      track.addEventListener('pointercancel', endDrag);
+
+      // Keep the current slide aligned when the phone changes size.
+      if ('ResizeObserver' in window) new ResizeObserver(function () { go(index, 'auto'); }).observe(track);
+      mark();
+    })();
+  </script>
+  <script>
+    // Desktop carousel beside the phone: own state, independent of the phone gallery.
+    // Gold arrows, ←/→/Home/End, touch swipe and mouse drag (the slide follows the
+    // pointer), short slide transition, manual only. Window height follows the slide.
+    // Click a screenshot (without dragging) for the full-resolution lightbox.
+    (function () {
+      var root = document.querySelector('.pw-desk-carousel');
+      if (!root) return;
+      var track = root.querySelector('.pj-track');
+      var viewport = root.querySelector('.pj-viewport');
+      var slides = root.querySelectorAll('.pj-slide');
+      var current = root.querySelector('[data-current]');
+      var total = root.querySelector('[data-total]');
+      var n = slides.length, index = 0;
+      if (total) total.textContent = n;
+      slides.forEach(function (s, i) {
+        var label = s.dataset.label || 'Screenshot';
+        s.setAttribute('role', 'group');
+        s.setAttribute('aria-roledescription', 'Folie');
+        s.setAttribute('aria-label', (i + 1) + ' von ' + n + ': ' + label);
+        s.querySelector('.pj-zoom').setAttribute('aria-label', 'Vergrößern: ' + label);
+      });
+      function w() { return viewport.getBoundingClientRect().width; }
+      function place(offset) {
+        track.style.transform = 'translateX(' + Math.round(-index * w() + (offset || 0)) + 'px)';
+      }
+      function fit() { viewport.style.height = slides[index].offsetHeight + 'px'; }
+      function show(i) {
+        index = (i + n) % n;
+        place(0);
+        current.textContent = index + 1;
+        slides.forEach(function (s, k) {
+          s.setAttribute('aria-hidden', String(k !== index));
+          s.inert = k !== index;
+        });
+        fit();
+      }
+      root.querySelectorAll('.pj-nav').forEach(function (b) {
+        b.addEventListener('click', function () { show(index + Number(b.dataset.dir)); });
+      });
+      viewport.addEventListener('keydown', function (e) {
+        var map = { ArrowLeft: index - 1, ArrowRight: index + 1, Home: 0, End: n - 1 };
+        if (!(e.key in map)) return;
+        e.preventDefault();
+        show(map[e.key]);
+      });
+
+      // Touch swipe and mouse drag via pointer events. Touch keeps vertical page
+      // scrolling (touch-action: pan-y); a drag only starts when clearly horizontal.
+      var drag = null, lastDrag = 0;
+      viewport.addEventListener('pointerdown', function (e) {
+        if (e.pointerType === 'mouse' && e.button !== 0) return;
+        drag = { id: e.pointerId, x: e.clientX, y: e.clientY, active: false };
+      });
+      viewport.addEventListener('pointermove', function (e) {
+        if (!drag || e.pointerId !== drag.id) return;
+        var dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+        if (!drag.active) {
+          if (Math.abs(dy) > 8 && Math.abs(dy) >= Math.abs(dx)) { drag = null; return; }
+          if (Math.abs(dx) < 8) return;
+          drag.active = true;
+          track.classList.add('is-dragging');
+          viewport.setPointerCapture(e.pointerId);
+        }
+        place(dx);
+      });
+      function end(e) {
+        if (!drag || e.pointerId !== drag.id) return;
+        var dx = e.clientX - drag.x, was = drag.active;
+        drag = null;
+        track.classList.remove('is-dragging');
+        if (!was) return;
+        lastDrag = Date.now();
+        show(Math.abs(dx) > Math.min(80, w() * 0.15) ? index + (dx < 0 ? 1 : -1) : index);
+      }
+      viewport.addEventListener('pointerup', end);
+      viewport.addEventListener('pointercancel', end);
+      if ('ResizeObserver' in window) new ResizeObserver(function () { place(0); fit(); }).observe(track);
+      show(0);
+
+      // Lightbox gallery (full-resolution originals, never upscaled beyond the page's
+      // real size). Own index while open; the carousel follows it on close.
+      var box = document.querySelector('.pj-lightbox');
+      if (!box || typeof box.showModal !== 'function') return;
+      var big = box.querySelector('.pj-lb-stage img');
+      var stage = box.querySelector('.pj-lb-stage');
+      var label = box.querySelector('.pj-lb-label');
+      var lbCurrent = box.querySelector('[data-lb-current]');
+      box.querySelector('[data-lb-total]').textContent = n;
+      var lbIndex = 0, openedAt = 0, opener = null;
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+      function source(i) { return slides[i].querySelector('img'); }
+      function preload(i) { var im = new Image(); var src = source(i); im.src = src.dataset.full || src.currentSrc || src.src; }
+      function lbShow(i) {
+        lbIndex = (i + n) % n;
+        var img = source(lbIndex);
+        var fw = Number(img.getAttribute('width')), fh = Number(img.getAttribute('height'));
+        var swap = function () {
+          big.src = img.dataset.full || img.currentSrc || img.src;
+          big.alt = img.alt; big.width = fw; big.height = fh;
+          // Cap at the screenshot's real (CSS-pixel) size; CSS fits it to the screen.
+          big.style.setProperty('--lb-w', Math.round(fw / (Number(img.dataset.density) || 1)) + 'px');
+          big.classList.remove('is-switching');
+        };
+        if (box.open && !reduce.matches) {
+          big.classList.add('is-switching');
+          setTimeout(swap, 150);
+        } else swap();
+        label.textContent = slides[lbIndex].dataset.label || '';
+        lbCurrent.textContent = lbIndex + 1;
+        preload((lbIndex + 1) % n); preload((lbIndex - 1 + n) % n);
+      }
+
+      root.querySelectorAll('.pj-zoom').forEach(function (btn, i) {
+        btn.addEventListener('click', function () {
+          if (Date.now() - lastDrag < 400) return;   // the click that ends a drag is not a tap
+          opener = btn; openedAt = i;
+          lbShow(i);
+          document.documentElement.classList.add('has-lightbox');   // no page scroll behind
+          box.showModal();
+          box.querySelector('.pj-lightbox-close').focus();
+        });
+      });
+      box.querySelectorAll('[data-lb-dir]').forEach(function (b) {
+        b.addEventListener('click', function () { lbShow(lbIndex + Number(b.dataset.lbDir)); });
+      });
+      box.querySelector('.pj-lightbox-close').addEventListener('click', function () { box.close(); });
+      // A click beside the image (backdrop area of the full-screen dialog) closes it.
+      box.addEventListener('click', function (e) { if (e.target === box || e.target === stage) box.close(); });
+
+      box.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+          e.preventDefault();
+          lbShow(lbIndex + (e.key === 'ArrowRight' ? 1 : -1));
+        } else if (e.key === 'Tab') {
+          // Keep focus on the lightbox controls (close, previous, next).
+          // Visible buttons only (offsetParent would be null for the fixed close button).
+          var f = Array.prototype.filter.call(box.querySelectorAll('button'), function (b) { return b.getClientRects().length > 0; });
+          var k = f.indexOf(document.activeElement);
+          e.preventDefault();
+          f[(k + (e.shiftKey ? -1 : 1) + f.length) % f.length].focus();
+        }
+      });
+
+      // Touch swipe (and mouse drag) on the image: horizontal moves only.
+      var sw = null;
+      stage.addEventListener('pointerdown', function (e) {
+        if (e.pointerType === 'mouse' && e.button !== 0) return;
+        sw = { id: e.pointerId, x: e.clientX, y: e.clientY };
+      });
+      stage.addEventListener('pointerup', function (e) {
+        if (!sw || e.pointerId !== sw.id) return;
+        var dx = e.clientX - sw.x, dy = e.clientY - sw.y;
+        sw = null;
+        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.2) {
+          box.dataset.swiped = String(Date.now());
+          lbShow(lbIndex + (dx < 0 ? 1 : -1));
+        }
+      });
+      stage.addEventListener('pointercancel', function () { sw = null; });
+      // The click that ends a swipe must not close the lightbox.
+      stage.addEventListener('click', function (e) {
+        if (Date.now() - Number(box.dataset.swiped || 0) < 400) e.stopPropagation();
+      }, true);
+
+      box.addEventListener('close', function () {
+        document.documentElement.classList.remove('has-lightbox');
+        show(lbIndex);   // carousel follows the last image viewed
+        // Focus back on the clicked screenshot; if another one was viewed last, on that
+        // one (the clicked slide is hidden in the carousel now).
+        var target = lbIndex === openedAt ? opener : slides[lbIndex].querySelector('.pj-zoom');
+        if (target) target.focus({ preventScroll: true });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Über uns – Zetac</title>
-  <meta name="description" content="Zetac ist ein kleines Digitalstudio aus Paderborn." />
+  <meta name="description" content="Die Menschen hinter Zetac: ein Digitalstudio aus Paderborn für individuelle Apps, Onlineshops und Social Media." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
@@ -13,81 +13,117 @@
   <link rel="stylesheet" href="zetac.css" />
   <link rel="icon" href="assets/logo.png" type="image/png" />
 </head>
-<body>
+<body class="page-about">
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
 
-  <header class="site-header">
+  <!-- Same navbar as the homepage: floats over the hero image, boxes fill in on scroll. -->
+  <header class="site-header site-header--hero">
     <div class="wrap">
-      <a class="brand" href="index.html" aria-label="Zetac – zur Startseite"><img src="assets/logo.png" alt="" width="30" height="30" />Zetac</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menü</button>
+      <a class="brand" href="index.html" aria-label="Zetac – zur Startseite"><span class="brand-mark"><img src="assets/logo.png" alt="" width="30" height="30" /></span>Zetac</a>
       <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
         <ul class="nav-list">
-          <li><a href="about.html" aria-current="page">Über uns</a></li>
           <li><a href="projekte.html">Projekte</a></li>
           <li><a href="services.html">Leistungen</a></li>
+          <li><a href="about.html" aria-current="page">Über uns</a></li>
           <li class="nav-cta"><a href="contact.html">Kontakt</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="inhalt">
-    <section class="wrap page-head">
-      <h1>Über uns</h1>
-      <p>Zwei Gründer, ein kleines Studio, kurze Wege.</p>
-    </section>
-
-    <!-- PLATZHALTER: Teamfoto (Stockfoto von Unsplash). Ersetzen: assets/platzhalter/team-ueber-uns.jpg -->
-    <figure class="photo about-photo">
-      <img src="assets/platzhalter/team-ueber-uns.jpg" alt="Platzhalter: Team bei der Arbeit (Stockfoto)" width="2000" height="1312" />
-      <figcaption class="temp-tag"><b>Platzhalter</b> · Stockfoto, wird durch unser Teamfoto ersetzt</figcaption>
-    </figure>
-
-    <section class="wrap section prose">
-      <h2 class="label">Wer wir sind</h2>
-      <div class="prose-text">
-        <p>Zetac ist ein junges Digitalstudio im Umfeld der Universität Paderborn. Wir helfen Unternehmen, aus Ideen funktionierende Software zu machen.</p>
-        <p>Wir verbinden Technik mit einem klaren Blick fürs Geschäft. Bei uns sprechen Sie direkt mit den Menschen, die Ihr Projekt umsetzen – vom ersten Gespräch bis nach dem Launch.</p>
+  <main id="inhalt" class="ab">
+    <!-- 1. Hero, same layout as the homepage cover: full-bleed image behind the navbar.
+         Temporary photo (replace): assets/ueber-uns/hero-studio.jpg -->
+    <section class="cover cover--about" aria-labelledby="about-title">
+      <h1 id="about-title">Die Menschen hinter Zetac.</h1>
+      <div class="cover-bottom">
+        <p>Wir sind ein Digitalstudio aus Paderborn. Wir entwickeln individuelle Apps und Onlineshops und betreuen Social-Media-Auftritte für Unternehmen.</p>
       </div>
     </section>
 
-    <section class="wrap section people" aria-labelledby="team">
-      <div class="people-label">
-        <h2 id="team" class="label">Die Gründer</h2>
-      </div>
-      <!-- PLATZHALTER: Porträt ersetzen: assets/platzhalter/portrait-bedirhan.svg -->
-      <article class="person">
-        <figure class="photo"><img src="assets/platzhalter/portrait-bedirhan.svg" alt="Platzhalter: Porträt von Bedirhan Inanli" width="900" height="1125" loading="lazy" /></figure>
-        <h3>Bedirhan Inanli</h3>
-        <p class="role">Mitgründer · Wirtschaftsinformatiker</p>
-        <p class="quote"><span class="ph">Platzhalter: ein persönlicher Satz von Bedirhan</span></p>
-      </article>
-      <!-- PLATZHALTER: Porträt ersetzen: assets/platzhalter/portrait-ahmet.svg -->
-      <article class="person">
-        <figure class="photo"><img src="assets/platzhalter/portrait-ahmet.svg" alt="Platzhalter: Porträt von Ahmet Hakan Düger" width="900" height="1125" loading="lazy" /></figure>
-        <h3>Ahmet Hakan Düger</h3>
-        <p class="role">Mitgründer · Informatiker</p>
-        <p class="quote"><span class="ph">Platzhalter: ein persönlicher Satz von Ahmet</span></p>
-      </article>
+    <!-- 2. Group photo of all three team members.
+         Placeholder (replace, landscape 16:9): assets/ueber-uns/teamfoto.jpg -->
+    <section class="ab-group" aria-label="Teamfoto">
+      <figure class="ab-group-photo"><img src="assets/ueber-uns/teamfoto.jpg" alt="Platzhalter: Teamfoto folgt" width="2000" height="1125" /></figure>
     </section>
 
-    <section class="wrap closing">
-      <h2>Sie haben ein Projekt im Kopf?</h2>
-      <a class="mail" href="mailto:info@zetac.de">info@zetac.de</a>
+    <!-- 3. Profiles: three columns on desktop, one on phones. -->
+    <section class="ab-team" aria-labelledby="team-title">
+      <h2 id="team-title">Das Team</h2>
+      <ul class="ab-cards">
+          <li class="ab-card">
+            <!-- Porträt ersetzen: assets/ueber-uns/portrait-bedirhan.jpg (Hochformat 4:5) -->
+            <div class="ab-portrait"><img src="assets/ueber-uns/portrait-bedirhan.jpg" alt="Platzhalter: Porträt von Bedirhan Inanli" width="1200" height="1500" loading="lazy" /></div>
+            <h3>Bedirhan Inanli</h3>
+            <!-- PLATZHALTER: Rolle und Text noch nicht bestätigt. -->
+            <p class="ab-role">Gründer · App- und Webentwicklung <span class="ab-ph">Platzhalter</span></p>
+            <p class="ab-bio">Bedirhan entwickelt bei Zetac Apps und Onlineshops und kümmert sich um die technische Umsetzung. Kunden haben so von der ersten Idee bis zum Start einen festen Ansprechpartner.</p>
+          </li>
+          <li class="ab-card">
+            <!-- Porträt ersetzen: assets/ueber-uns/portrait-ahmet.jpg (Hochformat 4:5) -->
+            <div class="ab-portrait"><img src="assets/ueber-uns/portrait-ahmet.jpg" alt="Platzhalter: Porträt von Ahmet Hakan Düger" width="1200" height="1500" loading="lazy" /></div>
+            <h3>Ahmet Hakan Düger</h3>
+            <!-- PLATZHALTER: Rolle und Text noch nicht bestätigt. -->
+            <p class="ab-role">Mitgründer · Design und Social Media <span class="ab-ph">Platzhalter</span></p>
+            <p class="ab-bio">Ahmet gestaltet Entwürfe und betreut die Social-Media-Kanäle unserer Kunden. So passen Website, App und Auftritt in den sozialen Netzwerken zusammen.</p>
+          </li>
+          <li class="ab-card">
+            <!-- Porträt ersetzen: assets/ueber-uns/portrait-person-3.jpg (Hochformat 4:5) -->
+            <div class="ab-portrait"><img src="assets/ueber-uns/portrait-person-3.jpg" alt="Platzhalter: Porträt von Name folgt" width="1200" height="1500" loading="lazy" /></div>
+            <h3><span class="ab-ph-text">Name folgt</span></h3>
+            <!-- PLATZHALTER: Rolle und Text noch nicht bestätigt. -->
+            <p class="ab-role">Rolle folgt <span class="ab-ph">Platzhalter</span></p>
+            <p class="ab-bio">Hier stellen wir bald unser drittes Teammitglied vor. Der Text zu Aufgaben und Kundenarbeit folgt.</p>
+          </li>
+      </ul>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <span>Zetac · Digitalstudio in Paderborn</span>
-      <nav aria-label="Fußzeile">
-        <a href="about.html">Über uns</a>
-        <a href="projekte.html">Projekte</a>
-        <a href="services.html">Leistungen</a>
-        <a href="contact.html">Kontakt</a>
-        <a href="https://www.instagram.com/zetac.digital.consultancy/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      </nav>
-      <span>© 2026 Zetac</span>
+  <!-- Site footer: gold band, navy panel with rounded top corners (see .zf in zetac.css). -->
+  <footer class="zf">
+    <div class="zf-panel">
+      <div class="zf-inner">
+        <div class="zf-cols">
+          <nav aria-labelledby="zf-nav-title">
+            <h2 class="zf-title" id="zf-nav-title">Navigation</h2>
+            <ul>
+              <li><a href="projekte.html">Projekte</a></li>
+              <li><a href="services.html">Leistungen</a></li>
+              <li><a href="about.html">Über uns</a></li>
+              <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+          </nav>
+          <nav aria-labelledby="zf-svc-title">
+            <h2 class="zf-title" id="zf-svc-title">Leistungen</h2>
+            <ul>
+              <li><a href="services.html#app-entwicklung">App-Entwicklung</a></li>
+              <li><a href="services.html#onlineshop">Onlineshops &amp; Google-SEO</a></li>
+              <li><a href="services.html#leistungen">Social Media</a></li>
+            </ul>
+          </nav>
+          <div>
+            <h2 class="zf-title">Kontakt</h2>
+            <ul>
+              <li><a href="mailto:info@zetac.de">info@zetac.de</a></li>
+              <li>Paderborn, Deutschland</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Brand: logo tile beside the wordmark, tagline directly below the wordmark. -->
+        <div class="zf-sign">
+          <a class="zf-brand" href="index.html" aria-label="Zetac – zur Startseite"><span class="zf-logo"><img src="assets/logo.png" alt="" width="1024" height="1024" loading="lazy" /></span><span class="zf-brand-text"><span class="zf-word" aria-hidden="true">Zetac</span><span class="zf-tag" lang="en" aria-hidden="true">Digital Consultancy</span></span></a>
+        </div>
+        <!-- Legal row. NOTE: impressum.html and datenschutz.html do not exist yet. -->
+        <div class="zf-small">
+          <span>© 2026 Zetac</span>
+          <nav aria-label="Rechtliches">
+            <ul class="zf-legal">
+              <li><a href="impressum.html">Impressum</a></li>
+              <li><a href="datenschutz.html">Datenschutz</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </div>
   </footer>
 

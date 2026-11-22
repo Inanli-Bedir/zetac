@@ -6,33 +6,35 @@ Production is served by nginx (see `Dockerfile`, `nginx.conf`, `docker-compose.p
 
 ## Local development with Docker
 
-Requirements: [Docker Desktop](https://www.docker.com/products/docker-desktop/) (includes Docker Compose), running.
+Requirements: [Docker Desktop](https://www.docker.com/products/docker-desktop/) (includes Docker Compose).
 
-Run these from the repository root:
+The site runs at **http://localhost:5173**. Choose one way to start it:
 
-```bash
-docker compose up -d      # start (the first run builds the image automatically)
-docker compose down       # stop and remove the container
-```
+- **Double-click `Start Zetac.command`** in this folder. It opens Docker Desktop if
+  needed, waits for the engine, starts the container, waits until the site responds
+  and opens it in your browser. Any errors are shown in the window.
+- **Docker Desktop → Containers → `zetac-website-dev` → ▶ (Start).**
+- **Terminal:** `docker compose up -d --wait` from the repository root.
 
-Open **http://localhost:5173**.
-
-`compose.yaml` runs the Vite dev server (`Dockerfile.dev`). The project folder is
-mounted into the container, so when you save HTML, CSS or JS files the browser
-updates automatically (hot reload). You don't need to rebuild the image.
-
-Rebuild only after changing `package.json` / `package-lock.json`:
+The container has `restart: unless-stopped`, so it starts automatically every time
+Docker Desktop starts. This works only while the container **exists**:
 
 ```bash
-docker compose up -d --build -V   # -V recreates the container's node_modules volume
+docker compose stop      # stop it, but keep it (auto-start keeps working once you start it again)
+docker compose down      # DELETES the container; auto-start stops until you start it once more
+docker compose logs -f   # follow dev server logs
+docker compose ps        # status ("healthy" once the page, zetac.css and site.js all load)
 ```
 
-Useful commands:
+A container you stop yourself stays stopped, even across Docker Desktop restarts,
+until you start it again (that's what `unless-stopped` means).
 
-```bash
-docker compose ps         # status (shows "healthy" once the dev server answers)
-docker compose logs -f    # follow dev server logs
-```
+`compose.yaml` runs the Vite dev server (`Dockerfile.dev`) on `0.0.0.0:5173` inside
+the container. The project folder is mounted into the container, so when you save
+HTML, CSS or JS files the browser updates automatically (hot reload). You don't need
+to rebuild the image. `node_modules` lives in the named volume
+`zetac-website-dev_node_modules`. When `package-lock.json` changes, the container
+runs `npm ci` by itself on its next start (`docker compose restart`).
 
 You don't need environment variables, a database or external services.
 
@@ -42,24 +44,17 @@ You don't need environment variables, a database or external services.
   Production uses `docker-compose.prod.yml`, which must be named explicitly with `-f`.
 - The port is bound to `127.0.0.1` only, so the dev server is not exposed on your network.
 - If port 5173 is already in use, change the left side of `"127.0.0.1:5173:5173"`
-  in `compose.yaml` (e.g. `"127.0.0.1:5180:5173"`).
+  in `compose.yaml` (e.g. `"127.0.0.1:5180:5173"`) and the URL in `Start Zetac.command`.
 - Don't create a `compose.override.yaml` unless you mean to: Compose merges it
   into `compose.yaml` automatically.
 
-### Troubleshooting: `EIO: i/o error, read` (macOS + iCloud)
+### Keep the project out of iCloud (`EIO: i/o error, read`)
 
-If the dev server crashes with `Error: EIO: i/o error, read`, the project is in an
-iCloud-synced folder (e.g. `~/Desktop` with "Desktop & Documents" enabled) and iCloud
-has offloaded some files. Docker can't trigger the download, so reads fail.
-
-Fix: in Finder, right-click the project folder → **Keep Downloaded**, or run:
-
-```bash
-find . -path ./.git -prune -o -type f -flags +dataless -print   # list offloaded files
-find . -path ./.git -prune -o -type f -flags +dataless -exec brctl download {} \;
-```
-
-Then start the stack again. Moving the project outside iCloud (e.g. `~/Projects`) avoids it entirely.
+The repository lives in `~/Developer/zetac-website`. Don't move it back to `~/Desktop`
+or `~/Documents` when iCloud "Desktop & Documents" sync is on. iCloud offloads files
+it considers unused (more often when the disk is nearly full). Docker can't trigger the
+download, so Vite crashes with `Error: EIO: i/o error, read` and the container
+keeps restarting or shows **unhealthy**.
 
 ## Hero background video
 

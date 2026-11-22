@@ -8,84 +8,539 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <!-- The arrow (→) is not in Google's default Inter subsets; load just that glyph. -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&text=%E2%86%92&display=swap" rel="stylesheet" />
+  <!-- The arrows (→ ↗) are not in Google's default Inter subsets; load just those glyphs. -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&text=%E2%86%92%E2%86%97&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="zetac.css" />
   <link rel="icon" href="assets/logo.png" type="image/png" />
 </head>
-<body>
+<body class="page-blank page-projekte">
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
 
-  <header class="site-header">
+  <!-- Same navbar as the homepage. On these placeholder pages it is shown filled
+       from the start (see .page-blank in zetac.css). -->
+  <header class="site-header site-header--hero">
     <div class="wrap">
-      <a class="brand" href="index.html" aria-label="Zetac – zur Startseite"><img src="assets/logo.png" alt="" width="30" height="30" />Zetac</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menü</button>
+      <a class="brand" href="index.html" aria-label="Zetac – zur Startseite"><span class="brand-mark"><img src="assets/logo.png" alt="" width="30" height="30" /></span>Zetac</a>
       <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
         <ul class="nav-list">
-          <li><a href="about.html">Über uns</a></li>
           <li><a href="projekte.html" aria-current="page">Projekte</a></li>
           <li><a href="services.html">Leistungen</a></li>
+          <li><a href="about.html">Über uns</a></li>
           <li class="nav-cta"><a href="contact.html">Kontakt</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="inhalt">
-    <section class="wrap page-head">
-      <h1>Projekte</h1>
-      <p>Eine Auswahl unserer Arbeit. Weitere Projekte folgen.</p>
-    </section>
-
-    <section aria-label="Projektliste">
-      <!-- PLATZHALTER: App 01 – Name, Bildunterschrift, Screenshot (assets/platzhalter/app-01-screenshot.svg) -->
-      <article class="case case--wide">
-        <a href="projects/app-01.html">
-          <figure class="photo"><img src="assets/platzhalter/app-01-screenshot.svg" alt="Platzhalter-Screenshot von App 01" width="1600" height="1000" loading="lazy" /></figure>
-          <div class="wrap case-caption">
-            <div>
-              <span class="case-num">01</span>
-              <h3>App 01</h3>
-            </div>
-            <div>
-              <p class="case-caption-text"><span class="ph">Platzhalter: Bildunterschrift – was App 01 macht, in einem Satz.</span></p>
-              <span class="more">Zum Projekt</span>
-            </div>
-          </div>
-        </a>
-      </article>
-      <!-- PLATZHALTER: App 02 – Name, Bildunterschrift, Screenshot (assets/platzhalter/app-02-screenshot.svg) -->
-      <article class="case case--split is-mirrored">
-        <figure class="photo"><img src="assets/platzhalter/app-02-screenshot.svg" alt="Platzhalter-Screenshot von App 02" width="1200" height="1400" loading="lazy" /></figure>
-        <div class="case-body">
-          <span class="case-num">02</span>
-          <h3>App 02</h3>
-          <p class="case-caption-text"><span class="ph">Platzhalter: Bildunterschrift – was App 02 macht, in einem Satz.</span></p>
-          <span class="case-meta">Projektseite folgt</span>
+  <main id="inhalt" class="page-blank-main pk-page">
+    <div class="pk-top">
+      <div class="pk">
+        <div class="pk-intro">
+          <h1 class="pk-heading">Projekte</h1>
+          <a class="pk-contact" href="contact.html">Kontakt aufnehmen <span class="pk-contact-arrow" aria-hidden="true"><span>↗</span><span>↗</span></span></a>
         </div>
-      </article>
+        <nav aria-label="Projektkategorien">
+          <ul class="pk-list">
+            <li><a class="pk-row" href="projekte-apps.html"><span class="pk-title">Unsere Apps</span><span class="pk-desc">Individuelle Anwendungen für Web und Smartphone.</span><span class="pk-arrow" aria-hidden="true"><span>→</span><span>→</span></span></a></li>
+            <li><a class="pk-row" href="projekte-web.html"><span class="pk-title">Unsere Webprojekte</span><span class="pk-desc">Einblicke in die Websites und Onlineshops, die wir umsetzen.</span><span class="pk-arrow" aria-hidden="true"><span>→</span><span>→</span></span></a></li>
+            <!-- Social Media is a service, not a project section: links to its card on the Leistungen page. -->
+            <li><a class="pk-row" href="services.html#leistungen"><span class="pk-title">Social Media für Unternehmen</span><span class="pk-desc">Wir planen Inhalte, erstellen Beiträge und betreuen Ihre Social-Media-Kanäle.</span><span class="pk-arrow" aria-hidden="true"><span>→</span><span>→</span></span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Ablauf: navy band across the full viewport width, all four corners rounded;
+         heading and steps sit in a centred inner wrapper (.process-panel).
+         Opens once from its vertical centre when ~45 % is visible (site.js [data-reveal]),
+         then the gold connectors draw step to step. -->
+    <!-- Unclipped wrapper carries the trigger: IntersectionObserver would measure the
+         clipped band itself as (almost) invisible. -->
+    <div class="process-reveal" data-reveal data-reveal-threshold="0.45">
+    <section class="process process--projekte" aria-labelledby="ablauf-title">
+      <div class="process-panel">
+        <h2 id="ablauf-title">Von der Idee bis zum Start.</h2>
+        <ol class="process-steps">
+          <li class="process-step"><span class="process-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg></span><h3>Kennenlernen</h3><p>Wir sprechen über Ihre Idee und klären, was Sie erreichen möchten.</p><span class="process-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></li>
+          <li class="process-step"><span class="process-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="18" height="7" x="3" y="3" rx="1"/><rect width="9" height="7" x="3" y="14" rx="1"/><rect width="5" height="7" x="16" y="14" rx="1"/></svg></span><h3>Entwerfen</h3><p>Sie sehen einen ersten Entwurf und geben Feedback, bevor wir ihn umsetzen.</p><span class="process-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></li>
+          <li class="process-step"><span class="process-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span><h3>Umsetzen &amp; starten</h3><p>Wir bauen, testen und stimmen den Start mit Ihnen ab.</p></li>
+        </ol>
+      </div>
+    </section>
+    </div>
+
+    <!-- Unsere Apps: 2 × 2 cards (one column on phones). Each panel holds ONE phone with a
+         screenshot carousel (.pj-appc): the frame stays put, the screenshots slide inside
+         it (native scroll-snap: touch swipe; mouse drag; ←/→/Home/End), gold arrows and
+         dots below. Each card's carousel is independent. Click a screenshot for the
+         full-resolution lightbox gallery (previous/next) of that project.
+         Screenshots: assets/projekte/apps/<name>-full.webp (original pixels, lossless,
+         only the status bar / Safari controls cropped) + <name>-780.webp for the phone.
+         The login screenshot's demo-credentials box is blurred (redaction).
+         --app-bg = the app's page colour, shown below a screenshot shorter than the screen.
+         Markt- & Verkaufsverwaltung (App 04) keeps the iPhone status bar; its prices are
+         blurred in the source screenshots. Script at the end of this file.
+         Each card slides in once (left column from the left, right column from the
+         right) when its row enters the viewport: site.js [data-reveal], styles in zetac.css. -->
+    <section class="pj-section" id="apps" aria-labelledby="apps-title">
+      <h2 class="pj-heading" id="apps-title">Unsere Apps</h2>
+      <ul class="pj-apps" data-reveal-stagger="0">
+          <li class="pj-app" data-reveal data-reveal-nowait>
+            <div class="pj-app-panel">
+              <div class="pj-appc" role="group" aria-roledescription="Karussell" aria-label="Screenshots StockFlow">
+                <div class="pj-phone"><ul class="pj-appc-track" tabindex="0" aria-label="Screenshots StockFlow, mit Pfeiltasten wechseln">
+                  <li class="pj-appc-slide" data-label="Produkte" style="--app-bg: #f3f7fd"><button class="pj-zoom" type="button"><img src="assets/projekte/apps/stockflow-produkte-780.webp" srcset="assets/projekte/apps/stockflow-produkte-780.webp 780w, assets/projekte/apps/stockflow-produkte-full.webp 1179w" sizes="(max-width: 700px) 52vw, 250px" data-full="assets/projekte/apps/stockflow-produkte-full.webp" data-density="2" alt="StockFlow: Produktverwaltung mit Produktkatalog, PDF-Export und Produkttabelle" width="1179" height="2404" loading="lazy" decoding="async" draggable="false" /></button></li>
+                  <li class="pj-appc-slide" data-label="Übersicht" style="--app-bg: #f3f7fd"><button class="pj-zoom" type="button"><img src="assets/projekte/apps/stockflow-uebersicht-780.webp" srcset="assets/projekte/apps/stockflow-uebersicht-780.webp 780w, assets/projekte/apps/stockflow-uebersicht-full.webp 1179w" sizes="(max-width: 700px) 52vw, 250px" data-full="assets/projekte/apps/stockflow-uebersicht-full.webp" data-density="2" alt="StockFlow: Übersicht mit Produkten gesamt, aktuellem Bestand und letzten Lagerbewegungen" width="1179" height="2404" loading="lazy" decoding="async" draggable="false" /></button></li>
+                </ul></div>
+                <div class="pj-appc-controls">
+                  <button class="pj-nav pj-appc-nav" type="button" data-dir="-1" aria-label="Vorheriger Screenshot: StockFlow"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></button>
+                  <div class="pw-dots pj-appc-dots" role="group" aria-label="Screenshot wählen: StockFlow"></div>
+                  <button class="pj-nav pj-appc-nav" type="button" data-dir="1" aria-label="Nächster Screenshot: StockFlow"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+                </div>
+              </div>
+            </div>
+            <h3>StockFlow</h3>
+            <p>Produkte, Bestände und Lagerbewegungen übersichtlich verwalten.</p>
+            <a class="pk-contact" href="projekte-apps.html#stockflow" aria-label="Ganzes Projekt ansehen: StockFlow">Ganzes Projekt ansehen <span class="pk-contact-arrow" aria-hidden="true"><span>↗</span><span>↗</span></span></a>
+          </li>
+          <li class="pj-app" data-reveal data-reveal-nowait>
+            <div class="pj-app-panel">
+              <div class="pj-appc" role="group" aria-roledescription="Karussell" aria-label="Screenshots ZeitTrack">
+                <div class="pj-phone"><ul class="pj-appc-track" tabindex="0" aria-label="Screenshots ZeitTrack, mit Pfeiltasten wechseln">
+                  <li class="pj-appc-slide" data-label="Dashboard" style="--app-bg: #20293a"><button class="pj-zoom" type="button"><img src="assets/projekte/apps/zeittrack-dashboard-780.webp" srcset="assets/projekte/apps/zeittrack-dashboard-780.webp 780w, assets/projekte/apps/zeittrack-dashboard-full.webp 1178w" sizes="(max-width: 700px) 52vw, 250px" data-full="assets/projekte/apps/zeittrack-dashboard-full.webp" data-density="2" alt="ZeitTrack: Dashboard mit Arbeits-Timer und abgeschlossenen Sitzungen" width="1178" height="1930" loading="lazy" decoding="async" draggable="false" /></button></li>
+                  <li class="pj-appc-slide" data-label="Laufender Timer" style="--app-bg: #20293a"><button class="pj-zoom" type="button"><img src="assets/projekte/apps/zeittrack-timer-780.webp" srcset="assets/projekte/apps/zeittrack-timer-780.webp 780w, assets/projekte/apps/zeittrack-timer-full.webp 1178w" sizes="(max-width: 700px) 52vw, 250px" data-full="assets/projekte/apps/zeittrack-timer-full.webp" data-density="2" alt="ZeitTrack: laufender Timer mit aktueller Arbeitszeit, Pause und Stopp" width="1178" height="1985" loading="lazy" decoding="async" draggable="false" /></button></li>
+                </ul></div>
+                <div class="pj-appc-controls">
+                  <button class="pj-nav pj-appc-nav" type="button" data-dir="-1" aria-label="Vorheriger Screenshot: ZeitTrack"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></button>
+                  <div class="pw-dots pj-appc-dots" role="group" aria-label="Screenshot wählen: ZeitTrack"></div>
+                  <button class="pj-nav pj-appc-nav" type="button" data-dir="1" aria-label="Nächster Screenshot: ZeitTrack"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+                </div>
+              </div>
+            </div>
+            <h3>ZeitTrack</h3>
+            <p>Arbeitszeiten einfach erfassen und laufende Sitzungen im Blick behalten.</p>
+            <a class="pk-contact" href="projekte-apps.html#zeittrack" aria-label="Ganzes Projekt ansehen: ZeitTrack">Ganzes Projekt ansehen <span class="pk-contact-arrow" aria-hidden="true"><span>↗</span><span>↗</span></span></a>
+          </li>
+          <li class="pj-app" data-reveal data-reveal-nowait>
+            <div class="pj-app-panel">
+              <div class="pj-appc" role="group" aria-roledescription="Karussell" aria-label="Screenshots Kommunikationsplattform">
+                <div class="pj-phone"><ul class="pj-appc-track" tabindex="0" aria-label="Screenshots Kommunikationsplattform, mit Pfeiltasten wechseln">
+                  <li class="pj-appc-slide" data-label="Anmeldung" style="--app-bg: #f8fafb"><button class="pj-zoom" type="button"><img src="assets/projekte/apps/kommunikation-anmeldung-780.webp" srcset="assets/projekte/apps/kommunikation-anmeldung-780.webp 780w, assets/projekte/apps/kommunikation-anmeldung-full.webp 1179w" sizes="(max-width: 700px) 52vw, 250px" data-full="assets/projekte/apps/kommunikation-anmeldung-full.webp" data-density="2" alt="Kommunikationsplattform: Anmeldung mit E-Mail-Adresse und Passwort" width="1179" height="2290" loading="lazy" decoding="async" draggable="false" /></button></li>
+                  <li class="pj-appc-slide" data-label="Kontakte" style="--app-bg: #ffffff"><button class="pj-zoom" type="button"><img src="assets/projekte/apps/kommunikation-kontakte-780.webp" srcset="assets/projekte/apps/kommunikation-kontakte-780.webp 780w, assets/projekte/apps/kommunikation-kontakte-full.webp 1170w" sizes="(max-width: 700px) 52vw, 250px" data-full="assets/projekte/apps/kommunikation-kontakte-full.webp" data-density="2" alt="Kommunikationsplattform: Benachrichtigungen und Kontakte" width="1170" height="2240" loading="lazy" decoding="async" draggable="false" /></button></li>
+                </ul></div>
+                <div class="pj-appc-controls">
+                  <button class="pj-nav pj-appc-nav" type="button" data-dir="-1" aria-label="Vorheriger Screenshot: Kommunikationsplattform"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></button>
+                  <div class="pw-dots pj-appc-dots" role="group" aria-label="Screenshot wählen: Kommunikationsplattform"></div>
+                  <button class="pj-nav pj-appc-nav" type="button" data-dir="1" aria-label="Nächster Screenshot: Kommunikationsplattform"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+                </div>
+              </div>
+            </div>
+            <h3>Kommunikationsplattform</h3>
+            <p>Nachrichten und Kontakte für die Zusammenarbeit an einem Ort bündeln.</p>
+            <a class="pk-contact" href="projekte-apps.html#kommunikationsplattform" aria-label="Ganzes Projekt ansehen: Kommunikationsplattform">Ganzes Projekt ansehen <span class="pk-contact-arrow" aria-hidden="true"><span>↗</span><span>↗</span></span></a>
+          </li>
+          <li class="pj-app" data-reveal data-reveal-nowait>
+            <div class="pj-app-panel">
+              <div class="pj-appc" role="group" aria-roledescription="Karussell" aria-label="Screenshots Markt- &amp; Verkaufsverwaltung">
+                <div class="pj-phone"><ul class="pj-appc-track" tabindex="0" aria-label="Screenshots Markt- &amp; Verkaufsverwaltung, mit Pfeiltasten wechseln">
+                  <li class="pj-appc-slide" data-label="Kasse" style="--app-bg: #f1f2f5"><button class="pj-zoom" type="button"><img src="assets/projekte/apps/markt-kasse-780.webp" srcset="assets/projekte/apps/markt-kasse-780.webp 780w, assets/projekte/apps/markt-kasse-full.webp 852w" sizes="(max-width: 700px) 52vw, 250px" data-full="assets/projekte/apps/markt-kasse-full.webp" data-density="2" alt="Markt- &amp; Verkaufsverwaltung: Kasse mit Marktauswahl, Zeitraumfiltern und PDF-Export je Markt" width="852" height="1810" loading="lazy" decoding="async" draggable="false" /></button></li>
+                  <li class="pj-appc-slide" data-label="Produkte" style="--app-bg: #f1f2f5"><button class="pj-zoom" type="button"><img src="assets/projekte/apps/markt-produkte-780.webp" srcset="assets/projekte/apps/markt-produkte-780.webp 780w, assets/projekte/apps/markt-produkte-full.webp 852w" sizes="(max-width: 700px) 52vw, 250px" data-full="assets/projekte/apps/markt-produkte-full.webp" data-density="2" alt="Markt- &amp; Verkaufsverwaltung: Produktverwaltung mit Verkaufs- und Einkaufspreis" width="852" height="1810" loading="lazy" decoding="async" draggable="false" /></button></li>
+                </ul></div>
+                <div class="pj-appc-controls">
+                  <button class="pj-nav pj-appc-nav" type="button" data-dir="-1" aria-label="Vorheriger Screenshot: Markt- &amp; Verkaufsverwaltung"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></button>
+                  <div class="pw-dots pj-appc-dots" role="group" aria-label="Screenshot wählen: Markt- &amp; Verkaufsverwaltung"></div>
+                  <button class="pj-nav pj-appc-nav" type="button" data-dir="1" aria-label="Nächster Screenshot: Markt- &amp; Verkaufsverwaltung"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+                </div>
+              </div>
+            </div>
+            <h3>Markt- &amp; Verkaufsverwaltung</h3>
+            <p>Märkte, Produkte und Verkäufe zentral organisieren und verwalten.</p>
+            <a class="pk-contact" href="projekte-apps.html#markt-verkaufsverwaltung" aria-label="Ganzes Projekt ansehen: Markt- &amp; Verkaufsverwaltung">Ganzes Projekt ansehen <span class="pk-contact-arrow" aria-hidden="true"><span>↗</span><span>↗</span></span></a>
+          </li>
+      </ul>
     </section>
 
-    <section class="wrap closing">
-      <h2>Sie haben ein Projekt im Kopf?</h2>
-      <a class="mail" href="mailto:info@zetac.de">info@zetac.de</a>
+    <!-- Unsere Webprojekte: text and button left, screenshot carousel right (stacked on phones).
+         Carousel script at the end of this file. -->
+    <section class="pj-section pj-web" id="webprojekte" aria-labelledby="web-title">
+      <div class="pj-web-text">
+        <h2 class="pj-heading" id="web-title">Unsere Webprojekte</h2>
+        <h3>Onlineshop</h3>
+        <p>Ein Onlineshop, den wir für einen Kunden umgesetzt haben.</p>
+        <a class="pk-contact" href="projekte-web.html" aria-label="Ganzes Projekt ansehen: Onlineshop">Ganzes Projekt ansehen <span class="pk-contact-arrow" aria-hidden="true"><span>↗</span><span>↗</span></span></a>
+      </div>
+      <section class="pj-carousel" aria-roledescription="Karussell" aria-label="Screenshots Onlineshop">
+        <div class="pj-browser">
+          <div class="pj-browser-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+          <!-- Real screenshots of the shop (Safari toolbar removed), lossless WebP.
+               Carousel: srcset 1000w / 1600w / full (≥ 2× the rendered width on Retina).
+               Lightbox: data-full = original pixels, no resampling; data-density = the
+               screenshot's capture scale (2 = Retina capture), used to cap the lightbox at
+               the page's real size so it is never upscaled.
+               Each image is shown at width 100% / height auto; the window's height follows
+               the current slide. Click a screenshot to open it larger (lightbox below).
+               To add a slide: copy an <li>, set src/alt/width/height and data-label.
+               Counter, "x von N" labels and the lightbox are handled by the script. -->
+          <div class="pj-viewport" tabindex="0" aria-label="Screenshots, mit Pfeiltasten wechseln">
+            <ul class="pj-track">
+                <li class="pj-slide" data-label="Startseite"><button class="pj-zoom" type="button"><img src="assets/projekte/web/slide-startseite-1600.webp" srcset="assets/projekte/web/slide-startseite-1000.webp 1000w, assets/projekte/web/slide-startseite-1600.webp 1600w, assets/projekte/web/slide-startseite-2852.webp 2852w" sizes="(max-width: 900px) calc(100vw - 56px), min(56vw, 790px)" data-full="assets/projekte/web/slide-startseite-2852.webp" data-density="2" alt="Startseite des Onlineshops: Hero „Flexibel auf jedem Herd – schnell auf Temperatur“ mit Pfanne auf dem Induktionsfeld" width="2852" height="1741" /></button></li>
+                <li class="pj-slide" data-label="Kollektion"><button class="pj-zoom" type="button"><img src="assets/projekte/web/slide-kollektion-1600.webp" srcset="assets/projekte/web/slide-kollektion-1000.webp 1000w, assets/projekte/web/slide-kollektion-1600.webp 1600w, assets/projekte/web/slide-kollektion-2852.webp 2852w" sizes="(max-width: 900px) calc(100vw - 56px), min(56vw, 790px)" data-full="assets/projekte/web/slide-kollektion-2852.webp" data-density="2" alt="Kollektionsseite des Onlineshops: Kategorien Bratpfanne, Hochrandpfanne, Eckig und Wok" width="2852" height="1741" loading="lazy" /></button></li>
+                <li class="pj-slide" data-label="Warenkorb"><button class="pj-zoom" type="button"><img src="assets/projekte/web/slide-warenkorb-1600.webp" srcset="assets/projekte/web/slide-warenkorb-1000.webp 1000w, assets/projekte/web/slide-warenkorb-1600.webp 1600w, assets/projekte/web/slide-warenkorb-2852.webp 2852w" sizes="(max-width: 900px) calc(100vw - 56px), min(56vw, 790px)" data-full="assets/projekte/web/slide-warenkorb-2852.webp" data-density="2" alt="Warenkorb des Onlineshops: Bratpfanne 20 cm, Menge, Bestellübersicht und Button „Weiter zur Kasse“" width="2852" height="1741" loading="lazy" /></button></li>
+                <li class="pj-slide" data-label="Kasse"><button class="pj-zoom" type="button"><img src="assets/projekte/web/slide-kasse-1600.webp" srcset="assets/projekte/web/slide-kasse-1000.webp 1000w, assets/projekte/web/slide-kasse-1600.webp 1600w, assets/projekte/web/slide-kasse-2852.webp 2852w" sizes="(max-width: 900px) calc(100vw - 56px), min(56vw, 790px)" data-full="assets/projekte/web/slide-kasse-2852.webp" data-density="2" alt="Kasse des Onlineshops: Express-Kasse, Kontakt- und Lieferadresse sowie Bestellübersicht" width="2852" height="1741" loading="lazy" /></button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pj-controls">
+          <button class="pj-nav" type="button" data-dir="-1" aria-label="Vorheriger Screenshot"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></button>
+          <p class="pj-count" aria-live="polite"><span data-current>1</span> / <span data-total>4</span></p>
+          <button class="pj-nav" type="button" data-dir="1" aria-label="Nächster Screenshot"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+        </div>
+      </section>
     </section>
+
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <span>Zetac · Digitalstudio in Paderborn</span>
-      <nav aria-label="Fußzeile">
-        <a href="about.html">Über uns</a>
-        <a href="projekte.html">Projekte</a>
-        <a href="services.html">Leistungen</a>
-        <a href="contact.html">Kontakt</a>
-        <a href="https://www.instagram.com/zetac.digital.consultancy/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      </nav>
-      <span>© 2026 Zetac</span>
+  <!-- Site footer: gold band, navy panel with rounded top corners (see .zf in zetac.css). -->
+  <footer class="zf">
+    <div class="zf-panel">
+      <div class="zf-inner">
+        <div class="zf-cols">
+          <nav aria-labelledby="zf-nav-title">
+            <h2 class="zf-title" id="zf-nav-title">Navigation</h2>
+            <ul>
+              <li><a href="projekte.html">Projekte</a></li>
+              <li><a href="services.html">Leistungen</a></li>
+              <li><a href="about.html">Über uns</a></li>
+              <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+          </nav>
+          <nav aria-labelledby="zf-svc-title">
+            <h2 class="zf-title" id="zf-svc-title">Leistungen</h2>
+            <ul>
+              <li><a href="services.html#app-entwicklung">App-Entwicklung</a></li>
+              <li><a href="services.html#onlineshop">Onlineshops &amp; Google-SEO</a></li>
+              <li><a href="services.html#leistungen">Social Media</a></li>
+            </ul>
+          </nav>
+          <div>
+            <h2 class="zf-title">Kontakt</h2>
+            <ul>
+              <li><a href="mailto:info@zetac.de">info@zetac.de</a></li>
+              <li>Paderborn, Deutschland</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Brand: logo tile beside the wordmark, tagline directly below the wordmark. -->
+        <div class="zf-sign">
+          <a class="zf-brand" href="index.html" aria-label="Zetac – zur Startseite"><span class="zf-logo"><img src="assets/logo.png" alt="" width="1024" height="1024" loading="lazy" /></span><span class="zf-brand-text"><span class="zf-word" aria-hidden="true">Zetac</span><span class="zf-tag" lang="en" aria-hidden="true">Digital Consultancy</span></span></a>
+        </div>
+        <!-- Legal row. NOTE: impressum.html and datenschutz.html do not exist yet. -->
+        <div class="zf-small">
+          <span>© 2026 Zetac</span>
+          <nav aria-label="Rechtliches">
+            <ul class="zf-legal">
+              <li><a href="impressum.html">Impressum</a></li>
+              <li><a href="datenschutz.html">Datenschutz</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </div>
   </footer>
 
+  <!-- Lightbox for the carousel screenshots: closes with Escape, the close button,
+       or a click on the dark backdrop. -->
+  <dialog class="pj-lightbox" aria-label="Screenshot vergrößert">
+    <button class="pj-lightbox-close" type="button" aria-label="Schließen"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <figure class="pj-lightbox-figure">
+      <img alt="" />
+      <figcaption></figcaption>
+    </figure>
+  </dialog>
+
+  <!-- Lightbox gallery for the app carousels (one project at a time): full-resolution
+       originals, previous/next, counter; Escape, close button or a click beside the image
+       closes it; the card's carousel follows the last image viewed. -->
+  <dialog class="pj-lightbox pj-lightbox--gallery pj-app-lightbox" aria-label="Screenshots vergrößert" aria-roledescription="Galerie">
+    <button class="pj-lightbox-close" type="button" aria-label="Schließen"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <button class="pj-nav pj-lb-nav pj-lb-prev" type="button" data-lb-dir="-1" aria-label="Vorheriger Screenshot"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></button>
+    <figure class="pj-lightbox-figure pj-lb-stage">
+      <img alt="" />
+    </figure>
+    <button class="pj-nav pj-lb-nav pj-lb-next" type="button" data-lb-dir="1" aria-label="Nächster Screenshot"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+    <div class="pj-lb-bar">
+      <p class="pj-lb-label"></p>
+      <p class="pj-lb-count" aria-live="polite"><span data-lb-current>1</span> / <span data-lb-total>2</span></p>
+    </div>
+  </dialog>
+
   <script src="site.js" defer></script>
+  <script>
+    // Onlineshop screenshot carousel: arrow buttons, keyboard (←/→, Home/End), touch swipe;
+    // wraps around. The window's height follows the current screenshot (smooth transition).
+    // Clicking a screenshot opens it larger in a lightbox (Escape or the close button closes it).
+    (function () {
+      var root = document.querySelector('.pj-carousel');
+      if (!root) return;
+      var track = root.querySelector('.pj-track');
+      var slides = root.querySelectorAll('.pj-slide');
+      var viewport = root.querySelector('.pj-viewport');
+      var current = root.querySelector('[data-current]');
+      var total = root.querySelector('[data-total]');
+      var n = slides.length;
+      if (total) total.textContent = n;   // counter always matches the slides
+      slides.forEach(function (s, i) {
+        var label = s.dataset.label || 'Screenshot';
+        s.setAttribute('role', 'group');
+        s.setAttribute('aria-roledescription', 'Folie');
+        s.setAttribute('aria-label', (i + 1) + ' von ' + n + ': ' + label);
+        s.querySelector('.pj-zoom').setAttribute('aria-label', 'Vergrößern: ' + label);
+      });
+      var index = 0;
+      function fitHeight() { viewport.style.height = slides[index].offsetHeight + 'px'; }
+      function show(i) {
+        index = (i + n) % n;
+        track.style.transform = 'translateX(' + (-100 * index) + '%)';
+        current.textContent = index + 1;
+        slides.forEach(function (s, k) {
+          var hidden = k !== index;
+          s.setAttribute('aria-hidden', String(hidden));
+          s.inert = hidden;   // hidden slides' zoom buttons are not focusable
+        });
+        fitHeight();
+      }
+      root.querySelectorAll('.pj-nav').forEach(function (b) {
+        b.addEventListener('click', function () { show(index + Number(b.dataset.dir)); });
+      });
+      root.addEventListener('keydown', function (e) {
+        var map = { ArrowLeft: index - 1, ArrowRight: index + 1, Home: 0, End: n - 1 };
+        if (!(e.key in map)) return;
+        e.preventDefault();
+        show(map[e.key]);
+      });
+      var x0 = null, y0 = null, lastSwipe = 0;
+      viewport.addEventListener('touchstart', function (e) {
+        x0 = e.touches[0].clientX; y0 = e.touches[0].clientY;
+      }, { passive: true });
+      viewport.addEventListener('touchend', function (e) {
+        if (x0 === null) return;
+        var dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+        if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) { lastSwipe = Date.now(); show(index + (dx < 0 ? 1 : -1)); }
+        x0 = null;
+      });
+      // Keep the height right when the layout width changes (rotation, resize, image load).
+      if ('ResizeObserver' in window) new ResizeObserver(fitHeight).observe(track);
+      else window.addEventListener('resize', fitHeight);
+      show(0);
+
+      // Lightbox
+      var box = document.querySelector('.pj-lightbox');
+      if (!box || typeof box.showModal !== 'function') return;
+      var bigImg = box.querySelector('img');
+      var caption = box.querySelector('figcaption');
+      var opener = null;
+      root.querySelectorAll('.pj-zoom').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          if (Date.now() - lastSwipe < 400) return;   // the click right after a swipe is not a tap
+          var img = btn.querySelector('img');
+          // Full-resolution original (no resampling). The dialog is capped at the page's
+          // real size (pixels ÷ capture density), so the screenshot is never upscaled.
+          bigImg.src = img.dataset.full || img.currentSrc || img.src;
+          bigImg.alt = img.alt;
+          var fullW = Number(img.getAttribute('width')), fullH = Number(img.getAttribute('height'));
+          bigImg.width = fullW;
+          bigImg.height = fullH;
+          box.style.maxWidth = Math.round(fullW / (Number(img.dataset.density) || 1)) + 'px';
+          caption.textContent = btn.closest('.pj-slide').dataset.label || '';
+          opener = btn;
+          box.showModal();                        // Escape closes natively
+          box.querySelector('.pj-lightbox-close').focus();
+        });
+      });
+      box.querySelector('.pj-lightbox-close').addEventListener('click', function () { box.close(); });
+      box.addEventListener('click', function (e) { if (e.target === box) box.close(); });   // backdrop
+      box.addEventListener('close', function () { if (opener) opener.focus(); });
+    })();
+  </script>
+  <script>
+    // App carousels ("Unsere Apps"): one per card, each with its own state. The phone
+    // frame stays put; the screenshots slide inside it via native horizontal scroll-snap
+    // (touch swipe), mouse dragging, ←/→/Home/End, gold arrows (wrap around) and dots.
+    // A click (not the end of a drag) opens that project's screenshots in the lightbox
+    // gallery at full resolution; the carousel follows the last image viewed.
+    (function () {
+      var box = document.querySelector('.pj-app-lightbox');
+      var canBox = box && typeof box.showModal === 'function';
+      var active = null;   // the carousel whose screenshots the lightbox shows
+      var smooth = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+
+      document.querySelectorAll('.pj-appc').forEach(function (root) {
+        var track = root.querySelector('.pj-appc-track');
+        var slides = root.querySelectorAll('.pj-appc-slide');
+        var dotsBox = root.querySelector('.pj-appc-dots');
+        var n = slides.length, index = 0, dots = [];
+        slides.forEach(function (sl, i) {
+          var label = sl.dataset.label || 'Ansicht ' + (i + 1);
+          sl.setAttribute('role', 'group');
+          sl.setAttribute('aria-roledescription', 'Folie');
+          sl.setAttribute('aria-label', (i + 1) + ' von ' + n + ': ' + label);
+          sl.querySelector('.pj-zoom').setAttribute('aria-label', 'Vergrößern: ' + label);
+          var d = document.createElement('button');
+          d.type = 'button';
+          d.className = 'pw-dot';
+          d.setAttribute('aria-label', (i + 1) + ' von ' + n + ': ' + label);
+          d.addEventListener('click', function () { go(i); });
+          dotsBox.appendChild(d);
+          dots.push(d);
+        });
+        function width() { return track.clientWidth; }
+        function mark() {
+          dots.forEach(function (d, k) { d.setAttribute('aria-current', k === index ? 'true' : 'false'); });
+          slides.forEach(function (sl, k) { sl.setAttribute('aria-hidden', String(k !== index)); sl.inert = k !== index; });
+        }
+        function go(i, behavior) {
+          index = (i + n) % n;
+          track.scrollTo({ left: index * width(), behavior: behavior || smooth });
+          mark();
+        }
+        // Native swipes: the slide nearest to the scroll position becomes current.
+        var t = null;
+        track.addEventListener('scroll', function () {
+          if (drag) return;
+          clearTimeout(t);
+          t = setTimeout(function () {
+            var i = Math.round(track.scrollLeft / width());
+            if (i !== index) { index = i; mark(); }
+          }, 60);
+        }, { passive: true });
+        root.querySelectorAll('.pj-appc-nav').forEach(function (b) {
+          b.addEventListener('click', function () { go(index + Number(b.dataset.dir)); });
+        });
+        track.addEventListener('keydown', function (e) {
+          var map = { ArrowLeft: index - 1, ArrowRight: index + 1, Home: 0, End: n - 1 };
+          if (!(e.key in map)) return;
+          e.preventDefault();
+          go(map[e.key]);
+        });
+        // Mouse dragging (touch and pen use native scrolling).
+        var drag = null, lastDrag = 0;
+        track.addEventListener('pointerdown', function (e) {
+          if (e.pointerType !== 'mouse' || e.button !== 0) return;
+          drag = { x: e.clientX, left: track.scrollLeft, start: index, moved: false };
+        });
+        track.addEventListener('pointermove', function (e) {
+          if (!drag) return;
+          var dx = e.clientX - drag.x;
+          if (!drag.moved) {
+            if (Math.abs(dx) < 6) return;
+            drag.moved = true;
+            track.classList.add('is-dragging');
+            track.setPointerCapture(e.pointerId);
+          }
+          track.scrollLeft = drag.left - dx;
+        });
+        function endDrag(e) {
+          if (!drag) return;
+          var dx = e.clientX - drag.x, d = drag;
+          drag = null;
+          if (!d.moved) return;
+          lastDrag = Date.now();
+          track.classList.remove('is-dragging');
+          // Dragging stops at the first/last screenshot (like touch); only the arrows wrap.
+          go(Math.max(0, Math.min(n - 1, d.start + (Math.abs(dx) > Math.min(60, width() * 0.18) ? (dx < 0 ? 1 : -1) : 0))));
+        }
+        track.addEventListener('pointerup', endDrag);
+        track.addEventListener('pointercancel', endDrag);
+        if ('ResizeObserver' in window) new ResizeObserver(function () { go(index, 'auto'); }).observe(track);
+        mark();
+
+        root.querySelectorAll('.pj-zoom').forEach(function (btn, i) {
+          btn.addEventListener('click', function () {
+            if (!canBox || Date.now() - lastDrag < 400) return;   // the click ending a drag is not a tap
+            active = { slides: slides, go: go, opener: btn, openedAt: i, title: root.getAttribute('aria-label') };
+            lbOpen(i);
+          });
+        });
+      });
+
+      if (!canBox) return;
+      var big = box.querySelector('.pj-lb-stage img');
+      var stage = box.querySelector('.pj-lb-stage');
+      var label = box.querySelector('.pj-lb-label');
+      var lbCurrent = box.querySelector('[data-lb-current]');
+      var lbTotal = box.querySelector('[data-lb-total]');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+      var lbIndex = 0;
+      function img(i) { return active.slides[i].querySelector('img'); }
+      function preload(i) { var im = new Image(); im.src = img(i).dataset.full; }
+      function lbShow(i) {
+        var n = active.slides.length;
+        lbIndex = (i + n) % n;
+        var src = img(lbIndex);
+        var fw = Number(src.getAttribute('width')), fh = Number(src.getAttribute('height'));
+        var swap = function () {
+          big.src = src.dataset.full;
+          big.alt = src.alt; big.width = fw; big.height = fh;
+          // Cap at the screenshot's CSS-pixel size (pixels ÷ density): never upscaled.
+          big.style.setProperty('--lb-w', Math.round(fw / (Number(src.dataset.density) || 1)) + 'px');
+          big.classList.remove('is-switching');
+        };
+        if (box.open && !reduce.matches) { big.classList.add('is-switching'); setTimeout(swap, 150); } else swap();
+        label.textContent = active.slides[lbIndex].dataset.label || '';
+        lbCurrent.textContent = lbIndex + 1;
+        lbTotal.textContent = n;
+        preload((lbIndex + 1) % n);
+      }
+      function lbOpen(i) {
+        lbShow(i);
+        box.setAttribute('aria-label', active.title + ', vergrößert');
+        document.documentElement.classList.add('has-lightbox');
+        box.showModal();
+        box.querySelector('.pj-lightbox-close').focus();
+      }
+      box.querySelectorAll('[data-lb-dir]').forEach(function (b) {
+        b.addEventListener('click', function () { lbShow(lbIndex + Number(b.dataset.lbDir)); });
+      });
+      box.querySelector('.pj-lightbox-close').addEventListener('click', function () { box.close(); });
+      box.addEventListener('click', function (e) { if (e.target === box || e.target === stage) box.close(); });
+      box.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+          e.preventDefault();
+          lbShow(lbIndex + (e.key === 'ArrowRight' ? 1 : -1));
+        } else if (e.key === 'Tab') {
+          var f = Array.prototype.filter.call(box.querySelectorAll('button'), function (b) { return b.getClientRects().length > 0; });
+          var k = f.indexOf(document.activeElement);
+          e.preventDefault();
+          f[(k + (e.shiftKey ? -1 : 1) + f.length) % f.length].focus();
+        }
+      });
+      // Swipe (or mouse drag) on the enlarged image: horizontal moves only.
+      var sw = null;
+      stage.addEventListener('pointerdown', function (e) {
+        if (e.pointerType === 'mouse' && e.button !== 0) return;
+        sw = { id: e.pointerId, x: e.clientX, y: e.clientY };
+      });
+      stage.addEventListener('pointerup', function (e) {
+        if (!sw || e.pointerId !== sw.id) return;
+        var dx = e.clientX - sw.x, dy = e.clientY - sw.y;
+        sw = null;
+        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.2) {
+          box.dataset.swiped = String(Date.now());
+          lbShow(lbIndex + (dx < 0 ? 1 : -1));
+        }
+      });
+      stage.addEventListener('pointercancel', function () { sw = null; });
+      stage.addEventListener('click', function (e) {
+        if (Date.now() - Number(box.dataset.swiped || 0) < 400) e.stopPropagation();
+      }, true);
+      box.addEventListener('close', function () {
+        document.documentElement.classList.remove('has-lightbox');
+        if (!active) return;
+        active.go(lbIndex, 'auto');   // the card follows the last image viewed
+        var target = lbIndex === active.openedAt ? active.opener : active.slides[lbIndex].querySelector('.pj-zoom');
+        if (target) target.focus({ preventScroll: true });
+      });
+    })();
+  </script>
 </body>
 </html>

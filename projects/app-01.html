@@ -3,115 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>App 01 – Projekte – Zetac</title>
-  <meta name="description" content="Projekt App 01 von Zetac." />
+  <title>StockFlow – Projekte – Zetac</title>
+  <meta name="description" content="StockFlow: Produkte, Bestände und Lagerbewegungen übersichtlich verwalten." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <!-- The arrow (→) is not in Google's default Inter subsets; load just that glyph. -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&text=%E2%86%92&display=swap" rel="stylesheet" />
+  <!-- The arrows (→ ↗) are not in Google's default Inter subsets; load just that glyph. -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&text=%E2%86%92%E2%86%97&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../zetac.css" />
   <link rel="icon" href="../assets/logo.png" type="image/png" />
 </head>
-<body>
+<body class="page-blank page-web">
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
 
-  <header class="site-header">
+  <!-- Shared navbar (same as projekte.html). -->
+  <header class="site-header site-header--hero">
     <div class="wrap">
-      <a class="brand" href="../index.html" aria-label="Zetac – zur Startseite"><img src="../assets/logo.png" alt="" width="30" height="30" />Zetac</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menü</button>
+      <a class="brand" href="../index.html" aria-label="Zetac – zur Startseite"><span class="brand-mark"><img src="../assets/logo.png" alt="" width="30" height="30" /></span>Zetac</a>
       <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
         <ul class="nav-list">
-          <li><a href="../about.html">Über uns</a></li>
           <li><a href="../projekte.html" aria-current="page">Projekte</a></li>
           <li><a href="../services.html">Leistungen</a></li>
+          <li><a href="../about.html">Über uns</a></li>
           <li class="nav-cta"><a href="../contact.html">Kontakt</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="inhalt">
-    <nav class="wrap crumbs" aria-label="Brotkrumen">
-      <a href="../projekte.html">Projekte</a> / App 01
+  <!-- App-Projektseite: breadcrumb, title + lead/tags (.pw-head, as projekte-web.html),
+       then both real screenshots in full inside phone frames (.pa-*, zetac.css).
+       Screenshots: assets/projekte/apps/<name>-full.webp (original pixels) + -780.webp; status bar / Safari controls cropped. -->
+  <main id="inhalt" class="page-blank-main pw">
+    <nav class="pw-crumbs" aria-label="Brotkrumen">
+      <ol>
+        <li><a href="../projekte.html">Projekte</a></li>
+        <li><a href="../projekte.html#apps">Unsere Apps</a></li>
+        <li aria-current="page">StockFlow</li>
+      </ol>
     </nav>
 
-    <section class="wrap project-head">
-      <div>
-        <span class="case-num">Projekt 01</span>
-        <h1>App 01</h1>
-      </div>
-      <p class="lede"><span class="ph">Platzhalter: ein Satz, worum es bei App 01 geht.</span></p>
-    </section>
-
-    <!-- PLATZHALTER: Haupt-Screenshot. Ersetzen: assets/platzhalter/app-01-screenshot.svg -->
-    <figure class="photo hero-shot">
-      <img src="../assets/platzhalter/app-01-screenshot.svg" alt="Platzhalter: Haupt-Screenshot von App 01" width="1600" height="1000" fetchpriority="high" />
-    </figure>
-
-    <div class="wrap">
-      <!-- PLATZHALTER: Projektdaten -->
-      <dl class="facts">
-        <div><dt>Kunde</dt><dd><span class="ph">Platzhalter</span></dd></div>
-        <div><dt>Jahr</dt><dd><span class="ph">Platzhalter</span></dd></div>
-        <div><dt>Plattform</dt><dd><span class="ph">Platzhalter</span></dd></div>
-        <div><dt>Leistungen</dt><dd><span class="ph">Platzhalter</span></dd></div>
-      </dl>
-    </div>
-
-    <section class="wrap section story">
-      <h2>Was die App macht</h2>
-      <div class="story-text">
-        <!-- PLATZHALTER: Beschreibung von App 01 -->
-        <p class="big"><span class="ph">Platzhalter: Zwei Sätze dazu, welches Problem App 01 löst und für wen sie gedacht ist.</span></p>
-        <ul class="list">
-          <li><span class="ph">Platzhalter: Funktion 1</span></li>
-          <li><span class="ph">Platzhalter: Funktion 2</span></li>
-          <li><span class="ph">Platzhalter: Funktion 3</span></li>
+    <header class="pw-head">
+      <h1 class="pw-title">StockFlow</h1>
+      <div class="pw-intro">
+        <p class="pw-lead">Produkte, Bestände und Lagerbewegungen übersichtlich verwalten.</p>
+        <ul class="pw-tags" aria-label="Schwerpunkte">
+          <li>Produkte</li>
+          <li>Bestand</li>
+          <li>Lagerbewegungen</li>
         </ul>
       </div>
-    </section>
+    </header>
 
-    <!-- PLATZHALTER: Screenshot ersetzen: assets/platzhalter/app-01-detail-1.svg -->
-    <section class="case case--split" aria-labelledby="gebaut">
-      <figure class="photo"><img src="../assets/platzhalter/app-01-detail-1.svg" alt="Platzhalter: Ansicht 1 von App 01" width="1000" height="1250" loading="lazy" /></figure>
-      <div class="case-body">
-        <h2 id="gebaut">Was Zetac gebaut hat</h2>
-        <!-- PLATZHALTER: Leistungen von Zetac in diesem Projekt -->
-        <p class="case-caption-text"><span class="ph">Platzhalter: Kurz, was wir übernommen haben – vom Konzept bis zum Launch.</span></p>
-        <ul class="list">
-          <li>Konzept &amp; Design – <span class="ph">Platzhalter</span></li>
-          <li>Entwicklung – <span class="ph">Platzhalter</span></li>
-          <li>Launch &amp; Betreuung – <span class="ph">Platzhalter</span></li>
-        </ul>
+    <section class="pa-views" aria-labelledby="pa-views-title">
+      <h2 class="pw-h2" id="pa-views-title">Einblicke in die App.</h2>
+      <div class="pa-grid">
+        <figure class="pa-shot">
+          <div class="pa-phone" style="--app-bg: #f3f7fd"><img src="../assets/projekte/apps/stockflow-uebersicht-780.webp" srcset="../assets/projekte/apps/stockflow-uebersicht-780.webp 780w, ../assets/projekte/apps/stockflow-uebersicht-full.webp 1179w" sizes="(max-width: 600px) 82vw, 320px" alt="StockFlow: Übersicht mit Produkten gesamt (34), aktuellem Bestand (1.201 Einheiten) und Schaltflächen zum Hinzufügen, Buchen und PDF-Export" width="1179" height="2404" decoding="async" /></div>
+          <figcaption><strong>Übersicht</strong> Produkte gesamt, aktueller Bestand und die letzten Lagerbewegungen auf einen Blick.</figcaption>
+        </figure>
+        <figure class="pa-shot">
+          <div class="pa-phone" style="--app-bg: #f3f7fd"><img src="../assets/projekte/apps/stockflow-produkte-780.webp" srcset="../assets/projekte/apps/stockflow-produkte-780.webp 780w, ../assets/projekte/apps/stockflow-produkte-full.webp 1179w" sizes="(max-width: 600px) 82vw, 320px" alt="StockFlow: Produktverwaltung mit Produktkatalog, Datumsauswahl, PDF-Export und Produkttabelle" width="1179" height="2404" loading="lazy" decoding="async" /></div>
+          <figcaption><strong>Produkte</strong> Produktkatalog mit Preisen, PDF-Export und Bearbeitung.</figcaption>
+        </figure>
       </div>
     </section>
 
-    <div class="wrap">
-      <!-- PLATZHALTER: Screenshot ersetzen: assets/platzhalter/app-01-detail-2.svg -->
-      <figure class="photo inset-shot"><img src="../assets/platzhalter/app-01-detail-2.svg" alt="Platzhalter: Ansicht 2 von App 01" width="1600" height="1000" loading="lazy" /></figure>
-    </div>
-
-    <div class="wrap">
-      <a class="next-project" href="../projekte.html">
-        <span class="label">Nächstes Projekt</span>
-        <h2>App 02 <span class="accent">→</span></h2>
-        <span class="case-meta">Projektseite folgt – zur Projektübersicht</span>
-      </a>
-    </div>
+    <p class="pw-cta-row pa-cta-row">
+      <a class="pw-cta pw-cta--out" href="../contact.html">Ein ähnliches Projekt besprechen <span class="pw-cta-arrow" aria-hidden="true">↗</span></a>
+      <a class="pw-cta" href="app-02.html">Nächste App: ZeitTrack <span class="pw-cta-arrow" aria-hidden="true">→</span></a>
+    </p>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <span>Zetac · Digitalstudio in Paderborn</span>
-      <nav aria-label="Fußzeile">
-        <a href="../about.html">Über uns</a>
-        <a href="../projekte.html">Projekte</a>
-        <a href="../services.html">Leistungen</a>
-        <a href="../contact.html">Kontakt</a>
-        <a href="https://www.instagram.com/zetac.digital.consultancy/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      </nav>
-      <span>© 2026 Zetac</span>
+  <!-- Site footer: gold band, navy panel with rounded top corners (see .zf in zetac.css). -->
+  <footer class="zf">
+    <div class="zf-panel">
+      <div class="zf-inner">
+        <div class="zf-cols">
+          <nav aria-labelledby="zf-nav-title">
+            <h2 class="zf-title" id="zf-nav-title">Navigation</h2>
+            <ul>
+              <li><a href="../projekte.html">Projekte</a></li>
+              <li><a href="../services.html">Leistungen</a></li>
+              <li><a href="../about.html">Über uns</a></li>
+              <li><a href="../contact.html">Kontakt</a></li>
+            </ul>
+          </nav>
+          <nav aria-labelledby="zf-svc-title">
+            <h2 class="zf-title" id="zf-svc-title">Leistungen</h2>
+            <ul>
+              <li><a href="../services.html#app-entwicklung">App-Entwicklung</a></li>
+              <li><a href="../services.html#onlineshop">Onlineshops &amp; Google-SEO</a></li>
+              <li><a href="../services.html#leistungen">Social Media</a></li>
+            </ul>
+          </nav>
+          <div>
+            <h2 class="zf-title">Kontakt</h2>
+            <ul>
+              <li><a href="mailto:info@zetac.de">info@zetac.de</a></li>
+              <li>Paderborn, Deutschland</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Brand: logo tile beside the wordmark, tagline directly below the wordmark. -->
+        <div class="zf-sign">
+          <a class="zf-brand" href="../index.html" aria-label="Zetac – zur Startseite"><span class="zf-logo"><img src="../assets/logo.png" alt="" width="1024" height="1024" loading="lazy" /></span><span class="zf-brand-text"><span class="zf-word" aria-hidden="true">Zetac</span><span class="zf-tag" lang="en" aria-hidden="true">Digital Consultancy</span></span></a>
+        </div>
+        <!-- Legal row. NOTE: impressum.html and datenschutz.html do not exist yet. -->
+        <div class="zf-small">
+          <span>© 2026 Zetac</span>
+          <nav aria-label="Rechtliches">
+            <ul class="zf-legal">
+              <li><a href="../impressum.html">Impressum</a></li>
+              <li><a href="../datenschutz.html">Datenschutz</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </div>
   </footer>
 

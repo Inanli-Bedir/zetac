@@ -23,9 +23,9 @@
       <a class="brand" href="index.html" aria-label="Zetac – zur Startseite"><span class="brand-mark"><img src="assets/logo.png" alt="" width="30" height="30" /></span>Zetac</a>
       <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
         <ul class="nav-list">
-          <li><a href="about.html">Über uns</a></li>
           <li><a href="projekte.html">Projekte</a></li>
           <li><a href="services.html">Leistungen</a></li>
+          <li><a href="about.html">Über uns</a></li>
           <li class="nav-cta"><a href="contact.html">Kontakt</a></li>
         </ul>
       </nav>
@@ -35,32 +35,29 @@
   <main id="inhalt">
     <!-- 1. Hero (design: zetac-hero.html). Background: assets/zetac-background.jpg -->
     <section class="cover" aria-labelledby="hero-title">
-      <!-- Hero background video (decorative). Drop the clip files at these paths; site.js
-           only loads them when motion is allowed. Until they exist, or if playback fails,
-           the still image (assets/zetac-background.jpg) is shown instead.
-             assets/hero/zetac-hero-loop.webm  (VP9 or AV1)
-             assets/hero/zetac-hero-loop.mp4   (H.264, for Safari) -->
+      <!-- Hero background video (decorative): assets/hero/zetac-hero-loop.mp4 (H.264, no audio).
+           site.js only loads it when motion is allowed; with reduced motion, Save-Data,
+           or if playback fails, the still image (assets/zetac-background.jpg) is shown. -->
       <video class="cover-video" aria-hidden="true" tabindex="-1" muted loop playsinline autoplay
              preload="none" disablepictureinpicture disableremoteplayback
              poster="assets/zetac-background.jpg">
-        <source data-src="assets/hero/zetac-hero-loop.webm" type="video/webm" />
         <source data-src="assets/hero/zetac-hero-loop.mp4" type="video/mp4" />
       </video>
-      <h1 id="hero-title">Apps, Onlineshops und Social Media.</h1>
+      <h1 id="hero-title"><span class="cover-line">Individuelle Apps.</span> <span class="cover-line">E&#8209;Commerce von A&nbsp;bis&nbsp;Z.</span> <span class="cover-line">Social Media mit Konzept.</span></h1>
       <div class="cover-bottom">
-        <p>Wir entwickeln individuelle Apps, erstellen Onlineshops mit Google-SEO und betreuen Social-Media-Auftritte für Unternehmen.</p>
+        <p>Von Design und technischer Umsetzung Ihres Onlineshops über maßgeschneiderte Apps bis zu Social-Media-Inhalten und Kampagnen – wir begleiten Ihr Unternehmen von der Idee bis zum Start.</p>
         <a class="cover-action" href="#leistungen"><span>Leistungen entdecken</span><span class="cover-arrow" aria-hidden="true">→</span></a>
       </div>
     </section>
 
-    <!-- 2. Leistungen (same copy as services.html). Each row reveals once via site.js ([data-reveal]). -->
+    <!-- 2. Leistungen (same copy as services.html). Each row slides in from the right once via site.js ([data-reveal], 200ms stagger). -->
     <section class="home-services" id="leistungen" aria-labelledby="leistungen-title">
       <div class="wrap projects-head">
         <h2 id="leistungen-title">Leistungen<sup>01</sup></h2>
         <a class="more more--out" href="services.html">Alle Leistungen</a>
       </div>
       <div class="wrap">
-        <ul class="svc-rows">
+        <ul class="svc-rows" data-reveal-stagger="200">
           <li data-reveal>
             <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.75" width="11" height="18.5" rx="2.25"/><path d="M11.25 17.75h1.5"/></svg></span>
             <h3>Individuelle App&#8209;Entwicklung</h3>
@@ -97,8 +94,8 @@
     </section>
 
     <!-- 2. Ausgewählte Projekte: App-Showcase.
-         Platzhalterbilder (je 780 × 1100 px, einzeln austauschbar):
-         assets/showcase/app-terminplaner.png, app-aufgaben.png, app-kundenportal.png, app-mitteilungen.png
+         Echte App-Screenshots (900 px breit, ohne Statusleiste/Browserleiste zugeschnitten):
+         assets/showcase/app-zeittrack.jpg, app-kommunikation.jpg, app-verkauf.jpg, app-stockflow.jpg
          The collage assembles once as a group via site.js ([data-reveal]). -->
     <section class="showcase-band" aria-labelledby="projekte-title">
       <div class="wrap showcase">
@@ -107,47 +104,70 @@
           <h3>Eine App, die zu Ihrem Unternehmen passt.</h3>
           <p>Von der Onlinebuchung bis zum internen Aufgabenplaner: Wir entwickeln Apps für die Abläufe, die Ihr Team und Ihre Kunden täglich nutzen.</p>
           <ul class="showcase-apps">
-            <li>Terminplaner</li>
-            <li>Aufgaben</li>
-            <li>Kundenportal</li>
-            <li>Mitteilungen</li>
+            <li>Zeiterfassung</li>
+            <li>Kommunikation</li>
+            <li>Verkaufsverwaltung</li>
+            <li>Lagerverwaltung</li>
           </ul>
-          <a class="btn" href="projekte.html">App-Projekte ansehen <span class="btn-arrow" aria-hidden="true">→</span></a>
+          <a class="btn" href="projekte-apps.html">App-Projekte ansehen <span class="btn-arrow" aria-hidden="true">→</span></a>
         </div>
         <figure class="showcase-stack" data-reveal>
           <div class="showcase-screens">
             <!-- Back to front (also the reveal order). -->
-            <img class="screen screen--terminplaner" src="assets/showcase/app-terminplaner.png" alt="Beispielansicht: Terminplaner mit Terminen im November" width="780" height="1100" loading="lazy" />
-            <img class="screen screen--aufgaben" src="assets/showcase/app-aufgaben.png" alt="Beispielansicht: Aufgabenliste für heute" width="780" height="1100" loading="lazy" />
-            <img class="screen screen--kundenportal" src="assets/showcase/app-kundenportal.png" alt="Beispielansicht: Kundenportal mit Projekten, Anfragen und Dateien" width="780" height="1100" loading="lazy" />
-            <img class="screen screen--mitteilungen" src="assets/showcase/app-mitteilungen.png" alt="Beispielansicht: neue Mitteilungen" width="780" height="1100" loading="lazy" />
+            <img class="screen screen--zeit" src="assets/showcase/app-zeittrack.jpg" alt="ZeitTrack: Dashboard mit Arbeits-Timer und Sitzungen von heute" width="900" height="1589" loading="lazy" decoding="async" />
+            <img class="screen screen--verkauf" src="assets/showcase/app-verkauf.jpg" alt="Verkaufsverwaltung: Märkte auswählen und als PDF exportieren" width="900" height="1778" loading="lazy" decoding="async" />
+            <img class="screen screen--kommunikation" src="assets/showcase/app-kommunikation.jpg" alt="Kommunikationsplattform: Benachrichtigungen und Kontakte" width="900" height="1723" loading="lazy" decoding="async" />
+            <img class="screen screen--lager" src="assets/showcase/app-stockflow.jpg" alt="StockFlow: Lagerübersicht mit Produkten und aktuellem Bestand" width="900" height="1835" loading="lazy" decoding="async" />
           </div>
-          <figcaption>Beispielansichten</figcaption>
+          <figcaption>Einblicke in unsere Apps</figcaption>
         </figure>
       </div>
 
       <!-- Vorher/Nachher-Vergleich (Webshop-Redesign). Directly after the app showcase, same section.
-           Platzhalterbilder, beide 1600 × 900 px (gleiches Seitenverhältnis und gleicher Ausschnitt):
-           assets/vergleich/shop-vorher.png, assets/vergleich/shop-nachher.png
-           Slider: site.js ([data-compare]). Without JS it stays at 50/50. -->
+           Screenshots Perfekt Pfannen, beide 1920 × 1080 px, gleicher Ausschnitt (ohne Browserleiste):
+           assets/vergleich/perfekt-pfannen-vorher.jpg (alt), assets/vergleich/perfekt-pfannen-nachher.jpg (neu)
+           Slider: site.js ([data-compare]). Without JS it stays at 50/50.
+           [data-compare-demo]: once in view, the divider sweeps 50 → 62 → 38 → 50 % (skipped with reduced motion). -->
       <div class="wrap compare-block">
         <h3 id="vergleich-title">Ein neuer Auftritt für den Onlineshop.</h3>
-        <p id="vergleich-hint">Ziehen Sie den Regler, um Vorher und Nachher zu vergleichen.</p>
+        <p id="vergleich-hint">Ziehen Sie den Regler nach links oder rechts, um Vorher und Nachher zu vergleichen.</p>
         <figure class="compare">
-          <div class="compare-frame" data-compare style="--pos: 50%">
-            <img class="compare-img" src="assets/vergleich/shop-nachher.png" alt="Nachher: neues Design des Onlineshops" width="1600" height="900" loading="lazy" draggable="false" />
-            <img class="compare-img compare-img--before" src="assets/vergleich/shop-vorher.png" alt="Vorher: altes Design des Onlineshops" width="1600" height="900" loading="lazy" draggable="false" />
+          <div class="compare-frame" data-compare data-compare-demo style="--pos: 50%">
+            <img class="compare-img" src="assets/vergleich/perfekt-pfannen-nachher.jpg" alt="Nachher: neuer Onlineshop von Perfekt Pfannen mit dunklem Pfannen-Hero" width="1920" height="1080" loading="lazy" draggable="false" />
+            <img class="compare-img compare-img--before" src="assets/vergleich/perfekt-pfannen-vorher.jpg" alt="Vorher: alte blaue Website von Perfekt Pfannen" width="1920" height="1080" loading="lazy" draggable="false" />
             <span class="compare-label compare-label--before" aria-hidden="true">Vorher</span>
             <span class="compare-label compare-label--after" aria-hidden="true">Nachher</span>
             <input class="compare-range" type="range" hidden min="0" max="100" step="1" value="50"
                    aria-labelledby="vergleich-title" aria-describedby="vergleich-hint" aria-valuetext="50 % Vorher, 50 % Nachher" />
             <span class="compare-divider" aria-hidden="true">
               <span class="compare-handle">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 7.5 5 12l4.5 4.5M14.5 7.5 19 12l-4.5 4.5"/></svg>
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="compare-chevron--left" d="M9.5 7.5 5 12l4.5 4.5"/><path class="compare-chevron--right" d="M14.5 7.5 19 12l-4.5 4.5"/></svg>
               </span>
             </span>
           </div>
-          <figcaption>Beispielansichten</figcaption>
+        </figure>
+      </div>
+
+      <!-- Zweiter Vorher/Nachher-Vergleich (Produktseite), directly below the first one.
+           Same component and crop as above (1920 × 1080 px, ohne Browserleiste):
+           assets/vergleich/produktseite-vorher.jpg (alt), assets/vergleich/produktseite-nachher.jpg (neu)
+           site.js initialises every [data-compare] separately, so each slider keeps its own state. -->
+      <div class="wrap compare-block compare-block--follow">
+        <h3 id="produktseite-title">Die Produktseite im Vergleich.</h3>
+        <figure class="compare">
+          <div class="compare-frame" data-compare style="--pos: 50%">
+            <img class="compare-img" src="assets/vergleich/produktseite-nachher.jpg" alt="Nachher: neue Produktseite der Bratpfanne mit Größenwahl und Deckeloptionen" width="1920" height="1080" loading="lazy" draggable="false" />
+            <img class="compare-img compare-img--before" src="assets/vergleich/produktseite-vorher.jpg" alt="Vorher: alte Produktseite der Bratpfanne mit Seitenleiste und Preistabelle" width="1920" height="1080" loading="lazy" draggable="false" />
+            <span class="compare-label compare-label--before" aria-hidden="true">Vorher</span>
+            <span class="compare-label compare-label--after" aria-hidden="true">Nachher</span>
+            <input class="compare-range" type="range" hidden min="0" max="100" step="1" value="50"
+                   aria-labelledby="produktseite-title" aria-describedby="vergleich-hint" aria-valuetext="50 % Vorher, 50 % Nachher" />
+            <span class="compare-divider" aria-hidden="true">
+              <span class="compare-handle">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="compare-chevron--left" d="M9.5 7.5 5 12l4.5 4.5"/><path class="compare-chevron--right" d="M14.5 7.5 19 12l-4.5 4.5"/></svg>
+              </span>
+            </span>
+          </div>
         </figure>
       </div>
     </section>
@@ -190,17 +210,51 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <span>Zetac · Digitalstudio in Paderborn</span>
-      <nav aria-label="Fußzeile">
-        <a href="about.html">Über uns</a>
-        <a href="projekte.html">Projekte</a>
-        <a href="services.html">Leistungen</a>
-        <a href="contact.html">Kontakt</a>
-        <a href="https://www.instagram.com/zetac.digital.consultancy/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      </nav>
-      <span>© 2026 Zetac</span>
+  <!-- Site footer: gold band, navy panel with rounded top corners (see .zf in zetac.css). -->
+  <footer class="zf">
+    <div class="zf-panel">
+      <div class="zf-inner">
+        <div class="zf-cols">
+          <nav aria-labelledby="zf-nav-title">
+            <h2 class="zf-title" id="zf-nav-title">Navigation</h2>
+            <ul>
+              <li><a href="projekte.html">Projekte</a></li>
+              <li><a href="services.html">Leistungen</a></li>
+              <li><a href="about.html">Über uns</a></li>
+              <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+          </nav>
+          <nav aria-labelledby="zf-svc-title">
+            <h2 class="zf-title" id="zf-svc-title">Leistungen</h2>
+            <ul>
+              <li><a href="services.html#app-entwicklung">App-Entwicklung</a></li>
+              <li><a href="services.html#onlineshop">Onlineshops &amp; Google-SEO</a></li>
+              <li><a href="services.html#leistungen">Social Media</a></li>
+            </ul>
+          </nav>
+          <div>
+            <h2 class="zf-title">Kontakt</h2>
+            <ul>
+              <li><a href="mailto:info@zetac.de">info@zetac.de</a></li>
+              <li>Paderborn, Deutschland</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Brand: logo tile beside the wordmark, tagline directly below the wordmark. -->
+        <div class="zf-sign">
+          <a class="zf-brand" href="index.html" aria-label="Zetac – zur Startseite"><span class="zf-logo"><img src="assets/logo.png" alt="" width="1024" height="1024" loading="lazy" /></span><span class="zf-brand-text"><span class="zf-word" aria-hidden="true">Zetac</span><span class="zf-tag" lang="en" aria-hidden="true">Digital Consultancy</span></span></a>
+        </div>
+        <!-- Legal row. NOTE: impressum.html and datenschutz.html do not exist yet. -->
+        <div class="zf-small">
+          <span>© 2026 Zetac</span>
+          <nav aria-label="Rechtliches">
+            <ul class="zf-legal">
+              <li><a href="impressum.html">Impressum</a></li>
+              <li><a href="datenschutz.html">Datenschutz</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </div>
   </footer>
 

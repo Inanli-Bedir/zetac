@@ -1,0 +1,9 @@
+{
+  "name": "zetac-mailer",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Sends Kontakt form requests from zetac.de to info@zetac.de via SMTP.",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "nodemailer": "^6.9.16" }
+}

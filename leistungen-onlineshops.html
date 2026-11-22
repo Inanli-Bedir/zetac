@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Onlineshops &amp; SEO – Leistungen – Zetac</title>
+  <meta name="description" content="Onlineshops &amp; SEO von Zetac: Konzeption, Design, Entwicklung und Suchmaschinenoptimierung – von der Idee bis zum Start." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- The arrow (→) is not in Google's default Inter subsets; load just that glyph. -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&text=%E2%86%92&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="zetac.css" />
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+</head>
+<body class="page-blank page-service page-service--shop">
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <!-- Same navbar as the homepage, shown filled from the start (see .page-blank in zetac.css). -->
+  <header class="site-header site-header--hero">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Zetac – zur Startseite"><span class="brand-mark"><img src="assets/logo.png" alt="" width="30" height="30" /></span>Zetac</a>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <ul class="nav-list">
+          <li><a href="projekte.html">Projekte</a></li>
+          <li><a href="services.html" aria-current="page">Leistungen</a></li>
+          <li><a href="about.html">Über uns</a></li>
+          <li class="nav-cta"><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Onlineshops & SEO: hero with laptop + phone (real shop screenshots), three connected steps, four icon rows, closing navy panel.
+       Shell and breadcrumb as on the project subpages (.pw); page styles: .sv-* in zetac.css.
+       Entrances once per element via site.js [data-reveal] (.sv-anim), off with reduced motion. -->
+  <main id="inhalt" class="page-blank-main pw sv">
+    <div class="sv-wrap">
+      <nav class="pw-crumbs" aria-label="Brotkrumen">
+        <ol>
+          <li><a href="services.html">Leistungen</a></li>
+          <li aria-current="page">Onlineshops &amp; SEO</li>
+        </ol>
+      </nav>
+
+      <!-- One photographic scene behind the whole hero: wall with plant shadows, plant on the
+           right, laptop + phone (Onlineshop project) on a wooden table. The image is a separate
+           positioned layer (.sv-scene); the section's bottom padding reserves the device area,
+           so the text sits on the quiet wall above. The wall above the original photo was
+           extended in the asset (shop-scene-*), not stretched. -->
+      <section class="sv-hero sv-hero--scene" aria-labelledby="sv-title">
+        <div class="sv-scene">
+          <img src="assets/leistungen/shop-scene-1536.webp" srcset="assets/leistungen/shop-scene-960.webp 960w, assets/leistungen/shop-scene-1536.webp 1536w" sizes="min(100vw, 1600px)" alt="Laptop und Smartphone auf einem Holztisch, beide mit der Startseite eines von uns umgesetzten Onlineshops für Kochgeschirr" width="1536" height="1544" fetchpriority="high" />
+        </div>
+        <div class="sv-hero-text sv-anim" data-reveal>
+          <h1 class="sv-h1" id="sv-title">Ihr Onlineshop. Von der Idee bis zum Start.</h1>
+          <p class="sv-lead">Sie erzählen uns, was Sie vorhaben. Wir übernehmen Konzeption, Design, Entwicklung und SEO.</p>
+          <a class="sv-btn" href="contact.html">Shop-Projekt besprechen <span class="sv-btn-arrow" aria-hidden="true">→</span></a>
+        </div>
+      </section>
+
+      <section class="sv-section" aria-labelledby="sv-steps-title">
+        <h2 class="sv-h2 sv-anim" data-reveal id="sv-steps-title">Sie haben die Idee. Wir kümmern uns um die Umsetzung.</h2>
+        <ol class="sv-steps" data-reveal-stagger="140">
+          <li class="sv-step sv-anim" data-reveal><span class="sv-step-mark" aria-hidden="true">01</span><h3>Wünsche besprechen</h3><p>Wir klären Ihre Ziele, Anforderungen und alles, was Ihnen wichtig ist.</p></li>
+          <li class="sv-step sv-anim" data-reveal><span class="sv-step-mark" aria-hidden="true">02</span><h3>Shop gestalten &amp; entwickeln</h3><p>Wir erstellen ein passendes Design und setzen Ihren Onlineshop technisch um.</p></li>
+          <li class="sv-step sv-anim" data-reveal><span class="sv-step-mark" aria-hidden="true">03</span><h3>Mit SEO online gehen</h3><p>Wir bereiten Ihren Shop suchmaschinenfreundlich vor und bringen ihn live.</p></li>
+        </ol>
+        <ul class="sv-rows" aria-label="Unsere Leistungen für Ihren Onlineshop" data-reveal-stagger="110">
+          <li class="sv-row sv-anim" data-reveal><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><div><h3>Individuelles Shop-Design</h3><p>Ein Design, das zu Ihrem Unternehmen und Ihren Produkten passt.</p></div></li>
+          <li class="sv-row sv-anim" data-reveal><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg><div><h3>Technische Einrichtung</h3><p>Wir richten Ihren Onlineshop vollständig und zuverlässig ein.</p></div></li>
+          <li class="sv-row sv-anim" data-reveal><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg><div><h3>Produkte &amp; Kaufprozess</h3><p>Wir pflegen Ihre Produkte ein und gestalten einen einfachen, sicheren Bestellprozess.</p></div></li>
+          <li class="sv-row sv-anim" data-reveal><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><div><h3>Suchmaschinenoptimierung</h3><p>Wir optimieren Ihren Shop für eine bessere Auffindbarkeit in Suchmaschinen.</p></div></li>
+        </ul>
+      </section>
+
+      <section class="sv-close sv-anim" data-reveal aria-labelledby="sv-close-title">
+        <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+        <span class="sv-close-rule" aria-hidden="true"></span>
+        <div>
+          <h2 id="sv-close-title">Bereit für Ihren eigenen Onlineshop?</h2>
+          <p>Lassen Sie uns über Ihr Projekt sprechen.</p>
+        </div>
+        <a class="sv-btn" href="contact.html">Shop-Projekt besprechen <span class="sv-btn-arrow" aria-hidden="true">→</span></a>
+      </section>
+    </div>
+  </main>
+
+  <!-- Site footer: gold band, navy panel with rounded top corners (see .zf in zetac.css). -->
+  <footer class="zf">
+    <div class="zf-panel">
+      <div class="zf-inner">
+        <div class="zf-cols">
+          <nav aria-labelledby="zf-nav-title">
+            <h2 class="zf-title" id="zf-nav-title">Navigation</h2>
+            <ul>
+              <li><a href="projekte.html">Projekte</a></li>
+              <li><a href="services.html">Leistungen</a></li>
+              <li><a href="about.html">Über uns</a></li>
+              <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+          </nav>
+          <nav aria-labelledby="zf-svc-title">
+            <h2 class="zf-title" id="zf-svc-title">Leistungen</h2>
+            <ul>
+              <li><a href="services.html#app-entwicklung">App-Entwicklung</a></li>
+              <li><a href="services.html#onlineshop">Onlineshops &amp; Google-SEO</a></li>
+              <li><a href="services.html#leistungen">Social Media</a></li>
+            </ul>
+          </nav>
+          <div>
+            <h2 class="zf-title">Kontakt</h2>
+            <ul>
+              <li><a href="mailto:info@zetac.de">info@zetac.de</a></li>
+              <li>Paderborn, Deutschland</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Brand: logo tile beside the wordmark, tagline directly below the wordmark. -->
+        <div class="zf-sign">
+          <a class="zf-brand" href="index.html" aria-label="Zetac – zur Startseite"><span class="zf-logo"><img src="assets/logo.png" alt="" width="1024" height="1024" loading="lazy" /></span><span class="zf-brand-text"><span class="zf-word" aria-hidden="true">Zetac</span><span class="zf-tag" lang="en" aria-hidden="true">Digital Consultancy</span></span></a>
+        </div>
+        <!-- Legal row. NOTE: impressum.html and datenschutz.html do not exist yet. -->
+        <div class="zf-small">
+          <span>© 2026 Zetac</span>
+          <nav aria-label="Rechtliches">
+            <ul class="zf-legal">
+              <li><a href="impressum.html">Impressum</a></li>
+              <li><a href="datenschutz.html">Datenschutz</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="site.js" defer></script>
+</body>
+</html>
